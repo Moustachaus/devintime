@@ -20,6 +20,6 @@ bot.on ("message", (message) => {
         if (mention == null) { return; }
         message.delete();
         mentionMessage = message.content.slice (8);
-        metnion.sendMessage (mentionMessage);
+        mention.sendMessage (mentionMessage);
         message.channel.send ("done!"); 
     }
