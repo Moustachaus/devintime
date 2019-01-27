@@ -18,5 +18,5 @@ bot.on('message', function(message){
 });
 
 
-bot.user.setActivity('Test / /dit aide');
+bot.user.setActivity('Test / dit aide');
 bot.login(process.env.toek);
