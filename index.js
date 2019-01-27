@@ -23,7 +23,7 @@ bot.on('message', message => {
         if(splitMessage[0] === '!commande') {
             if(splitMessage[1] === 'send') {
                 if(splitMessage.length === 3)
-                message.channel.send('Paramètre: ' + splitMessage[1]);
+                message.channel.send('Paramètre: ' + splitMessage[2]);
             else 
                 sendError(message, 'Erreur');
             }
