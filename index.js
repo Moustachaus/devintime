@@ -17,7 +17,7 @@ bot.on('message', function(message){
             mention.sendMessage (mentionMessage);
             message.channel.send ("Envoyé!");
         } else {
-            message.channel.send ("Tu nas pas la permission de faire!");
+            message.channel.send ("Tu n'as pas la permission de faire ça !");
           }
     }
 });
