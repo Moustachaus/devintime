@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const prefix = '!devintime';
+const prefix = '!';
 
 
 function sendError(message, description) {
