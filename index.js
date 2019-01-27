@@ -4,12 +4,11 @@ const bot = new Discord.Client();
 bot.login(process.env.toek);
 
 
-client.msgs = require ("./msgs.json");
 
 
 
 const prefix = "!dit";
-client.on ("message", (message) => {
+bot.on ("message", (message) => {
 
     msg = message.content.toLowerCase();
 
