@@ -1,14 +1,15 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-var prefix = "!";
+
 
 
 
 bot.on('message', function(message){
     mention = message.mentions.users.first();
     if (message.author.bot) return;
-    if (msg.content.toLowerCase().startsWith(prefix + "msg")) {
+    if (message.startsWith = '!devintime msg')
+    {
         if (mention == null) { return; }
         if (message.member.hasPermission("ADMINISTRATOR"))
         {
@@ -18,6 +19,9 @@ bot.on('message', function(message){
         } else {
             message.channel.send ("Tu n'as pas la permission de faire ça !");
           }
+        
+    }   else {
+        message.channel.send ("e");
     }
 });
 
