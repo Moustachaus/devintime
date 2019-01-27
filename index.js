@@ -36,7 +36,7 @@ bot.on('message', message => {
         }
         else if(splitMessage[0] === '!devintime') {
             if(splitMessage[1] === 'msg') {
-                if(splitMessage.length === 3)
+                if(splitMessage.length === 4)
                 if (mention == null) { return; }
                 if (message.member.hasPermission("ADMINISTRATOR"))  {
                     mentionMessage = message.content.slice (15);
