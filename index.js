@@ -16,8 +16,9 @@ bot.on('message', function(message){
             mentionMessage = message.content.slice (15);
             mention.sendMessage (mentionMessage);
             message.channel.send ("Envoyé!");
-        }
-        message.channel.send ("Tu nas pas la permission de faire!");
+        } else {
+            message.channel.send ("Tu nas pas la permission de faire!");
+          }
     }
 });
 
