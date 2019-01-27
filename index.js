@@ -14,19 +14,6 @@ bot.on('message', function(message){
         if (message.member.hasPermission("ADMINISTRATOR"))
         mentionMessage = message.content.slice (15);
         mention.sendMessage (mentionMessage);
-        mention.sendMessage (mentionMessage);
-        mention.sendMessage (mentionMessage);
-        mention.sendMessage (mentionMessage);
-        mention.sendMessage (mentionMessage);
-        mention.sendMessage (mentionMessage);
-        mention.sendMessage (mentionMessage);
-        mention.sendMessage (mentionMessage);
-        mention.sendMessage (mentionMessage);
-        mention.sendMessage (mentionMessage);
-        mention.sendMessage (mentionMessage);
-        mention.sendMessage (mentionMessage);
-        mention.sendMessage (mentionMessage);
-        mention.sendMessage (mentionMessage);
         message.channel.send ("Envoyé!");
     }
 });
