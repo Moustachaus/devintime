@@ -11,7 +11,7 @@ bot.on('message', function(message){
     if (message.startsWith = '!devintime msg')
     {
         if (mention == null) { return; }
-        mentionMessage = message.content.slice (8);
+        mentionMessage = message.content.slice (13);
         mention.sendMessage (mentionMessage);
         message.channel.send ("done!");
     }
@@ -21,5 +21,5 @@ bot.on('ready', () => {
     bot.user.setGame('/devintime aide')
   })
 
-  
+
 bot.login(process.env.toek);
