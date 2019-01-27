@@ -8,7 +8,7 @@ const prefix="!";
 bot.on('message', function(message){
     mention = message.mentions.users.first();
     if (message.author.bot) return;
-    if(args[0].toLocaleLowerCase() === prefix +'dit') {
+    if(args[0].toLocaleLowerCase() = 'dit') {
         if (mention == null) { return; }
         if (message.member.hasPermission("ADMINISTRATOR"))
         {
