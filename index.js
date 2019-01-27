@@ -3,6 +3,12 @@ const bot = new Discord.Client();
 const prefix = '!devintime';
 
 
+function sendError(message, description) {
+    message.channel.send({embed: {
+        color: 15158332,
+        description: ':x: ' +description
+    }});
+}
 
 
 bot.on('message', message => {
@@ -13,16 +19,12 @@ bot.on('message', message => {
     mention = message.mentions.users.first();
 
     if (message.content[0] === prefix) {
-        if(message.content === 'test') {
-            if (mention == null) { return; }
-            if (message.member.hasPermission("ADMINISTRATOR"))
-            {
-                mentionMessage = message.content.slice (15);
-                mention.sendMessage (mentionMessage);
-                message.channel.send ("Envoyé!");
-            } else {
-                message.channel.send ("Tu n'as pas la permission de faire ça !");
-              }
+        let splitMessage = message.content.split(" ");
+        if(splitMessage[0] === '!commande') {
+            if(splitMessage.length === 2)
+                message.channel.send('Paramètre: ' + splitMessage[1]);
+                else 
+                    sendError(message, 'Erreur');
         }
         
     }
