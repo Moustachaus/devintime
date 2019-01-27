@@ -37,7 +37,7 @@ bot.on('message', message => {
         else if(splitMessage[0] === '!devintime') {
             if(splitMessage[1] === 'msg') {
                 if(splitMessage.length === 4)
-                if (mention == null) { return; }
+                if (mention == null) { return sendError(message, 'Erreur avec la mention') }
                 if (message.member.hasPermission("ADMINISTRATOR"))  {
                     mentionMessage = message.content.slice (15);
                     mention.sendMessage (mentionMessage);
