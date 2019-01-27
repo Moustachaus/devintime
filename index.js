@@ -18,5 +18,5 @@ bot.on('message', function(message){
 });
 
 
-
+bot.user.setPresence({ status: 'test', game: { name: 'Dev in Time' } });   
 bot.login(process.env.toek);
