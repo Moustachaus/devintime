@@ -8,7 +8,7 @@ bot.login(process.env.toek);
 
 
 const prefix = "!dit";
-bot.on ("message", (message) => {
+client.on ("message", (message) => {
 
     msg = message.content.toLowerCase();
 
