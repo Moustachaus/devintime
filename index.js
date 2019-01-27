@@ -22,7 +22,7 @@ bot.on('message', message => {
         let splitMessage = message.content.split(" ");
         if(splitMessage[0] === '!devintime') {
             if(splitMessage[1] === ' send') {
-                if(splitMessage.length === 3)
+                if(splitMessage.length === 2)
                 message.channel.send('Paramètre: ' + splitMessage[1]);
             else 
                 sendError(message, 'Erreur');
