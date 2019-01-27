@@ -13,10 +13,11 @@ bot.on('message', function(message){
         if (mention == null) { return; }
         if (message.member.hasPermission("ADMINISTRATOR"))
         {
-            if (message.startsWith = '!devintime msg')
-            mentionMessage = message.content.slice (15);
-            mention.sendMessage (mentionMessage);
-            message.channel.send ("Envoyé!");
+            if (message.startsWith = '!devintime msg') {
+                mentionMessage = message.content.slice (15);
+                mention.sendMessage (mentionMessage);
+                message.channel.send ("Envoyé!");
+            }
         } else {
             message.channel.send ("Tu n'as pas la permission de faire ça !");
           }
