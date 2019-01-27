@@ -21,7 +21,7 @@ bot.on('message', message => {
     if (message.content[0] === prefix) {
         let splitMessage = message.content.split(" ");
         if(splitMessage[0] === '!commande') {
-            if(splitMessage[1] === ' send') {
+            if(splitMessage[1] === 'send') {
                 if(splitMessage.length === 3)
                 message.channel.send('Paramètre: ' + splitMessage[1]);
             else 
