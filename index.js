@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-
+const prefix = '!devintime';
 
 
 
@@ -8,7 +8,7 @@ const bot = new Discord.Client();
 bot.on('message', function(message){
     mention = message.mentions.users.first();
     if (message.author.bot) return;
-    if (message.content = '!devintime msg')
+    if (message.startsWith = prefix + ' msg')
     {
         if (mention == null) { return; }
         if (message.member.hasPermission("ADMINISTRATOR"))
