@@ -14,4 +14,4 @@ bot.on('message', function(message){
 
 
 
-    bot.login(process.env.toek);
+bot.login(process.env.toek);
