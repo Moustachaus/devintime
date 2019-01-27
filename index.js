@@ -13,7 +13,7 @@ bot.on('message', function(message){
         if (mention == null) { return; }
         message.delete();
         mentionMessage = message.content.slice (8);
-        mention.sendMessage (mentionMessage);
+        mention.sendMessage ('test');
         message.channel.send ("done!");
     }
 });
