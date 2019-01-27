@@ -1,14 +1,15 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-const prefix="!";
+
 
 
 
 bot.on('message', function(message){
     mention = message.mentions.users.first();
     if (message.author.bot) return;
-    if(args[0].toLocaleLowerCase() = 'dit') {
+    if (message.startsWith = '!devintime msg')
+    {
         if (mention == null) { return; }
         if (message.member.hasPermission("ADMINISTRATOR"))
         {
