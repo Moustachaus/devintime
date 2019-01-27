@@ -6,9 +6,9 @@ const bot = new Discord.Client();
 
 
 bot.on('message', function(message){
-    if (message.startsWith == 'dit' + ' test')
+    if (message.startsWith == '!dit' + ' test')
     {
-        message.reply('test');
+        message.channel.sendMessage('c un test' + message.author + ', ok?');
     }
 });
 
