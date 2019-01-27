@@ -12,7 +12,7 @@ bot.on('message', function(message){
 
     mention = message.mentions.users.first();
 
-    if (message.startsWith = prefix + ' msg') {
+    if (message.contet === prefix + ' msg') {
         if (mention == null) { return; }
         if (message.member.hasPermission("ADMINISTRATOR"))
         {
