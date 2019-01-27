@@ -6,10 +6,14 @@ const prefix = '!devintime';
 
 
 bot.on('message', function(message){
-    mention = message.mentions.users.first();
+
+    msg = message.content.toLowerCase();
+
     if (message.author.bot) return;
-    if (message.startsWith = prefix + ' msg')
-    {
+
+    mention = message.mentions.users.first();
+
+    if (msg.startsWith = prefix + ' msg') {
         if (mention == null) { return; }
         if (message.member.hasPermission("ADMINISTRATOR"))
         {
