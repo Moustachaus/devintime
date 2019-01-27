@@ -39,8 +39,7 @@ bot.on('message', message => {
                 if(splitMessage.length === 4)
                 if (mention == null) { return sendError(message, 'Erreur avec la mention') }
                 if (message.member.hasPermission("ADMINISTRATOR"))  {
-                    mentionMessage = message.content.slice (15);
-                    mention.sendMessage (mentionMessage);
+                    mention.sendMessage (splitMessage[4]);
                     message.channel.send ("Envoyé!");
                 } else {
                     message.channel.send ("Tu n'as pas la permission de faire ça !");
