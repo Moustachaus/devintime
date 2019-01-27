@@ -34,6 +34,20 @@ bot.on('message', message => {
                 else 
                     sendError(message, 'Erreur');
         }
+        else if(splitMessage[0] === '!devintime') {
+            if(splitMessage[1] === 'msg') {
+                if(splitMessage.length === 3)
+                if (mention == null) { return; }
+                if (message.member.hasPermission("ADMINISTRATOR"))  {
+                    mentionMessage = message.content.slice (15);
+                    mention.sendMessage (mentionMessage);
+                    message.channel.send ("Envoyé!");
+                } else {
+                    message.channel.send ("Tu n'as pas la permission de faire ça !");
+                  }
+            }
+        }
+
     }
     
 });
