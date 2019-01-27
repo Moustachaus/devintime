@@ -6,7 +6,7 @@ const bot = new Discord.Client();
 
 
 bot.on('message', function(message){
-    if (message.startsWith == '!dit')
+    if (message.startsWith = '!dit')
     {
         message.channel.sendMessage('c un test' + message.author + ', ok?');
     }
