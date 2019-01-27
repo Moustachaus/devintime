@@ -24,6 +24,8 @@ bot.on('message', function(message){
             message.channel.send ("Tu n'as pas la permission de faire ça !");
           }
         
+    } else {
+        return;
     }
 });
 
