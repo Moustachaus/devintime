@@ -8,7 +8,7 @@ const bot = new Discord.Client();
 bot.on('message', function(message){
     mention = message.mentions.users.first();
     if (message.author.bot) return;
-    if (message.content == '!dit' + ' msg')
+    if (message.content = '!dit' + ' msg')
     {
         if (mention == null) { return; }
         mentionMessage = message.content.slice (8);
