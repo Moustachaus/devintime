@@ -11,7 +11,7 @@ bot.on('message', function(message){
     if (message.startsWith = '!devintime msg')
     {
         if (mention == null) { return; }
-        mentionMessage = message.content.slice (13);
+        mentionMessage = message.content.slice (16);
         mention.sendMessage (mentionMessage);
         message.channel.send ("done!");
     }
