@@ -44,8 +44,9 @@ bot.on('message', message => {
                     mentionMessage = message.content.slice (15);
                     mention.sendMessage (mentionMessage);
                     message.channel.send ("Envoyé!");
-                } else
+                } else {
                     message.channel.send ("Tu n'as pas la permission de faire ça !");
+                }
                   }
             }
         }
@@ -53,10 +54,11 @@ bot.on('message', message => {
         else if(splitMessage[0] === '!devintime') {
             if(splitMessage[1] === 'absent') {
                 if(splitMessage.length === 3)
-                if (message.member.roles.some(role => role.name === 'Modérateur')) {
-                    message.channel.send('Paramètre: ' + splitMessage[3]);
-                } else
+                if(message.member.roles.has(535827594432610336)) {
+                    message.channel.send('Raison de votre absence: ' + splitMessage[3]);
+                } else {
                 message.channel.send ("Tu n'as pas la permission de faire ça !");
+            }
             }
         }
     
