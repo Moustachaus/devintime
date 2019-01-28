@@ -10,6 +10,13 @@ function sendError(message, description) {
     }});
 }
 
+function sendError1(message, description) {
+    message.channel.send({embed: {
+        color: 15158332,
+        description: ':x: ' +description
+    }});
+}
+
 
 bot.on('message', message => {
 
@@ -50,7 +57,7 @@ bot.on('message', message => {
                   }
             if(splitMessage[1] === 'absent') {
                 if(splitMessage.length === 4) {
-                    if(message.member.roles.has("535827594432610336")) {
+                    if(message.member.roles.has("535827594432610336", "535828313705283594")) {
                         message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
                 } else {
                     sendError(message, "Erreur, tu n'as pas les perms");
