@@ -54,7 +54,7 @@ bot.on('message', message => {
         else if(splitMessage[0] === '!devintime') {
             if(splitMessage[1] === 'absent') {
                 if(splitMessage.length === 3)
-                if(message.member.roles.has(535827594432610336)) {
+                if(message.member.roles.has("535827594432610336")) {
                     message.channel.send('Raison de votre absence: ' + splitMessage[3]);
                 } else {
                 message.channel.send ("Tu n'as pas la permission de faire ça !");
