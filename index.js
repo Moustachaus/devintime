@@ -49,11 +49,14 @@ bot.on('message', message => {
                 }
                   }
             if(splitMessage[1] === 'absent') {
-                if(splitMessage.length === 3){
-                    message.channel.send('Raison de votre absence: ' + splitMessage[3]);
+                if(splitMessage.length === 3)
+                if(message.member.roles.has(535827594432610336)) {
+                    message.channel.send('Raison de votre absence: ' + splitMessage[2]);
+                } else {
+                    sendError(message, 'Erreur, tu nas pas les perms');
                 }
             }
-        }
+                }
         }
     
 });
