@@ -48,15 +48,12 @@ bot.on('message', message => {
                     message.channel.send ("Tu n'as pas la permission de faire ça !");
                 }
                   }
+            if(splitMessage[1] === 'absent') {
+                if(splitMessage.length === 3){
+                    message.channel.send('Raison de votre absence: ' + splitMessage[3]);
+                }
             }
         }
-
-        else if(splitMessage[0] === '!devintime') {
-            if(splitMessage[1] === 'absent') {
-                if(splitMessage.length === 3)
-                message.channel.send('Raison de votre absence: ' + splitMessage[3]);
-            }
-            }
         }
     
 });
