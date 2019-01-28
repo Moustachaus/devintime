@@ -58,6 +58,7 @@ bot.on('message', message => {
                 } else {
                     sendError(message, 'Erreur, mauvais format, veuillez inscrire la commande comma ça: "!devintime absent raison temps"');
             }
+        }
                 }
         }
     
