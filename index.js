@@ -55,11 +55,8 @@ bot.on('message', message => {
                 if (message.member.roles.some(role => role.name === 'Modérateur'))  {
                     if(splitMessage.length === 3) {
                         message.channel.send('Paramètre: ' + splitMessage[3]);
-                    } else {
-                        sendError(message, 'Veuillez entrer pourquoi et jusqua quand !');
                     }
-                } else {
-                    message.channel.send ("Tu n'as pas la permission de faire ça !");
+                    
                 }
             }
         }
