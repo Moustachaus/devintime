@@ -52,12 +52,11 @@ bot.on('message', message => {
 
         else if(splitMessage[0] === '!devintime') {
             if(splitMessage[1] === 'absent') {
-                if (message.member.roles.some(role => role.name === 'Modérateur'))  {
-                    if(splitMessage.length === 3) {
-                        message.channel.send('Paramètre: ' + splitMessage[3]);
-                    }
-                    
-                }
+                if(splitMessage.length === 3)
+                if (message.member.roles.some(role => role.name === 'Modérateur')) {
+                    message.channel.send('Paramètre: ' + splitMessage[3]);
+                } else
+                message.channel.send ("Tu n'as pas la permission de faire ça !");
             }
         }
     
