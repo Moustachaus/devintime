@@ -28,12 +28,14 @@ bot.on('message', message => {
                 sendError(message, 'Erreur');
             }
         }
+
         else if(splitMessage[0] === '!ban') {
             if(splitMessage.length === 2)
                 message.guild.ban(message.mentions.users.first());
                 else 
                     sendError(message, 'Erreur');
         }
+
         else if(splitMessage[0] === '!devintime') {
             if(splitMessage[1] === 'msg') {
                 if(splitMessage.length === 4)
@@ -42,13 +44,27 @@ bot.on('message', message => {
                     mentionMessage = message.content.slice (15);
                     mention.sendMessage (mentionMessage);
                     message.channel.send ("Envoyé!");
-                } else {
+                } else
                     message.channel.send ("Tu n'as pas la permission de faire ça !");
                   }
             }
         }
 
-    }
+        else if(splitMessage[0] === '!devintime') {
+            if(splitMessage[1] === 'absent') {
+                if(splitMessage.length === 4)
+                if (mention == null) { return sendError(message, 'Erreur avec la mention') }
+                if (message.member.roles.some(role => role.name === 'Modérateur'))  {
+                    if(splitMessage.length === 3) {
+                        message.channel.send('Paramètre: ' + splitMessage[3]);
+                    } else {
+                        sendError(message, 'Veuillez entrer pourquoi et jusqua quand !');
+                    }
+                } else {
+                    message.channel.send ("Tu n'as pas la permission de faire ça !");
+                  }
+            }
+        }
     
 });
 
