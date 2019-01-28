@@ -52,8 +52,6 @@ bot.on('message', message => {
 
         else if(splitMessage[0] === '!devintime') {
             if(splitMessage[1] === 'absent') {
-                if(splitMessage.length === 4)
-                if (mention == null) { return sendError(message, 'Erreur avec la mention') }
                 if (message.member.roles.some(role => role.name === 'Modérateur'))  {
                     if(splitMessage.length === 3) {
                         message.channel.send('Paramètre: ' + splitMessage[3]);
@@ -62,7 +60,7 @@ bot.on('message', message => {
                     }
                 } else {
                     message.channel.send ("Tu n'as pas la permission de faire ça !");
-                  }
+                }
             }
         }
     
