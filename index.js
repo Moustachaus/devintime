@@ -69,178 +69,43 @@ bot.on('message', message => {
             if(splitMessage[1] === 'absent') {
                 if(splitMessage.length === 4) {
                     if(message.member.roles.has("535827594432610336")) {
-                        message.channel.send({embed: {
-                            color: 3447003,
-                            author: {
-                              name: client.user.username,
-                              icon_url: client.user.avatarURL
-                            },
-                            title: "This is an embed",
-                            url: "http://google.com",
-                            description: "This is a test embed to showcase what they look like and what they can do.",
-                            fields: [{
-                                name: "Fields",
-                                value: "They can have different fields with small headlines."
-                              },
-                              {
-                                name: "Masked links",
-                                value: "You can put [masked links](http://google.com) inside of rich embeds."
-                              },
-                              {
-                                name: "Markdown",
-                                value: "You can put all the *usual* **__Markdown__** inside of them."
-                              }
-                            ],
-                            timestamp: new Date(),
-                            footer: {
-                              icon_url: client.user.avatarURL,
-                              text: "© Example"
-                            }
-                          }
-                        });
+                        var embed1 = new Discord.RichEmbed()
+                            .setTitle("Absence")
+                            .setDescription("Absence")
+                            .addField(".help", "Page d'aide", true)
+                            .addField("Embed1", "Embedf [PZH CODAGE](https://dev-in-time.com)", true)
+                            .setColor("0xFACC2E")
+                            .setFooter("Testencoreok")
+                        message.channel.sendEmbed(embed1);
                 }
 
 
 
                 if(message.member.roles.has("535828313705283594")) {
-                    message.channel.send({embed: {
-                        color: 3447003,
-                        author: {
-                          name: client.user.username,
-                          icon_url: client.user.avatarURL
-                        },
-                        title: "This is an embed",
-                        url: "http://google.com",
-                        description: "This is a test embed to showcase what they look like and what they can do.",
-                        fields: [{
-                            name: "Fields",
-                            value: "They can have different fields with small headlines."
-                          },
-                          {
-                            name: "Masked links",
-                            value: "You can put [masked links](http://google.com) inside of rich embeds."
-                          },
-                          {
-                            name: "Markdown",
-                            value: "You can put all the *usual* **__Markdown__** inside of them."
-                          }
-                        ],
-                        timestamp: new Date(),
-                        footer: {
-                          icon_url: client.user.avatarURL,
-                          text: "© Example"
-                        }
-                      }
-                    });
+                    message.channel.sendEmbed(embed1);
+                    //message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
             }
 
 
 
 
             if(message.member.roles.has("539133325730775081")) {
-                message.channel.send({embed: {
-                    color: 3447003,
-                    author: {
-                      name: client.user.username,
-                      icon_url: client.user.avatarURL
-                    },
-                    title: "This is an embed",
-                    url: "http://google.com",
-                    description: "This is a test embed to showcase what they look like and what they can do.",
-                    fields: [{
-                        name: "Fields",
-                        value: "They can have different fields with small headlines."
-                      },
-                      {
-                        name: "Masked links",
-                        value: "You can put [masked links](http://google.com) inside of rich embeds."
-                      },
-                      {
-                        name: "Markdown",
-                        value: "You can put all the *usual* **__Markdown__** inside of them."
-                      }
-                    ],
-                    timestamp: new Date(),
-                    footer: {
-                      icon_url: client.user.avatarURL,
-                      text: "© Example"
-                    }
-                  }
-                });
+                message.channel.sendEmbed(embed1);
+                //message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
         }
 
 
 
         if(message.member.roles.has("539183295959793667")) {
-            message.channel.send({embed: {
-                color: 3447003,
-                author: {
-                  name: client.user.username,
-                  icon_url: client.user.avatarURL
-                },
-                title: "This is an embed",
-                url: "http://google.com",
-                description: "This is a test embed to showcase what they look like and what they can do.",
-                fields: [{
-                    name: "Fields",
-                    value: "They can have different fields with small headlines."
-                  },
-                  {
-                    name: "Masked links",
-                    value: "You can put [masked links](http://google.com) inside of rich embeds."
-                  },
-                  {
-                    name: "Markdown",
-                    value: "You can put all the *usual* **__Markdown__** inside of them."
-                  }
-                ],
-                timestamp: new Date(),
-                footer: {
-                  icon_url: client.user.avatarURL,
-                  text: "© Example"
-                }
-              }
-            });
+            message.channel.sendEmbed(embed1);
+            //message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
     }
 
 
 
         if(message.member.roles.has("535827954870124554")) {
-            message.channel.send({embed: {
-                color: 3447003,
-                author: {
-                  name: client.user.username,
-                  icon_url: client.user.avatarURL
-                },
-                title: "This is an embed",
-                url: "http://google.com",
-                description: "This is a test embed to showcase what they look like and what they can do.",
-                fields: [{
-                    name: "Fields",
-                    value: "They can have different fields with small headlines."
-                  },
-                  {
-                    name: "Masked links",
-                    value: "You can put [masked links](http://google.com) inside of rich embeds."
-                  },
-                  {
-                    name: "Markdown",
-                    value: "You can put all the *usual* **__Markdown__** inside of them."
-                  }
-                ],
-                timestamp: new Date(),
-                footer: {
-                  icon_url: client.user.avatarURL,
-                  text: "© Example"
-                }
-              }
-            });
-
-
-
-
-
-            
+            message.channel.sendEmbed(embed1);
+        //message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
     }
 
 
