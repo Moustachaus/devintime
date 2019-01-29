@@ -69,8 +69,6 @@ bot.on('message', message => {
             if(splitMessage[1] === 'absent') {
                 if(splitMessage.length === 4) {
                     if(message.member.roles.has("535827594432610336")) {
-                        var allo1 = splitMessage[2]
-                        var allo2 = splitMessage[3]
                         var embed1 = new Discord.RichEmbed()
                             .setTitle("Absence")
                             .setThumbnail(client.user.displayAvatarURL)
