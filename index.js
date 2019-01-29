@@ -81,6 +81,7 @@ bot.on('message', message => {
 
 
                             message.channel.send({embed: embed1}).then(embedMessage => {
+                                embedMessage.react('👍').then(() => embedMessage.react('👎'));
                             });
                 
                 
@@ -93,7 +94,7 @@ bot.on('message', message => {
                                 return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
                             };
                             
-                            message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+                            embedMessage.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
                                 .then(collected => {
                                     const reaction = collected.first();
                             
@@ -115,6 +116,7 @@ bot.on('message', message => {
 
                 if(message.member.roles.has("535828313705283594")) {
                     message.channel.send({embed: embed1}).then(embedMessage => {
+                        embedMessage.react('👍').then(() => embedMessage.react('👎'));
                     });
         
         
@@ -127,7 +129,7 @@ bot.on('message', message => {
                         return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
                     };
                     
-                    message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+                    embedMessage.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
                         .then(collected => {
                             const reaction = collected.first();
                     
@@ -151,6 +153,7 @@ bot.on('message', message => {
 
             if(message.member.roles.has("539133325730775081")) {
                 message.channel.send({embed: embed1}).then(embedMessage => {
+                    embedMessage.react('👍').then(() => embedMessage.react('👎'));
                 });
     
     
@@ -163,7 +166,7 @@ bot.on('message', message => {
                     return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
                 };
                 
-                message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+                embedMessage.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
                     .then(collected => {
                         const reaction = collected.first();
                 
@@ -186,6 +189,7 @@ bot.on('message', message => {
 
         if(message.member.roles.has("539183295959793667")) {
             message.channel.send({embed: embed1}).then(embedMessage => {
+                embedMessage.react('👍').then(() => embedMessage.react('👎'));
             });
 
 
@@ -198,7 +202,7 @@ bot.on('message', message => {
                 return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
             };
             
-            message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+            embedMessage.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
                 .then(collected => {
                     const reaction = collected.first();
             
@@ -221,6 +225,7 @@ bot.on('message', message => {
 
         if(message.member.roles.has("535827954870124554")) {
             message.channel.send({embed: embed1}).then(embedMessage => {
+                embedMessage.react('👍').then(() => embedMessage.react('👎'));
             });
 
 
@@ -233,7 +238,7 @@ bot.on('message', message => {
                 return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
             };
             
-            message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+            embedMessage.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
                 .then(collected => {
                     const reaction = collected.first();
             
