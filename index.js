@@ -83,12 +83,13 @@ bot.on('message', message => {
                             message.channel.send({embed: embed1}).then(embedMessage => {
                                 embedMessage.react('👍').then(() => embedMessage.react('👎'));
                             });
-
-
-
-
-
-
+                
+                
+                
+                
+                
+                
+                
                             const filter = (reaction, user) => {
                                 return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
                             };
@@ -100,7 +101,8 @@ bot.on('message', message => {
                                     if (reaction.emoji.name === '👍') {
                                         message.channel.send ('👍');
                                     }
-                                    if (reaction.emoji.name === '👎') {
+                                    else {
+                                        if (reaction.emoji.name === '👎') 
                                         message.channel.send ('👎');
                                     }
                                 })
@@ -122,7 +124,7 @@ bot.on('message', message => {
         
         
         
-                    
+        
                     const filter = (reaction, user) => {
                         return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
                     };
@@ -134,7 +136,8 @@ bot.on('message', message => {
                             if (reaction.emoji.name === '👍') {
                                 message.channel.send ('👍');
                             }
-                            if (reaction.emoji.name === '👎') {
+                            else {
+                                if (reaction.emoji.name === '👎') 
                                 message.channel.send ('👎');
                             }
                         })
@@ -158,7 +161,7 @@ bot.on('message', message => {
     
     
     
-                
+    
                 const filter = (reaction, user) => {
                     return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
                 };
@@ -170,7 +173,8 @@ bot.on('message', message => {
                         if (reaction.emoji.name === '👍') {
                             message.channel.send ('👍');
                         }
-                        if (reaction.emoji.name === '👎') {
+                        else {
+                            if (reaction.emoji.name === '👎') 
                             message.channel.send ('👎');
                         }
                     })
@@ -193,7 +197,7 @@ bot.on('message', message => {
 
 
 
-            
+
             const filter = (reaction, user) => {
                 return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
             };
@@ -205,7 +209,8 @@ bot.on('message', message => {
                     if (reaction.emoji.name === '👍') {
                         message.channel.send ('👍');
                     }
-                    if (reaction.emoji.name === '👎') {
+                    else {
+                        if (reaction.emoji.name === '👎') 
                         message.channel.send ('👎');
                     }
                 })
@@ -240,7 +245,8 @@ bot.on('message', message => {
                     if (reaction.emoji.name === '👍') {
                         message.channel.send ('👍');
                     }
-                    if (reaction.emoji.name === '👎') {
+                    else {
+                        if (reaction.emoji.name === '👎') 
                         message.channel.send ('👎');
                     }
                 })
