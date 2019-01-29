@@ -269,12 +269,12 @@ bot.on('message', message => {
                     var adminhelp = new Discord.RichEmbed()
                         .setTitle("Aide Admin")
                         .setDescription(" ")
-                        .addField("Commandes", "!devintime absent (raison) (temps)", true)  //, "Pour nous prévenir d'une absence de votre part",
+                        .addField("Commandes", "!devintime absent (raison) (temps)", "Pour nous prévenir d'une absence de votre part", true)
                         .addField("2", "test", true)
                         .setColor("0xFACC2E")
                         .setFooter("Dev in Time")
                     
-                    message.channel.send({adminhelp});
+                        message.channel.send({adminhelp});
 
             }
         }
