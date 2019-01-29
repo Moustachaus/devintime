@@ -266,15 +266,14 @@ bot.on('message', message => {
         if(splitMessage[1] === 'admin') {
             if(splitMessage[2] === 'aide') {
                 if(splitMessage.length === 3) {
-                    if(message.channel.id != '539939029412741173') {
-                        var adminhelp = new Discord.RichEmbed()
+                    var adminhelp = new Discord.RichEmbed()
                         .setTitle("Aide Admin")
                         .setDescription("test")
                         .addField("Commandes", "!devintime absent (raison) (temps)", "Pour nous prévenir d'une absence de votre part", true) 
                         .setColor("0xFAAC58")
                         .setFooter("Dev in Time")
                     message.channel.sendEmbed(adminhelp);
-                    }
+
             }
         }
     }
