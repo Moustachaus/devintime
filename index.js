@@ -274,7 +274,7 @@ bot.on('message', message => {
                         .setColor("0xFACC2E")
                         .setFooter("Dev in Time")
                     
-                        message.channel.send({adminhelp});
+                    message.channel.sendEmbed(adminhelp);
 
             }
         }
