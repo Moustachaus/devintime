@@ -71,12 +71,13 @@ bot.on('message', message => {
                     if(message.member.roles.has("535827594432610336")) {
                         var embed1 = new Discord.RichEmbed()
                             .setTitle("Absence")
-                            .setDescription("Absence")
-                            .addField(".help", "Page d'aide", true)
-                            .addField("Embed1", "Embedf [PZH CODAGE](https://dev-in-time.com)", true)
+                            .setDescription("Est-ce correct ?")
+                            .addField("Raison de votre absence", + splitMessage[2], true)
+                            .addField("Temps de votre absence", + splitMessage[3], true)
                             .setColor("0xFACC2E")
-                            .setFooter("Testencoreok")
+                            .setFooter("Dev in Time")
                         message.channel.sendEmbed(embed1);
+                        message.react('👍').then(() => message.react('👎'));
                 }
 
 
