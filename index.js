@@ -76,16 +76,17 @@ bot.on('message', message => {
                             .addField("Temps de votre absence", splitMessage[3], true)
                             .setColor("0xFACC2E")
                             .setFooter("Dev in Time")
-                        message.channel.sendEmbed(embed1);
                         message.channel.send({embed: embed1}).then(embedMessage => {
-                            embedMessage.react('👍').then(() => message.react('👎'));
+                            embedMessage.react('👍').then(() => embedMessage.react('👎'));
                         });
                 }
 
 
 
                 if(message.member.roles.has("535828313705283594")) {
-                    message.channel.sendEmbed(embed1);
+                    message.channel.send({embed: embed1}).then(embedMessage => {
+                        embedMessage.react('👍').then(() => embedMessage.react('👎'));
+                    });
                     //message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
             }
 
@@ -93,21 +94,27 @@ bot.on('message', message => {
 
 
             if(message.member.roles.has("539133325730775081")) {
-                message.channel.sendEmbed(embed1);
+                message.channel.send({embed: embed1}).then(embedMessage => {
+                    embedMessage.react('👍').then(() => embedMessage.react('👎'));
+                });
                 //message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
         }
 
 
 
         if(message.member.roles.has("539183295959793667")) {
-            message.channel.sendEmbed(embed1);
+            message.channel.send({embed: embed1}).then(embedMessage => {
+                embedMessage.react('👍').then(() => embedMessage.react('👎'));
+            });
             //message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
     }
 
 
 
         if(message.member.roles.has("535827954870124554")) {
-            message.channel.sendEmbed(embed1);
+            message.channel.send({embed: embed1}).then(embedMessage => {
+                embedMessage.react('👍').then(() => embedMessage.react('👎'));
+            });
         //message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
     }
 
