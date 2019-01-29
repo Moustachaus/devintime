@@ -219,7 +219,6 @@ bot.on('message', message => {
                 });
             //message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
     }
-}
 
 
 
@@ -287,7 +286,7 @@ bot.on('message', message => {
 
 
 
-
+}
 });
 
 
