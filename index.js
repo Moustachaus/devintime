@@ -266,7 +266,7 @@ bot.on('message', message => {
         if(splitMessage[1] === 'admin') {
             if(splitMessage[2] === 'aide') {
                 if(splitMessage.length === 3) {
-                    if(message.channel.id != 'XXXXX') {
+                    if(message.channel.id != '539939029412741173') {
                         var adminhelp = new Discord.RichEmbed()
                         .setTitle("Aide Admin")
                         .setDescription("test")
