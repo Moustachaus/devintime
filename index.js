@@ -68,12 +68,15 @@ bot.on('message', message => {
 
             if(splitMessage[1] === 'absent') {
                 if(splitMessage.length === 4) {
+                    var allo1 = splitMessage[2]
+                    var allo2 = splitMessage[3]
                     if(message.member.roles.has("535827594432610336")) {
                         var embed1 = new Discord.RichEmbed()
                             .setTitle("Absence")
+                            .setThumbnail(client.user.displayAvatarURL)
                             .setDescription("Est-ce correct ?")
-                            .addField("Raison de votre absence", + splitMessage[2], true)
-                            .addField("Temps de votre absence", + splitMessage[3], true)
+                            .addField("Raison de votre absence", + allo1, true)
+                            .addField("Temps de votre absence", + allo2, true)
                             .setColor("0xFACC2E")
                             .setFooter("Dev in Time")
                         message.channel.sendEmbed(embed1);
