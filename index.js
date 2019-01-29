@@ -98,10 +98,10 @@ bot.on('message', message => {
                                     const reaction = collected.first();
                             
                                     if (reaction.emoji.name === '👍') {
-                                        message.reply('👍');
+                                        message.channel.send ('👍');
                                     }
                                     if (reaction.emoji.name === '👎') {
-                                        message.reply('👎');
+                                        message.channel.send ('👎');
                                     }
                                 })
                                 .catch(collected => {
@@ -132,10 +132,10 @@ bot.on('message', message => {
                             const reaction = collected.first();
                     
                             if (reaction.emoji.name === '👍') {
-                                message.reply('👍');
+                                message.channel.send ('👍');
                             }
                             if (reaction.emoji.name === '👎') {
-                                message.reply('👎');
+                                message.channel.send ('👎');
                             }
                         })
                         .catch(collected => {
@@ -168,10 +168,10 @@ bot.on('message', message => {
                         const reaction = collected.first();
                 
                         if (reaction.emoji.name === '👍') {
-                            message.reply('👍');
+                            message.channel.send ('👍');
                         }
                         if (reaction.emoji.name === '👎') {
-                            message.reply('👎');
+                            message.channel.send ('👎');
                         }
                     })
                     .catch(collected => {
@@ -203,10 +203,10 @@ bot.on('message', message => {
                     const reaction = collected.first();
             
                     if (reaction.emoji.name === '👍') {
-                        message.reply('👍');
+                        message.channel.send ('👍');
                     }
                     if (reaction.emoji.name === '👎') {
-                        message.reply('👎');
+                        message.channel.send ('👎');
                     }
                 })
                 .catch(collected => {
@@ -238,10 +238,10 @@ bot.on('message', message => {
                     const reaction = collected.first();
             
                     if (reaction.emoji.name === '👍') {
-                        message.reply('👍');
+                        message.channel.send ('👍');
                     }
                     if (reaction.emoji.name === '👎') {
-                        message.reply('👎');
+                        message.channel.send ('👎');
                     }
                 })
                 .catch(collected => {
