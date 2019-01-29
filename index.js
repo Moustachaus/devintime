@@ -77,7 +77,9 @@ bot.on('message', message => {
                             .setColor("0xFACC2E")
                             .setFooter("Dev in Time")
                         message.channel.sendEmbed(embed1);
-                        embedMessage.react('👍').then(() => message.react('👎'));
+                        message.channel.send({embed: embed1}).then(embedMessage => {
+                            embedMessage.react('👍').then(() => message.react('👎'));
+                        });
                 }
 
 
