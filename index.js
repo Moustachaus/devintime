@@ -94,7 +94,7 @@ bot.on('message', message => {
                                 return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
                             };
                             
-                            embedMessage.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+                            message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
                                 .then(collected => {
                                     const reaction = collected.first();
                             
@@ -129,7 +129,7 @@ bot.on('message', message => {
                         return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
                     };
                     
-                    embedMessage.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+                    message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
                         .then(collected => {
                             const reaction = collected.first();
                     
@@ -166,7 +166,7 @@ bot.on('message', message => {
                     return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
                 };
                 
-                embedMessage.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+                message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
                     .then(collected => {
                         const reaction = collected.first();
                 
@@ -202,7 +202,7 @@ bot.on('message', message => {
                 return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
             };
             
-            embedMessage.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+            message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
                 .then(collected => {
                     const reaction = collected.first();
             
@@ -238,7 +238,7 @@ bot.on('message', message => {
                 return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
             };
             
-            embedMessage.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+            message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
                 .then(collected => {
                     const reaction = collected.first();
             
