@@ -94,7 +94,7 @@ bot.on('message', message => {
                                 return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
                             };
                             
-                            message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+                            message.awaitReactions(filter, { max: 1, time: 10000, errors: ['time'] })
                                 .then(collected => {
                                     const reaction = collected.first();
                             
@@ -108,7 +108,7 @@ bot.on('message', message => {
                                 })
                                 .catch(collected => {
                                     console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
-                                    message.reply('you didn\'t react with neither a thumbs up, nor a thumbs down.');
+                                    message.reply('hmm');
                                 });
                 }
 
@@ -129,7 +129,7 @@ bot.on('message', message => {
                         return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
                     };
                     
-                    message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+                    message.awaitReactions(filter, { max: 1, time: 10000, errors: ['time'] })
                         .then(collected => {
                             const reaction = collected.first();
                     
@@ -143,7 +143,7 @@ bot.on('message', message => {
                         })
                         .catch(collected => {
                             console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
-                            message.reply('you didn\'t react with neither a thumbs up, nor a thumbs down.');
+                            message.reply('hmm');
                         });
                     //message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
             }
@@ -166,7 +166,7 @@ bot.on('message', message => {
                     return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
                 };
                 
-                message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+                message.awaitReactions(filter, { max: 1, time: 10000, errors: ['time'] })
                     .then(collected => {
                         const reaction = collected.first();
                 
@@ -180,7 +180,7 @@ bot.on('message', message => {
                     })
                     .catch(collected => {
                         console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
-                        message.reply('you didn\'t react with neither a thumbs up, nor a thumbs down.');
+                        message.reply('hmm');
                     });
                 //message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
         }
@@ -202,7 +202,7 @@ bot.on('message', message => {
                 return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
             };
             
-            message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+            message.awaitReactions(filter, { max: 1, time: 10000, errors: ['time'] })
                 .then(collected => {
                     const reaction = collected.first();
             
@@ -216,7 +216,7 @@ bot.on('message', message => {
                 })
                 .catch(collected => {
                     console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
-                    message.reply('you didn\'t react with neither a thumbs up, nor a thumbs down.');
+                    message.reply('hmm');
                 });
             //message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
     }
@@ -238,7 +238,7 @@ bot.on('message', message => {
                 return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
             };
             
-            message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+            message.awaitReactions(filter, { max: 1, time: 10000, errors: ['time'] })
                 .then(collected => {
                     const reaction = collected.first();
             
@@ -252,7 +252,7 @@ bot.on('message', message => {
                 })
                 .catch(collected => {
                     console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
-                    message.reply('you didn\'t react with neither a thumbs up, nor a thumbs down.');
+                    message.reply('hmm');
                 });
         //message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
     }
