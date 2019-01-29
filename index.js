@@ -276,8 +276,8 @@ bot.on('message', message => {
                     .addField("2", "test", true)
                     .setColor("0xFACC2E")
                     .setFooter("Dev in Time")
-
-
+                    
+                    message.channel.send({embed: adminhelp})
 
 
                 }
