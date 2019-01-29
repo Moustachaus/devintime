@@ -105,6 +105,16 @@ bot.on('message', message => {
 
 
                 if(message.member.roles.has("535828313705283594")) {
+                    message.channel.send({embed: embed1}).then(embedMessage => {
+                        embedMessage.react('👍').then(() => embedMessage.react('👎'));
+                    });
+        
+        
+        
+        
+        
+        
+                    
                     const filter = (reaction, user) => {
                         return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
                     };
@@ -124,9 +134,6 @@ bot.on('message', message => {
                             console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
                             message.reply('you didn\'t react with neither a thumbs up, nor a thumbs down.');
                         });
-                message.channel.send({embed: embed1}).then(embedMessage => {
-                    embedMessage.react('👍').then(() => embedMessage.react('👎'));
-                });
                     //message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
             }
 
@@ -134,6 +141,16 @@ bot.on('message', message => {
 
 
             if(message.member.roles.has("539133325730775081")) {
+                message.channel.send({embed: embed1}).then(embedMessage => {
+                    embedMessage.react('👍').then(() => embedMessage.react('👎'));
+                });
+    
+    
+    
+    
+    
+    
+                
                 const filter = (reaction, user) => {
                     return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
                 };
@@ -153,15 +170,22 @@ bot.on('message', message => {
                         console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
                         message.reply('you didn\'t react with neither a thumbs up, nor a thumbs down.');
                     });
-            message.channel.send({embed: embed1}).then(embedMessage => {
-                embedMessage.react('👍').then(() => embedMessage.react('👎'));
-            });
                 //message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
         }
 
 
 
         if(message.member.roles.has("539183295959793667")) {
+            message.channel.send({embed: embed1}).then(embedMessage => {
+                embedMessage.react('👍').then(() => embedMessage.react('👎'));
+            });
+
+
+
+
+
+
+            
             const filter = (reaction, user) => {
                 return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
             };
@@ -181,15 +205,22 @@ bot.on('message', message => {
                     console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
                     message.reply('you didn\'t react with neither a thumbs up, nor a thumbs down.');
                 });
-        message.channel.send({embed: embed1}).then(embedMessage => {
-            embedMessage.react('👍').then(() => embedMessage.react('👎'));
-        });
             //message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
     }
 
 
 
         if(message.member.roles.has("535827954870124554")) {
+            message.channel.send({embed: embed1}).then(embedMessage => {
+                embedMessage.react('👍').then(() => embedMessage.react('👎'));
+            });
+
+
+
+
+
+
+
             const filter = (reaction, user) => {
                 return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
             };
@@ -209,9 +240,6 @@ bot.on('message', message => {
                     console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
                     message.reply('you didn\'t react with neither a thumbs up, nor a thumbs down.');
                 });
-        message.channel.send({embed: embed1}).then(embedMessage => {
-            embedMessage.react('👍').then(() => embedMessage.react('👎'));
-        });
         //message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
     }
 
