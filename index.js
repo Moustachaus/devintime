@@ -71,7 +71,6 @@ bot.on('message', message => {
                     if(message.member.roles.has("535827594432610336")) {
                         var embed1 = new Discord.RichEmbed()
                             .setTitle("Absence")
-                            .setThumbnail(client.user.displayAvatarURL)
                             .setDescription("Est-ce correct ?")
                             .addField("Raison de votre absence", splitMessage[2], true)
                             .addField("Temps de votre absence", splitMessage[3], true)
