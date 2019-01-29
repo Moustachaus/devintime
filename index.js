@@ -277,7 +277,7 @@ bot.on('message', message => {
                             .setFooter("Dev in Time")
                     
                         message.channel.send({adminhelp});
-
+                        sendError(message, 'Erreur"');
 
                 }
             }
