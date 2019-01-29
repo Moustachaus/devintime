@@ -266,7 +266,7 @@ bot.on('message', message => {
 
         if(splitMessage[1] === 'admin') {
             if(splitMessage[2] === 'aide') {
-                if(splitMessage.length === 4) {
+                if(splitMessage.length === 3) {
                     var adminhelp = new Discord.RichEmbed()
                         .setTitle("Aide Admin")
                         .setDescription(" ")
