@@ -57,11 +57,47 @@ bot.on('message', message => {
                   }
             if(splitMessage[1] === 'absent') {
                 if(splitMessage.length === 4) {
-                    if(message.member.roles.has("535827594432610336, 535828313705283594")) {
+                    if(message.member.roles.has("535827594432610336")) {
                         message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
                 } else {
                     sendError(message, "Erreur, tu n'as pas les perms");
                 }
+
+
+
+                if(message.member.roles.has("535828313705283594")) {
+                    message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
+            } else {
+                sendError(message, "Erreur, tu n'as pas les perms");
+            }
+
+
+
+
+            if(message.member.roles.has("539133325730775081")) {
+                message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
+        } else {
+            sendError(message, "Erreur, tu n'as pas les perms");
+        }
+
+
+
+        if(message.member.roles.has("539183295959793667")) {
+            message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
+    } else {
+        sendError(message, "Erreur, tu n'as pas les perms");
+    }
+
+
+
+        if(message.member.roles.has("535827954870124554")) {
+        message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
+    } else {
+        sendError(message, "Erreur, tu n'as pas les perms");
+    }
+
+
+
                 } else {
                     sendError(message, 'Erreur, mauvais format, veuillez inscrire la commande comma ça: "!devintime absent raison temps"');
             }
