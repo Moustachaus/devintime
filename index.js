@@ -266,20 +266,18 @@ bot.on('message', message => {
 
         if(splitMessage[1] === 'admin') {
             if(splitMessage[2] === 'aide') {
-                if(splitMessage.length === 3) {
-                    if(message.member.roles.has("535827594432610336")) {
-                        var adminhelp = new Discord.RichEmbed()
-                            .setTitle("Aide Admin")
-                            .setDescription(" ")
-                            .addField("Commandes", "!devintime absent (raison) (temps)", "Pour nous prévenir d'une absence de votre part", true)
-                            .addField("2", "test", true)
-                            .setColor("0xFACC2E")
-                            .setFooter("Dev in Time")
+                if(splitMessage.length === 4) {
+                    var adminhelp = new Discord.RichEmbed()
+                        .setTitle("Aide Admin")
+                        .setDescription(" ")
+                        .addField("Commandes", "!devintime absent (raison) (temps)", "Pour nous prévenir d'une absence de votre part", true)
+                        .addField("2", "test", true)
+                        .setColor("0xFACC2E")
+                        .setFooter("Dev in Time")
                     
-                        message.channel.send({adminhelp});
-                        sendError(message, 'Erreur"');
+                    message.channel.send({adminhelp});
+                    sendError(message, 'Erreur"');
 
-                }
             }
         }
     }
