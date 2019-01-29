@@ -78,6 +78,17 @@ bot.on('message', message => {
                             .setFooter("Dev in Time")
 
 
+
+
+                            message.channel.send({embed: embed1}).then(embedMessage => {
+                                embedMessage.react('👍').then(() => embedMessage.react('👎'));
+                            });
+
+
+
+
+
+
                             const filter = (reaction, user) => {
                                 return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
                             };
@@ -97,9 +108,6 @@ bot.on('message', message => {
                                     console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
                                     message.reply('you didn\'t react with neither a thumbs up, nor a thumbs down.');
                                 });
-                        message.channel.send({embed: embed1}).then(embedMessage => {
-                            embedMessage.react('👍').then(() => embedMessage.react('👎'));
-                        });
                 }
 
 
