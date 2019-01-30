@@ -280,14 +280,14 @@ bot.on('message', message => {
 
 
     if(splitMessage[1] === 'aide') {
-            if(splitMessage.length === 2) {
-                var aide = new Discord.RichEmbed()
-                    .setTitle("Aide Admin")
-                    .setDescription("test")
-                    .addField("Commandes", "!devintime absent (raison) (temps)", "Pour nous prévenir d'une absence de votre part", true) 
-                    .setColor("0xFAAC58")
-                    .setFooter("Dev in Time")
-                message.channel.sendEmbed(aide);
+        if(splitMessage.length === 2) {
+            var aide = new Discord.RichEmbed()
+                .setTitle("Aide Admin")
+                .setDescription("test")
+                .addField("Commandes", "!devintime absent (raison) (temps)", "Pour nous prévenir d'une absence de votre part", true) 
+                .setColor("0xFAAC58")
+                .setFooter("Dev in Time")
+            message.channel.sendEmbed(aide);
     }
 }
 
