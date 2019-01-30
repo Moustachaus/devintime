@@ -269,11 +269,10 @@ bot.on('message', message => {
                         var adminhelp = new Discord.RichEmbed()
                             .setTitle("Aide Admin")
                             .setDescription("test")
-                            .addField("Commandes", "!devintime absent (raison) (temps)", "Pour nous prévenir d'une absence de votre part", true) 
+                            .addField("Commandes", "!devintime absent (raison) (temps)", true)
                             .setColor("0xFAAC58")
                             .setFooter("Dev in Time")
                         message.channel.sendEmbed(adminhelp);
-
             }
         }
     }
@@ -284,7 +283,7 @@ bot.on('message', message => {
                     var aide = new Discord.RichEmbed()
                         .setTitle("Aide Admin")
                         .setDescription("test")
-                        .addField("Commandes", "!devintime absent (raison) (temps)", "Pour nous prévenir d'une absence de votre part", true) 
+                        .addField("Commandes", "!devintime absent (raison) (temps)", true)
                         .setColor("0xFAAC58")
                         .setFooter("Dev in Time")
                     message.channel.sendEmbed(aide);
