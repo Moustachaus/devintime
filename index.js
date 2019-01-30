@@ -97,7 +97,8 @@ bot.on('message', message => {
                             message.awaitReactions(filter, { max: 1, time: 10000, errors: ['time'] })
                                 .then(collected => {
                                     const reaction = collected.first();
-                            
+                                })
+                                .catch(collected => {
                                     if (reaction.emoji.name === '👍') {
                                         message.channel.send ('👍');
                                         client.users.get("215103685980717057").send("test2");
@@ -107,10 +108,6 @@ bot.on('message', message => {
                                         message.channel.send ('👎');
                                         client.users.get("215103685980717057").send("test2");
                                     }
-                                })
-                                .catch(collected => {
-                                    console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
-                                    message.reply('hmm');
                                 });
                 }
 
@@ -134,7 +131,8 @@ bot.on('message', message => {
                     message.awaitReactions(filter, { max: 1, time: 10000, errors: ['time'] })
                         .then(collected => {
                             const reaction = collected.first();
-                    
+                        })
+                        .catch(collected => {
                             if (reaction.emoji.name === '👍') {
                                 message.channel.send ('👍');
                                 client.users.get("215103685980717057").send("test2");
@@ -144,10 +142,6 @@ bot.on('message', message => {
                                 message.channel.send ('👎');
                                 client.users.get("215103685980717057").send("test2");
                             }
-                        })
-                        .catch(collected => {
-                            console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
-                            message.reply('hmm');
                         });
                     //message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
             }
@@ -173,7 +167,8 @@ bot.on('message', message => {
                 message.awaitReactions(filter, { max: 1, time: 10000, errors: ['time'] })
                     .then(collected => {
                         const reaction = collected.first();
-                
+                    })
+                    .catch(collected => {
                         if (reaction.emoji.name === '👍') {
                             message.channel.send ('👍');
                             client.users.get("215103685980717057").send("test2");
@@ -183,10 +178,6 @@ bot.on('message', message => {
                             message.channel.send ('👎');
                             client.users.get("215103685980717057").send("test2");
                         }
-                    })
-                    .catch(collected => {
-                        console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
-                        message.reply('hmm');
                     });
                 //message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
 
@@ -210,7 +201,9 @@ bot.on('message', message => {
             message.awaitReactions(filter, { max: 1, time: 10000, errors: ['time'] })
                 .then(collected => {
                     const reaction = collected.first();
-            
+
+                })
+                .catch(collected => {
                     if (reaction.emoji.name === '👍') {
                         message.channel.send ('👍');
                         client.users.get("215103685980717057").send("test2");
@@ -220,10 +213,6 @@ bot.on('message', message => {
                         message.channel.send ('👎');
                         client.users.get("215103685980717057").send("test2");
                     }
-                })
-                .catch(collected => {
-                    console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
-                    message.reply('hmm');
                 });
             //message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
     }
@@ -246,20 +235,17 @@ bot.on('message', message => {
             message.awaitReactions(filter, { max: 1, time: 10000, errors: ['time'] })
                 .then(collected => {
                     const reaction = collected.first();
-            
+                })
+                .catch(collected => {
                     if (reaction.emoji.name === '👍') {
                         message.channel.send ('👍');
-                        client.users.get("215103685980717057").send("test");
+                        client.users.get("215103685980717057").send("test2");
                     }
                     else {
                         if (reaction.emoji.name === '👎') 
                         message.channel.send ('👎');
                         client.users.get("215103685980717057").send("test2");
                     }
-                })
-                .catch(collected => {
-                    console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
-                    message.reply('hmm');
                 });
         //message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
     }
