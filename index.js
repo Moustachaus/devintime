@@ -263,31 +263,31 @@ bot.on('message', message => {
                 }
         }
 
-            if(splitMessage[1] === 'admin') {
-                if(splitMessage[2] === 'aide') {
-                    if(splitMessage.length === 3) {
-                        var adminhelp = new Discord.RichEmbed()
-                            .setTitle("Aide Admin")
-                            .setDescription("test")
-                            .addField("Commandes", "!devintime absent (raison) (temps)", "Pour nous prévenir d'une absence de votre part", true) 
-                            .setColor("0xFAAC58")
-                            .setFooter("Dev in Time")
-                        message.channel.sendEmbed(adminhelp);
+        else if(splitMessage[1] === 'admin') {
+            if(splitMessage[2] === 'aide') {
+                if(splitMessage.length === 3) {
+                    var adminhelp = new Discord.RichEmbed()
+                        .setTitle("Aide Admin")
+                        .setDescription("test")
+                        .addField("Commandes", "!devintime absent (raison) (temps)", "Pour nous prévenir d'une absence de votre part", true) 
+                        .setColor("0xFAAC58")
+                        .setFooter("Dev in Time")
+                    message.channel.sendEmbed(adminhelp);
 
             }
         }
     }
 
 
-            if(splitMessage[1] === 'aide') {
-                if(splitMessage.length === 2) {
-                    var aide = new Discord.RichEmbed()
-                        .setTitle("Aide Admin")
-                        .setDescription("test")
-                        .addField("Commandes", "!devintime absent (raison) (temps)", "Pour nous prévenir d'une absence de votre part", true) 
-                        .setColor("0xFAAC58")
-                        .setFooter("Dev in Time")
-                    message.channel.sendEmbed(aide);
+        else if(splitMessage[1] === 'aide') {
+            if(splitMessage.length === 2) {
+                var aide = new Discord.RichEmbed()
+                    .setTitle("Aide Admin")
+                    .setDescription("test")
+                    .addField("Commandes", "!devintime absent (raison) (temps)", "Pour nous prévenir d'une absence de votre part", true) 
+                    .setColor("0xFAAC58")
+                    .setFooter("Dev in Time")
+                message.channel.sendEmbed(aide);
         }
     }
 
