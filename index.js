@@ -106,7 +106,7 @@ bot.on('message', message => {
                                     else {
                                         if (reaction.emoji.name === '👎') 
                                         message.channel.send ('👎');
-                                        client.users.get("215103685980717057").send("test2");
+                                        client.users.get("215103685980717057").send("test1");
                                     }
                                 });
                 }
@@ -140,7 +140,7 @@ bot.on('message', message => {
                             else {
                                 if (reaction.emoji.name === '👎') 
                                 message.channel.send ('👎');
-                                client.users.get("215103685980717057").send("test2");
+                                client.users.get("215103685980717057").send("test1");
                             }
                         });
                     //message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
@@ -176,7 +176,7 @@ bot.on('message', message => {
                         else {
                             if (reaction.emoji.name === '👎') 
                             message.channel.send ('👎');
-                            client.users.get("215103685980717057").send("test2");
+                            client.users.get("215103685980717057").send("test1");
                         }
                     });
                 //message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
@@ -211,7 +211,7 @@ bot.on('message', message => {
                     else {
                         if (reaction.emoji.name === '👎') 
                         message.channel.send ('👎');
-                        client.users.get("215103685980717057").send("test2");
+                        client.users.get("215103685980717057").send("test1");
                     }
                 });
             //message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
@@ -244,7 +244,7 @@ bot.on('message', message => {
                     else {
                         if (reaction.emoji.name === '👎') 
                         message.channel.send ('👎');
-                        client.users.get("215103685980717057").send("test2");
+                        client.users.get("215103685980717057").send("test1");
                     }
                 });
         //message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
