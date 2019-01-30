@@ -277,9 +277,9 @@ bot.on('message', message => {
             if(splitMessage[1] === 'aide') {
                 if(splitMessage.length === 2) {
                     var aide = new Discord.RichEmbed()
-                        .setTitle("Aide Admin")
-                        .setDescription("test")
-                        .addField("Commandes", "!devintime absent (raison) (temps)", true)
+                        .setTitle("Aide")
+                        .setDescription("aide")
+                        .addField("Commandes", "!devintime", true)
                         .setColor("0xFAAC58")
                         .setFooter("Dev in Time")
                     message.channel.sendEmbed(aide);
