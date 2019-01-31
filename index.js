@@ -72,8 +72,8 @@ bot.on('message', message => {
                     tMessage = message.content.slice (17);
 
                     var embed1 = new Discord.RichEmbed()
-                        .setTitle("Absence")
-                        .setDescription("Envoyé")
+                        .setTitle("Envoyé!")
+                        .setDescription("Absence envoyé")
                         .addField("Raison de votre absence", tMessage, true)
                         .setColor("0xFACC2E")
                         .setFooter("Dev in Time")
