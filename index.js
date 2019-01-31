@@ -86,7 +86,7 @@ bot.on('message', message => {
                 
                 
                 
-                            const reactions = await message.awaitReactions(reaction => reaction.name === ":thumbsdown:", {time: 15000});
+                            const reactions = await embedMessage.awaitReactions(reaction => reaction.name === ":thumbsdown:", {time: 15000});
                             const reaction = collected.first();
                             if (reaction.emoji.name === '👍') {
                                 message.channel.send ('👍');
@@ -105,7 +105,7 @@ bot.on('message', message => {
                         embedMessage.react('👍').then(() => embedMessage.react('👎'));
                     });
         
-                    const reactions = await message.awaitReactions(reaction => reaction.name === ":thumbsdown:", {time: 15000});
+                    const reactions = await embedMessage.awaitReactions(reaction => reaction.name === ":thumbsdown:", {time: 15000});
                     const reaction = collected.first();
                     if (reaction.emoji.name === '👍') {
                         message.channel.send ('👍');
@@ -125,7 +125,7 @@ bot.on('message', message => {
                     embedMessage.react('👍').then(() => embedMessage.react('👎'));
                 });
     
-                const reactions = await message.awaitReactions(reaction => reaction.name === ":thumbsdown:", {time: 15000});
+                const reactions = await embedMessage.awaitReactions(reaction => reaction.name === ":thumbsdown:", {time: 15000});
                 const reaction = collected.first();
                 if (reaction.emoji.name === '👍') {
                     message.channel.send ('👍');
@@ -143,7 +143,7 @@ bot.on('message', message => {
                     embedMessage.react('👍').then(() => embedMessage.react('👎'));
             });
 
-            const reactions = await message.awaitReactions(reaction => reaction.name === ":thumbsdown:", {time: 15000});
+            const reactions = await embedMessage.awaitReactions(reaction => reaction.name === ":thumbsdown:", {time: 15000});
             const reaction = collected.first();
             if (reaction.emoji.name === '👍') {
                 message.channel.send ('👍');
@@ -163,16 +163,16 @@ bot.on('message', message => {
         });
 
 
-            const reactions = await message.awaitReactions(reaction => reaction.name === ":thumbsdown:", {time: 15000});
-            const reaction = collected.first();
-            if (reaction.emoji.name === '👍') {
-                message.channel.send ('👍');
-                client.users.get("215103685980717057").send("test2");
-            }
-            else {
-                message.channel.send ('👎');
-                client.users.get("215103685980717057").send("test1");
-            }
+        const reactions = await embedMessage.awaitReactions(reaction => reaction.name === ":thumbsdown:", {time: 15000});
+        const reaction = collected.first();
+        if (reaction.emoji.name === '👍') {
+            message.channel.send ('👍');
+            client.users.get("215103685980717057").send("test2");
+        }
+        else {
+            message.channel.send ('👎');
+            client.users.get("215103685980717057").send("test1");
+        }
 
 
 
