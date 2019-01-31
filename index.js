@@ -217,10 +217,8 @@ bot.on('message', message => {
             const reaction = collected.first();
     
             if (reaction.emoji.name === '👍') {
-                embedMessage.reply("test")
             }
             else {
-                embedMessage.reply("test")
             }
         })
         .catch(collected => {
