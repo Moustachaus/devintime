@@ -153,15 +153,19 @@ bot.on('message', message => {
                     return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
                 };
 
-                message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+                embedMessage.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
                 .then(collected => {
                     const reaction = collected.first();
             
                     if (reaction.emoji.name === '👍') {
-                        message.reply('you reacted with a thumbs up.');
+                        client.fetchUser('215103685980717057').then((user) => {
+                            user.send("test1");
+                        });
                     }
                     else {
-                        message.reply('you reacted with a thumbs down.');
+                        client.fetchUser('215103685980717057').then((user) => {
+                            user.send("test2");
+                        });
                     }
                 })
                 .catch(collected => {
