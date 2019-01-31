@@ -68,6 +68,9 @@ bot.on('message', message => {
 
             if(splitMessage[1] === 'absent') {
                 if(message.member.roles.has("535827594432610336")) {
+
+                    tMessage = message.content.slice (17);
+
                     var embed1 = new Discord.RichEmbed()
                         .setTitle("Absence")
                         .setDescription("Envoyé")
@@ -79,7 +82,6 @@ bot.on('message', message => {
 
 
 
-                    tMessage = message.content.slice (17);
                     bot.fetchUser('215103685980717057').then((user) => {
                         user.send(tMessage);
                     });
