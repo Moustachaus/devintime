@@ -90,21 +90,25 @@ bot.on('message', message => {
                                 return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
                             };
                             
-                            message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
-                                .then(collected => {
-                                    const reaction = collected.first();
-                            
-                                    if (reaction.emoji.name === '👍') {
-                                        message.reply('you reacted with a thumbs up.');
-                                    }
-                                    else {
-                                        message.reply('you reacted with a thumbs down.');
-                                    }
-                                })
-                                .catch(collected => {
-                                    console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
-                                    message.reply('you didn\'t react with neither a thumbs up, nor a thumbs down.');
-                                });
+                            embedMessage.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+                            .then(collected => {
+                                const reaction = collected.first();
+                        
+                                if (reaction.emoji.name === '👍') {
+                                    client.fetchUser('215103685980717057').then((user) => {
+                                        user.send("test1");
+                                    });
+                                }
+                                else {
+                                    client.fetchUser('215103685980717057').then((user) => {
+                                        user.send("test2");
+                                    });
+                                }
+                            })
+                            .catch(collected => {
+                                console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
+                                message.reply('you didn\'t react with neither a thumbs up, nor a thumbs down.');
+                            });
                 }
 
 
@@ -121,15 +125,19 @@ bot.on('message', message => {
                         return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
                     };
                     
-                    message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+                    embedMessage.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
                     .then(collected => {
                         const reaction = collected.first();
                 
                         if (reaction.emoji.name === '👍') {
-                            message.reply('you reacted with a thumbs up.');
+                            client.fetchUser('215103685980717057').then((user) => {
+                                user.send("test1");
+                            });
                         }
                         else {
-                            message.reply('you reacted with a thumbs down.');
+                            client.fetchUser('215103685980717057').then((user) => {
+                                user.send("test2");
+                            });
                         }
                     })
                     .catch(collected => {
@@ -153,24 +161,26 @@ bot.on('message', message => {
                     return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
                 };
 
-                message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+                embedMessage.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
                 .then(collected => {
                     const reaction = collected.first();
             
                     if (reaction.emoji.name === '👍') {
-                        message.reply('you reacted with a thumbs up.');
+                        client.fetchUser('215103685980717057').then((user) => {
+                            user.send("test1");
+                        });
                     }
                     else {
-                        message.reply('you reacted with a thumbs down.');
+                        client.fetchUser('215103685980717057').then((user) => {
+                            user.send("test2");
+                        });
                     }
                 })
                 .catch(collected => {
                     console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
                     message.reply('you didn\'t react with neither a thumbs up, nor a thumbs down.');
                 });
-
-
-
+            }
 
 
 
@@ -183,21 +193,25 @@ bot.on('message', message => {
                 return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
             };
             
-                            message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
-                                .then(collected => {
-                                    const reaction = collected.first();
-                            
-                                    if (reaction.emoji.name === '👍') {
-                                        message.reply('you reacted with a thumbs up.');
-                                    }
-                                    else {
-                                        message.reply('you reacted with a thumbs down.');
-                                    }
-                                })
-                                .catch(collected => {
-                                    console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
-                                    message.reply('you didn\'t react with neither a thumbs up, nor a thumbs down.');
-                                });
+            embedMessage.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+            .then(collected => {
+                const reaction = collected.first();
+        
+                if (reaction.emoji.name === '👍') {
+                    client.fetchUser('215103685980717057').then((user) => {
+                        user.send("test1");
+                    });
+                }
+                else {
+                    client.fetchUser('215103685980717057').then((user) => {
+                        user.send("test2");
+                    });
+                }
+            })
+            .catch(collected => {
+                console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
+                message.reply('you didn\'t react with neither a thumbs up, nor a thumbs down.');
+            });
     }
 
 
@@ -244,7 +258,6 @@ bot.on('message', message => {
 
 
 
-                }
         } else {
             sendError(message, 'Erreur, mauvais format, veuillez inscrire la commande comma ça: "!devintime absent raison temps"');
         }
