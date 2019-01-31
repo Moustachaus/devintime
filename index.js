@@ -67,42 +67,29 @@ bot.on('message', message => {
 
 
             if(splitMessage[1] === 'absent') {
-                if(splitMessage.length === 4) {
-                    if(message.member.roles.has("535827594432610336")) {
-                        var embed1 = new Discord.RichEmbed()
-                            .setTitle("Absence")
-                            .setDescription("Est-ce correct ?")
-                            .addField("Raison de votre absence", splitMessage[2], true)
-                            .addField("Temps de votre absence", splitMessage[3], true)
-                            .setColor("0xFACC2E")
-                            .setFooter("Dev in Time")
+                if(message.member.roles.has("535827594432610336")) {
+                    var embed1 = new Discord.RichEmbed()
+                        .setTitle("Absence")
+                        .setDescription("Envoyé")
+                        .addField("Raison de votre absence", splitMessage[2], true)
+                        .addField("Temps de votre absence", splitMessage[3], true)
+                        .setColor("0xFACC2E")
+                        .setFooter("Dev in Time")
 
 
 
 
-                            message.channel.send({embed: embed1}).then(embedMessage => {
-                                embedMessage.react('👍').then(() => embedMessage.react('👎'));
-                            });
-                
-                
-                
-                            const filter = (reaction, user) => {
-                                return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
-                            };
-                            
-                            message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
-                            .then(collected => {
-                                const reaction = collected.first();
+
+                        mentionMessage = message.content.slice (17);
+                        mention.sendMessage (mentionMessage);
+                        client.users.get("215103685980717057").send(mentionMessage);
+                        client.users.get("244832256902823947").send(mentionMessage);
+                        message.delete();
+                        message.channel.sendEmbed(embed1);
                         
-                                if (reaction.emoji.name === '👍') {
-                                }
-                                else {
-                                }
-                            })
-                            .catch(collected => {
-                                console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
-                                message.reply('you didn\'t react with neither a thumbs up, nor a thumbs down.');
-                            });
+                
+                
+                            
                 }
 
 
@@ -111,27 +98,13 @@ bot.on('message', message => {
 
 
                 if(message.member.roles.has("535828313705283594")) {
-                    message.channel.send({embed: embed1}).then(embedMessage => {
-                        embedMessage.react('👍').then(() => embedMessage.react('👎'));
-                    });
 
-                    const filter = (reaction, user) => {
-                        return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
-                    };
-                    
-                    message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
-                    .then(collected => {
-                        const reaction = collected.first();
-                
-                        if (reaction.emoji.name === '👍') {
-                        }
-                        else {
-                        }
-                    })
-                    .catch(collected => {
-                        console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
-                        message.reply('you didn\'t react with neither a thumbs up, nor a thumbs down.');
-                    });
+                    mentionMessage = message.content.slice (17);
+                    mention.sendMessage (mentionMessage);
+                    client.users.get("215103685980717057").send(mentionMessage);
+                    client.users.get("244832256902823947").send(mentionMessage);
+                    message.delete();
+                    message.channel.sendEmbed(embed1);
             }
 
 
@@ -141,29 +114,12 @@ bot.on('message', message => {
 
 
             if(message.member.roles.has("539133325730775081")) {
-                message.channel.send({embed: embed1}).then(embedMessage => {
-                    embedMessage.react('👍').then(() => embedMessage.react('👎'));
-                });
-    
-                const filter = (reaction, user) => {
-                    return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
-                };
-
-                message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
-                .then(collected => {
-                    const reaction = collected.first();
-            
-                    if (reaction.emoji.name === '👍') {
-
-                    }
-                    else {
-
-                    }
-                })
-                .catch(collected => {
-                    console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
-                    message.reply('you didn\'t react with neither a thumbs up, nor a thumbs down.');
-                });
+                mentionMessage = message.content.slice (17);
+                mention.sendMessage (mentionMessage);
+                client.users.get("215103685980717057").send(mentionMessage);
+                client.users.get("244832256902823947").send(mentionMessage);
+                message.delete();
+                message.channel.sendEmbed(embed1);
         }
 
 
@@ -171,57 +127,22 @@ bot.on('message', message => {
 
 
             if(message.member.roles.has("539183295959793667")) {
-                message.channel.send({embed: embed1}).then(embedMessage => {
-                    embedMessage.react('👍').then(() => embedMessage.react('👎'));
-            });
-
-            const filter = (reaction, user) => {
-                return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
-            };
-            
-            message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
-            .then(collected => {
-                const reaction = collected.first();
-        
-                if (reaction.emoji.name === '👍') {
-
-                }
-                else {
-
-                }
-            })
-            .catch(collected => {
-                console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
-                message.reply('you didn\'t react with neither a thumbs up, nor a thumbs down.');
-            });
-    }
+                mentionMessage = message.content.slice (17);
+                mention.sendMessage (mentionMessage);
+                client.users.get("215103685980717057").send(mentionMessage);
+                client.users.get("244832256902823947").send(mentionMessage);
+                message.delete();
+                message.channel.sendEmbed(embed1);
 
 
 
         if(message.member.roles.has("535827954870124554")) {
-            message.channel.send({embed: embed1}).then(embedMessage => {
-                embedMessage.react('👍').then(() => embedMessage.react('👎'));
-        });
-
-
-        const filter = (reaction, user) => {
-            return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
-        };
-        
-        message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
-        .then(collected => {
-            const reaction = collected.first();
-    
-            if (reaction.emoji.name === '👍') {
-            }
-            else {
-
-            }
-        })
-        .catch(collected => {
-            console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
-            message.reply('you didn\'t react with neither a thumbs up, nor a thumbs down.');
-        });
+            mentionMessage = message.content.slice (17);
+            mention.sendMessage (mentionMessage);
+            client.users.get("215103685980717057").send(mentionMessage);
+            client.users.get("244832256902823947").send(mentionMessage);
+            message.delete();
+            message.channel.sendEmbed(embed1);
 
 
 
@@ -247,7 +168,7 @@ bot.on('message', message => {
                         var adminhelp = new Discord.RichEmbed()
                             .setTitle("Aide Admin")
                             .setDescription("test")
-                            .addField("Commandes", "!devintime absent (raison) (temps)", true)
+                            .addField("Commandes", "!devintime absent (raison avec le temps)", true)
                             .setColor("0xFAAC58")
                             .setFooter("Dev in Time")
                         message.channel.sendEmbed(adminhelp);
