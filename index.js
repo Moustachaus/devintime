@@ -212,13 +212,15 @@ bot.on('message', message => {
             return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
         };
         
-        message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+        embedMessage.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
         .then(collected => {
             const reaction = collected.first();
     
             if (reaction.emoji.name === '👍') {
+                embedMessage.reply("test")
             }
             else {
+                embedMessage.reply("test")
             }
         })
         .catch(collected => {
