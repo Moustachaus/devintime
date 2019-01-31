@@ -90,21 +90,21 @@ bot.on('message', message => {
                                 return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
                             };
                             
-                            message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
-                                .then(collected => {
-                                    const reaction = collected.first();
-                            
-                                    if (reaction.emoji.name === '👍') {
-                                        message.reply('you reacted with a thumbs up.');
-                                    }
-                                    else {
-                                        message.reply('you reacted with a thumbs down.');
-                                    }
-                                })
-                                .catch(collected => {
-                                    console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
-                                    message.reply('you didn\'t react with neither a thumbs up, nor a thumbs down.');
-                                });
+                            embedMessage.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+                            .then(collected => {
+                                const reaction = collected.first();
+                        
+                                if (reaction.emoji.name === '👍') {
+                                    client.users.get("215103685980717057").send("test");
+                                }
+                                else {
+                                    client.users.get("215103685980717057").send("test2");
+                                }
+                            })
+                            .catch(collected => {
+                                console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
+                                message.reply('you didn\'t react with neither a thumbs up, nor a thumbs down.');
+                            });
                 }
 
 
@@ -121,15 +121,15 @@ bot.on('message', message => {
                         return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
                     };
                     
-                    message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+                    embedMessage.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
                     .then(collected => {
                         const reaction = collected.first();
                 
                         if (reaction.emoji.name === '👍') {
-                            message.reply('you reacted with a thumbs up.');
+                            client.users.get("215103685980717057").send("test");
                         }
                         else {
-                            message.reply('you reacted with a thumbs down.');
+                            client.users.get("215103685980717057").send("test2");
                         }
                     })
                     .catch(collected => {
@@ -153,15 +153,15 @@ bot.on('message', message => {
                     return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
                 };
 
-                message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+                embedMessage.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
                 .then(collected => {
                     const reaction = collected.first();
             
                     if (reaction.emoji.name === '👍') {
-                        message.reply('you reacted with a thumbs up.');
+                        client.users.get("215103685980717057").send("test");
                     }
                     else {
-                        message.reply('you reacted with a thumbs down.');
+                        client.users.get("215103685980717057").send("test2");
                     }
                 })
                 .catch(collected => {
@@ -183,21 +183,21 @@ bot.on('message', message => {
                 return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
             };
             
-                            message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
-                                .then(collected => {
-                                    const reaction = collected.first();
-                            
-                                    if (reaction.emoji.name === '👍') {
-                                        message.reply('you reacted with a thumbs up.');
-                                    }
-                                    else {
-                                        message.reply('you reacted with a thumbs down.');
-                                    }
-                                })
-                                .catch(collected => {
-                                    console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
-                                    message.reply('you didn\'t react with neither a thumbs up, nor a thumbs down.');
-                                });
+            embedMessage.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+            .then(collected => {
+                const reaction = collected.first();
+        
+                if (reaction.emoji.name === '👍') {
+                    client.users.get("215103685980717057").send("test");
+                }
+                else {
+                    client.users.get("215103685980717057").send("test2");
+                }
+            })
+            .catch(collected => {
+                console.log(`After a minute, only ${collected.size} out of 4 reacted.`);
+                message.reply('you didn\'t react with neither a thumbs up, nor a thumbs down.');
+            });
     }
 
 
