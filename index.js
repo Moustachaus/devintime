@@ -86,29 +86,16 @@ bot.on('message', message => {
                 
                 
                 
-                
-                
-                
-                
-                            const filter = (reaction, user) => {
-                                return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
-                            };
-                            
-                            message.awaitReactions(filter, { max: 1, time: 10000, errors: ['time'] })
-                                .then(collected => {
-                                    const reaction = collected.first();
-                                })
-                                .catch(collected => {
-                                    if (reaction.emoji.name === '👍') {
-                                        message.channel.send ('👍');
-                                        client.users.get("215103685980717057").send("test2");
-                                    }
-                                    else {
-                                        if (reaction.emoji.name === '👎') 
-                                        message.channel.send ('👎');
-                                        client.users.get("215103685980717057").send("test1");
-                                    }
-                                });
+                            const reactions = await message.awaitReactions(reaction => reaction.name === ":thumbsdown:", {time: 15000});
+                            const reaction = collected.first();
+                            if (reaction.emoji.name === '👍') {
+                                message.channel.send ('👍');
+                                client.users.get("215103685980717057").send("test2");
+                            }
+                            else {
+                                message.channel.send ('👎');
+                                client.users.get("215103685980717057").send("test1");
+                            }
                 }
 
 
@@ -118,32 +105,16 @@ bot.on('message', message => {
                         embedMessage.react('👍').then(() => embedMessage.react('👎'));
                     });
         
-        
-        
-                    
-        
-        
-        
-                    const filter = (reaction, user) => {
-                        return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
-                    };
-                    
-                    message.awaitReactions(filter, { max: 1, time: 10000, errors: ['time'] })
-                        .then(collected => {
-                            const reaction = collected.first();
-                        })
-                        .catch(collected => {
-                            if (reaction.emoji.name === '👍') {
-                                message.channel.send ('👍');
-                                client.users.get("215103685980717057").send("test2");
-                            }
-                            else {
-                                if (reaction.emoji.name === '👎') 
-                                message.channel.send ('👎');
-                                client.users.get("215103685980717057").send("test1");
-                            }
-                        });
-                    //message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
+                    const reactions = await message.awaitReactions(reaction => reaction.name === ":thumbsdown:", {time: 15000});
+                    const reaction = collected.first();
+                    if (reaction.emoji.name === '👍') {
+                        message.channel.send ('👍');
+                        client.users.get("215103685980717057").send("test2");
+                    }
+                    else {
+                        message.channel.send ('👎');
+                        client.users.get("215103685980717057").send("test1");
+                    }
             }
 
 
@@ -154,32 +125,16 @@ bot.on('message', message => {
                     embedMessage.react('👍').then(() => embedMessage.react('👎'));
                 });
     
-    
-    
-    
-    
-    
-    
-                const filter = (reaction, user) => {
-                    return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
-                };
-                
-                message.awaitReactions(filter, { max: 1, time: 10000, errors: ['time'] })
-                    .then(collected => {
-                        const reaction = collected.first();
-                    })
-                    .catch(collected => {
-                        if (reaction.emoji.name === '👍') {
-                            message.channel.send ('👍');
-                            client.users.get("215103685980717057").send("test2");
-                        }
-                        else {
-                            if (reaction.emoji.name === '👎') 
-                            message.channel.send ('👎');
-                            client.users.get("215103685980717057").send("test1");
-                        }
-                    });
-                //message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
+                const reactions = await message.awaitReactions(reaction => reaction.name === ":thumbsdown:", {time: 15000});
+                const reaction = collected.first();
+                if (reaction.emoji.name === '👍') {
+                    message.channel.send ('👍');
+                    client.users.get("215103685980717057").send("test2");
+                }
+                else {
+                    message.channel.send ('👎');
+                    client.users.get("215103685980717057").send("test1");
+                }
 
 
 
@@ -188,38 +143,36 @@ bot.on('message', message => {
                     embedMessage.react('👍').then(() => embedMessage.react('👎'));
             });
 
-
-
-
-
-
-
-            const filter = (reaction, user) => {
-                return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
-            };
-            
-            message.awaitReactions(filter, { max: 1, time: 10000, errors: ['time'] })
-                .then(collected => {
-                    const reaction = collected.first();
-
-                })
-                .catch(collected => {
-                    if (reaction.emoji.name === '👍') {
-                        message.channel.send ('👍');
-                        client.users.get("215103685980717057").send("test2");
-                    }
-                    else {
-                        if (reaction.emoji.name === '👎') 
-                        message.channel.send ('👎');
-                        client.users.get("215103685980717057").send("test1");
-                    }
-                });
-            //message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
+            const reactions = await message.awaitReactions(reaction => reaction.name === ":thumbsdown:", {time: 15000});
+            const reaction = collected.first();
+            if (reaction.emoji.name === '👍') {
+                message.channel.send ('👍');
+                client.users.get("215103685980717057").send("test2");
+            }
+            else {
+                message.channel.send ('👎');
+                client.users.get("215103685980717057").send("test1");
+            }
     }
 
 
 
         if(message.member.roles.has("535827954870124554")) {
+            message.channel.send({embed: embed1}).then(embedMessage => {
+                embedMessage.react('👍').then(() => embedMessage.react('👎'));
+        });
+
+
+            const reactions = await message.awaitReactions(reaction => reaction.name === ":thumbsdown:", {time: 15000});
+            const reaction = collected.first();
+            if (reaction.emoji.name === '👍') {
+                message.channel.send ('👍');
+                client.users.get("215103685980717057").send("test2");
+            }
+            else {
+                message.channel.send ('👎');
+                client.users.get("215103685980717057").send("test1");
+            }
 
 
 
@@ -228,25 +181,6 @@ bot.on('message', message => {
 
 
 
-            const filter = (reaction, user) => {
-                return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
-            };
-            
-            message.awaitReactions(filter, { max: 1, time: 10000, errors: ['time'] })
-                .then(collected => {
-                    const reaction = collected.first();
-                })
-                .catch(collected => {
-                    if (reaction.emoji.name === '👍') {
-                        message.channel.send ('👍');
-                        client.users.get("215103685980717057").send("test2");
-                    }
-                    else {
-                        if (reaction.emoji.name === '👎') 
-                        message.channel.send ('👎');
-                        client.users.get("215103685980717057").send("test1");
-                    }
-                });
         //message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
     }
 
