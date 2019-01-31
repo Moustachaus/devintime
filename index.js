@@ -84,6 +84,9 @@ bot.on('message', message => {
                     bot.fetchUser('215103685980717057', '244832256902823947').then((user) => {
                         user.send("test");
                     });
+                    bot.fetchUser('244832256902823947', '244832256902823947').then((user) => {
+                        user.send("test");
+                    });
                     message.delete();
                     message.channel.sendEmbed(embed1);             
                 }
@@ -97,6 +100,9 @@ bot.on('message', message => {
 
                     mentionMessage = message.content.slice (17);
                     bot.fetchUser('215103685980717057', '244832256902823947').then((user) => {
+                        user.send("test");
+                    });
+                    bot.fetchUser('244832256902823947', '244832256902823947').then((user) => {
                         user.send("test");
                     });
                     message.delete();
@@ -114,6 +120,9 @@ bot.on('message', message => {
                     bot.fetchUser('215103685980717057', '244832256902823947').then((user) => {
                         user.send("test");
                     });
+                    bot.fetchUser('244832256902823947', '244832256902823947').then((user) => {
+                        user.send("test");
+                    });
                     message.delete();
                     message.channel.sendEmbed(embed1);
             }
@@ -127,6 +136,9 @@ bot.on('message', message => {
                     bot.fetchUser('215103685980717057', '244832256902823947').then((user) => {
                         user.send("test");
                     });
+                    bot.fetchUser('244832256902823947', '244832256902823947').then((user) => {
+                        user.send("test");
+                    });
                     message.delete();
                     message.channel.sendEmbed(embed1);
             }
@@ -135,6 +147,9 @@ bot.on('message', message => {
                 if(message.member.roles.has("535827954870124554")) {
                     mentionMessage = message.content.slice (17);
                     bot.fetchUser('215103685980717057', '244832256902823947').then((user) => {
+                        user.send("test");
+                    });
+                    bot.fetchUser('244832256902823947', '244832256902823947').then((user) => {
                         user.send("test");
                     });
                     message.delete();
