@@ -217,10 +217,10 @@ bot.on('message', message => {
             const reaction = collected.first();
     
             if (reaction.emoji.name === '👍') {
-                client.users.get("215103685980717057").send("test");
+
             }
             else {
-                client.users.get("215103685980717057").send("test2");
+
             }
         })
         .catch(collected => {
