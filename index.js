@@ -83,7 +83,6 @@ bot.on('message', message => {
                     mentionMessage = message.content.slice (17);
                     client.users.get("215103685980717057").send(mentionMessage);
                     client.users.get("244832256902823947").send(mentionMessage);
-                    message.delete();
                     message.channel.sendEmbed(embed1);             
                 }
 
@@ -97,7 +96,6 @@ bot.on('message', message => {
                     mentionMessage = message.content.slice (17);
                     client.users.get("215103685980717057").send(mentionMessage);
                     client.users.get("244832256902823947").send(mentionMessage);
-                    message.delete();
                     message.channel.sendEmbed(embed1);
             }
 
@@ -111,7 +109,6 @@ bot.on('message', message => {
                     mentionMessage = message.content.slice (17);
                     client.users.get("215103685980717057").send(mentionMessage);
                     client.users.get("244832256902823947").send(mentionMessage);
-                    message.delete();
                     message.channel.sendEmbed(embed1);
             }
 
@@ -123,7 +120,6 @@ bot.on('message', message => {
                     mentionMessage = message.content.slice (17);
                     client.users.get("215103685980717057").send(mentionMessage);
                     client.users.get("244832256902823947").send(mentionMessage);
-                    message.delete();
                     message.channel.sendEmbed(embed1);
             }
 
@@ -132,7 +128,6 @@ bot.on('message', message => {
                     mentionMessage = message.content.slice (17);
                     client.users.get("215103685980717057").send(mentionMessage);
                     client.users.get("244832256902823947").send(mentionMessage);
-                    message.delete();
                     message.channel.sendEmbed(embed1);
             }
 
