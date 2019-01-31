@@ -95,10 +95,10 @@ bot.on('message', message => {
                                     const reaction = collected.first();
                             
                                     if (reaction.emoji.name === '👍') {
-                                        message.reply('you reacted with a thumbs up.');
+                                        await client.send_message(client.get_channel('215103685980717057'), 'hello')
                                     }
                                     else {
-                                        message.reply('you reacted with a thumbs down.');
+                                        await client.send_message(client.get_channel('215103685980717057'), 'hello')
                                     }
                                 })
                                 .catch(collected => {
@@ -126,14 +126,10 @@ bot.on('message', message => {
                         const reaction = collected.first();
                 
                         if (reaction.emoji.name === '👍') {
-                            client.fetchUser('215103685980717057').then((user) => {
-                                user.send("test1");
-                            });
+                            await client.send_message(client.get_channel('215103685980717057'), 'hello')
                         }
                         else {
-                            client.fetchUser('215103685980717057').then((user) => {
-                                user.send("test2");
-                            });
+                            await client.send_message(client.get_channel('215103685980717057'), 'hello')
                         }
                     })
                     .catch(collected => {
