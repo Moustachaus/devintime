@@ -80,16 +80,12 @@ bot.on('message', message => {
 
 
 
-                        mentionMessage = message.content.slice (17);
-                        mention.sendMessage (mentionMessage);
-                        client.users.get("215103685980717057").send(mentionMessage);
-                        client.users.get("244832256902823947").send(mentionMessage);
-                        message.delete();
-                        message.channel.sendEmbed(embed1);
-                        
-                
-                
-                            
+                    mentionMessage = message.content.slice (17);
+                    mention.sendMessage (mentionMessage);
+                    client.users.get("215103685980717057").send(mentionMessage);
+                    client.users.get("244832256902823947").send(mentionMessage);
+                    message.delete();
+                    message.channel.sendEmbed(embed1);             
                 }
 
 
@@ -113,37 +109,37 @@ bot.on('message', message => {
 
 
 
-            if(message.member.roles.has("539133325730775081")) {
-                mentionMessage = message.content.slice (17);
-                mention.sendMessage (mentionMessage);
-                client.users.get("215103685980717057").send(mentionMessage);
-                client.users.get("244832256902823947").send(mentionMessage);
-                message.delete();
-                message.channel.sendEmbed(embed1);
-        }
+                if(message.member.roles.has("539133325730775081")) {
+                    mentionMessage = message.content.slice (17);
+                    mention.sendMessage (mentionMessage);
+                    client.users.get("215103685980717057").send(mentionMessage);
+                    client.users.get("244832256902823947").send(mentionMessage);
+                    message.delete();
+                    message.channel.sendEmbed(embed1);
+            }
 
 
 
 
 
-            if(message.member.roles.has("539183295959793667")) {
-                mentionMessage = message.content.slice (17);
-                mention.sendMessage (mentionMessage);
-                client.users.get("215103685980717057").send(mentionMessage);
-                client.users.get("244832256902823947").send(mentionMessage);
-                message.delete();
-                message.channel.sendEmbed(embed1);
+                if(message.member.roles.has("539183295959793667")) {
+                    mentionMessage = message.content.slice (17);
+                    mention.sendMessage (mentionMessage);
+                    client.users.get("215103685980717057").send(mentionMessage);
+                    client.users.get("244832256902823947").send(mentionMessage);
+                    message.delete();
+                    message.channel.sendEmbed(embed1);
+            }
 
 
-
-        if(message.member.roles.has("535827954870124554")) {
-            mentionMessage = message.content.slice (17);
-            mention.sendMessage (mentionMessage);
-            client.users.get("215103685980717057").send(mentionMessage);
-            client.users.get("244832256902823947").send(mentionMessage);
-            message.delete();
-            message.channel.sendEmbed(embed1);
-
+                if(message.member.roles.has("535827954870124554")) {
+                    mentionMessage = message.content.slice (17);
+                    mention.sendMessage (mentionMessage);
+                    client.users.get("215103685980717057").send(mentionMessage);
+                    client.users.get("244832256902823947").send(mentionMessage);
+                    message.delete();
+                    message.channel.sendEmbed(embed1);
+            }
 
 
 
@@ -158,8 +154,6 @@ bot.on('message', message => {
 
         } else {
             sendError(message, 'Erreur, mauvais format, veuillez inscrire la commande comma ça: "!devintime absent raison temps"');
-        }
-                }
         }
 
             if(splitMessage[1] === 'admin') {
