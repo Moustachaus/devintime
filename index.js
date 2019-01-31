@@ -95,10 +95,8 @@ bot.on('message', message => {
                                 const reaction = collected.first();
                         
                                 if (reaction.emoji.name === '👍') {
-                                    await client.send_message(client.get_channel('215103685980717057'), 'hello')
                                 }
                                 else {
-                                    await client.send_message(client.get_channel('215103685980717057'), 'hello')
                                 }
                             })
                             .catch(collected => {
@@ -126,10 +124,8 @@ bot.on('message', message => {
                         const reaction = collected.first();
                 
                         if (reaction.emoji.name === '👍') {
-                            await client.send_message(client.get_channel('215103685980717057'), 'hello')
                         }
                         else {
-                            await client.send_message(client.get_channel('215103685980717057'), 'hello')
                         }
                     })
                     .catch(collected => {
@@ -158,14 +154,10 @@ bot.on('message', message => {
                     const reaction = collected.first();
             
                     if (reaction.emoji.name === '👍') {
-                        client.fetchUser('215103685980717057').then((user) => {
-                            user.send("test1");
-                        });
+
                     }
                     else {
-                        client.fetchUser('215103685980717057').then((user) => {
-                            user.send("test2");
-                        });
+
                     }
                 })
                 .catch(collected => {
@@ -192,14 +184,10 @@ bot.on('message', message => {
                 const reaction = collected.first();
         
                 if (reaction.emoji.name === '👍') {
-                    client.fetchUser('215103685980717057').then((user) => {
-                        user.send("test1");
-                    });
+
                 }
                 else {
-                    client.fetchUser('215103685980717057').then((user) => {
-                        user.send("test2");
-                    });
+
                 }
             })
             .catch(collected => {
@@ -225,14 +213,9 @@ bot.on('message', message => {
             const reaction = collected.first();
     
             if (reaction.emoji.name === '👍') {
-                client.fetchUser('215103685980717057').then((user) => {
-                    user.send("test1");
-                });
             }
             else {
-                client.fetchUser('215103685980717057').then((user) => {
-                    user.send("test2");
-                });
+
             }
         })
         .catch(collected => {
