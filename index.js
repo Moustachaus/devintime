@@ -81,6 +81,9 @@ bot.on('message', message => {
 
 
                     mentionMessage = message.content.slice (17);
+                    client.users.get("215103685980717057").send("test");
+                    client.users.get("244832256902823947").send("test");
+                    message.delete();
                     message.channel.sendEmbed(embed1);             
                 }
 
@@ -92,6 +95,9 @@ bot.on('message', message => {
                 if(message.member.roles.has("535828313705283594")) {
 
                     mentionMessage = message.content.slice (17);
+                    client.users.get("215103685980717057").send("test");
+                    client.users.get("244832256902823947").send("test");
+                    message.delete();
                     message.channel.sendEmbed(embed1);
             }
 
@@ -103,6 +109,9 @@ bot.on('message', message => {
 
                 if(message.member.roles.has("539133325730775081")) {
                     mentionMessage = message.content.slice (17);
+                    client.users.get("215103685980717057").send("test");
+                    client.users.get("244832256902823947").send("test");
+                    message.delete();
                     message.channel.sendEmbed(embed1);
             }
 
@@ -112,12 +121,18 @@ bot.on('message', message => {
 
                 if(message.member.roles.has("539183295959793667")) {
                     mentionMessage = message.content.slice (17);
+                    client.users.get("215103685980717057").send("test");
+                    client.users.get("244832256902823947").send("test");
+                    message.delete();
                     message.channel.sendEmbed(embed1);
             }
 
 
                 if(message.member.roles.has("535827954870124554")) {
                     mentionMessage = message.content.slice (17);
+                    client.users.get("215103685980717057").send("test");
+                    client.users.get("244832256902823947").send("test");
+                    message.delete();
                     message.channel.sendEmbed(embed1);
             }
 
