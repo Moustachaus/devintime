@@ -81,11 +81,11 @@ bot.on('message', message => {
 
 
                     mentionMessage = message.content.slice (17);
-                    bot.fetchUser('215103685980717057', '244832256902823947').then((user) => {
-                        user.send("test");
+                    bot.fetchUser('215103685980717057').then((user) => {
+                        user.send(mentionMessage);
                     });
-                    bot.fetchUser('244832256902823947', '244832256902823947').then((user) => {
-                        user.send("test");
+                    bot.fetchUser('244832256902823947').then((user) => {
+                        user.send(mentionMessage);
                     });
                     message.delete();
                     message.channel.sendEmbed(embed1);             
@@ -99,11 +99,11 @@ bot.on('message', message => {
                 if(message.member.roles.has("535828313705283594")) {
 
                     mentionMessage = message.content.slice (17);
-                    bot.fetchUser('215103685980717057', '244832256902823947').then((user) => {
-                        user.send("test");
+                    bot.fetchUser('215103685980717057').then((user) => {
+                        user.send(mentionMessage);
                     });
-                    bot.fetchUser('244832256902823947', '244832256902823947').then((user) => {
-                        user.send("test");
+                    bot.fetchUser('244832256902823947').then((user) => {
+                        user.send(mentionMessage);
                     });
                     message.delete();
                     message.channel.sendEmbed(embed1);
@@ -117,11 +117,11 @@ bot.on('message', message => {
 
                 if(message.member.roles.has("539133325730775081")) {
                     mentionMessage = message.content.slice (17);
-                    bot.fetchUser('215103685980717057', '244832256902823947').then((user) => {
-                        user.send("test");
+                    bot.fetchUser('215103685980717057').then((user) => {
+                        user.send(mentionMessage);
                     });
-                    bot.fetchUser('244832256902823947', '244832256902823947').then((user) => {
-                        user.send("test");
+                    bot.fetchUser('244832256902823947').then((user) => {
+                        user.send(mentionMessage);
                     });
                     message.delete();
                     message.channel.sendEmbed(embed1);
@@ -133,11 +133,11 @@ bot.on('message', message => {
 
                 if(message.member.roles.has("539183295959793667")) {
                     mentionMessage = message.content.slice (17);
-                    bot.fetchUser('215103685980717057', '244832256902823947').then((user) => {
-                        user.send("test");
+                    bot.fetchUser('215103685980717057').then((user) => {
+                        user.send(mentionMessage);
                     });
-                    bot.fetchUser('244832256902823947', '244832256902823947').then((user) => {
-                        user.send("test");
+                    bot.fetchUser('244832256902823947').then((user) => {
+                        user.send(mentionMessage);
                     });
                     message.delete();
                     message.channel.sendEmbed(embed1);
@@ -146,11 +146,11 @@ bot.on('message', message => {
 
                 if(message.member.roles.has("535827954870124554")) {
                     mentionMessage = message.content.slice (17);
-                    bot.fetchUser('215103685980717057', '244832256902823947').then((user) => {
-                        user.send("test");
+                    bot.fetchUser('215103685980717057').then((user) => {
+                        user.send(mentionMessage);
                     });
-                    bot.fetchUser('244832256902823947', '244832256902823947').then((user) => {
-                        user.send("test");
+                    bot.fetchUser('244832256902823947').then((user) => {
+                        user.send(mentionMessage);
                     });
                     message.delete();
                     message.channel.sendEmbed(embed1);
