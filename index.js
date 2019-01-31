@@ -84,9 +84,6 @@ bot.on('message', message => {
                     client.fetchUser('215103685980717057').then((user) => {
                         user.send("test");
                     });
-                    client.fetchUser('244832256902823947').then((user) => {
-                        user.send("test");
-                    });
                     message.delete();
                     message.channel.sendEmbed(embed1);             
                 }
@@ -100,9 +97,6 @@ bot.on('message', message => {
 
                     mentionMessage = message.content.slice (17);
                     client.fetchUser('215103685980717057').then((user) => {
-                        user.send("test");
-                    });
-                    client.fetchUser('244832256902823947').then((user) => {
                         user.send("test");
                     });
                     message.delete();
@@ -120,9 +114,6 @@ bot.on('message', message => {
                     client.fetchUser('215103685980717057').then((user) => {
                         user.send("test");
                     });
-                    client.fetchUser('244832256902823947').then((user) => {
-                        user.send("test");
-                    });
                     message.delete();
                     message.channel.sendEmbed(embed1);
             }
@@ -136,9 +127,6 @@ bot.on('message', message => {
                     client.fetchUser('215103685980717057').then((user) => {
                         user.send("test");
                     });
-                    client.fetchUser('244832256902823947').then((user) => {
-                        user.send("test");
-                    });
                     message.delete();
                     message.channel.sendEmbed(embed1);
             }
@@ -147,9 +135,6 @@ bot.on('message', message => {
                 if(message.member.roles.has("535827954870124554")) {
                     mentionMessage = message.content.slice (17);
                     client.fetchUser('215103685980717057').then((user) => {
-                        user.send("test");
-                    });
-                    client.fetchUser('244832256902823947').then((user) => {
                         user.send("test");
                     });
                     message.delete();
