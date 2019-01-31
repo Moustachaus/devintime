@@ -79,7 +79,7 @@ bot.on('message', message => {
 
 
 
-                        tMessage = message.content.slice (17);
+                    tMessage = message.content.slice (17);
                     bot.fetchUser('215103685980717057').then((user) => {
                         user.send(tMessage);
                     });
