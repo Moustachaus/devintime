@@ -212,8 +212,12 @@ bot.on('guildMemberAdd', member => {
     .setDescription("t")
     .addField("Si tu as un problème passe dans le salon #support", true)
     .addField("N'oublie pas de lire les règlements !", true)
+    .addField("Voici le [site](http://dev-in-time.com)", true)
+    //.setThumbnail(client.user.avatarURL)
     .setColor("0xFACC2E")
     .setFooter("Dev in Time")
+
+
 
     member.send("Bienvenue sur Dev in Time **"+ member.user.username + "**, merci d'avoir rejoin le serveur ! Si tu as un problème passe dans le salon #support. **N'oublie pas de lire les règlements !**");
  });
