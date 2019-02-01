@@ -205,7 +205,7 @@ bot.on('message', message => {
         var commande = new Discord.RichEmbed()
             .setTitle("Commande personnalisée envoyé !")
             .setDescription("**Votre commande personnalisée à été envoyé !**")
-            .addField(" ", false)
+            .addField(".", ".", true)
             .setColor("0x42D321")
             .setFooter("• Dev in Time •")
         message.channel.sendEmbed(commande);
@@ -214,7 +214,7 @@ bot.on('message', message => {
         var commanderec = new Discord.RichEmbed()
             .setTitle("Commande personnalisée reçus !")
             .setDescription("**Une commande personnalisée à été reçus !**")
-            .addField(" ", false)
+            .addField(".", ".", true)
             .setColor("0x42D321")
             .setFooter("• Dev in Time •")
         message.channel.sendEmbed(commande);
