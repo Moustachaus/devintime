@@ -227,7 +227,6 @@ bot.on('message', message => {
 
 
 
-        user.sendEmbed(commandepv)
 
         
 
