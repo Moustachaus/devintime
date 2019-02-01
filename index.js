@@ -205,25 +205,34 @@ bot.on('message', message => {
         var commande = new Discord.RichEmbed()
             .setTitle("Commande personnalisée envoyé !")
             .setDescription("**Votre commande personnalisée à été envoyé !**")
-            .addField(".", false)
+            .addField("Regardez dans vos messages privé pour plus d'infos !", "•", false)
             .setColor("0x42D321")
             .setFooter("• Dev in Time •")
         message.channel.sendEmbed(commande);
         message.delete();
+        commande1 = message.content.slice (18);
+        var commandepv = new Discord.RichEmbed()
+            .setTitle("Commande personnalisée envoyé !")
+            .setDescription("**Voici votre commande:**")
+            .addField(commande1, "•", true)
+            .setColor("0x42D321")
+            .setFooter("• Dev in Time •")
 
         var commanderec = new Discord.RichEmbed()
             .setTitle("Commande personnalisée reçus !")
             .setDescription("**Une commande personnalisée à été reçus !**")
-            .addField(".", false)
+            .addField(commande1, "•",  false)
             .setColor("0x42D321")
             .setFooter("• Dev in Time •")
 
 
 
-        commande1 = message.content.slice (18);
+        user.sendEmbed(commandepv)
+
+        
+
         bot.fetchUser('215103685980717057').then((user) => {
             user.sendEmbed(commanderec)
-            user.send(commande1);
         });
 
         }
