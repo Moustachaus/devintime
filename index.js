@@ -202,13 +202,13 @@ bot.on('message', message => {
     else if(splitMessage[0] === '!devintime') {
         if(splitMessage[1] === 'commande') {
             
-        var commande = new Discord.RichEmbed()
-            .setTitle("Commande personnalisée envoyé !")
-            .setDescription("**Votre commande personnalisée à été envoyé !**")
-            .addField("Regardez dans vos messages privé pour plus d'infos !", "•", true)
-            .setColor("0x42D321")
-            .setFooter("• Dev in Time •")
-        message.channel.sendEmbed(commande);
+        //var commande = new Discord.RichEmbed()
+        //    .setTitle("Commande personnalisée envoyé !")
+        //    .setDescription("**Votre commande personnalisée à été envoyé !**")
+        //    .addField("Regardez dans vos messages privé pour plus d'infos !", "•", true)
+        //    .setColor("0x42D321")
+        //    .setFooter("• Dev in Time •")
+        //message.channel.sendEmbed(commande);
         message.delete();
         commande1 = message.content.slice (19);
         var commandepv = new Discord.RichEmbed()
@@ -220,7 +220,7 @@ bot.on('message', message => {
 
         var commanderec = new Discord.RichEmbed()
             .setTitle("Commande personnalisée reçus !")
-            .setDescription("**Une commande personnalisée à été reçus !**")
+            .setDescription("**Une commande personnalisée a été reçus !**")
             .addField(commande1, "•", true)
             .setColor("0x42D321")
             .setFooter("• Dev in Time •")
@@ -237,6 +237,19 @@ bot.on('message', message => {
         }
     }
 
+    else if(splitMessage[0] === '!devintime') {
+        if(splitMessage[1] === '!sendcommande') {
+            if(message.member.roles.has("539183295959793667")) {
+                var commandesend = new Discord.RichEmbed()
+                .setTitle("Envoyer une Commande personnalisée")
+                .setDescription("**Vous pouvez faire votre propre commande avec cette commande !**")
+                .addField("•Vous n'avez qu'a écrire !devintime command (votre commande)•", "•", true)
+                .setColor("0x2169D3")
+                .setFooter("• Dev in Time •")
+    
+            }
+        }
+    }
 
 
 }
