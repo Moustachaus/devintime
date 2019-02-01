@@ -210,17 +210,17 @@ bot.on('guildMemberAdd', member => {
     var msgbvnembed = new Discord.RichEmbed()
     .setTitle("Bienvenue sur Dev in Time !")
     .setDescription("t")
-    .addField("Si tu as un problème passe dans le salon #support", true)
-    .addField("N'oublie pas de lire les règlements !", true)
-    .addField("Voici le site https://dev-in-time.com)", true)
-    .setColor("0xF6D430")
+    .addField("Si tu as un problème passe dans le salon #support", ".", true)
+    .addField("N'oublie pas de lire les règlements !", ".", true)
+    .addField("Voici le site https://dev-in-time.com)", ".", true)
+    .setColor("0x53DD73")
     .setFooter("Dev in Time")
 
     var bvnembed = new Discord.RichEmbed()
     .setTitle("Un nouveau !")
     .setDescription(" ")
     .addField("**" + member.user.username + "** a rejoint le serveur, Bienvenue !", ".", true)
-    .setColor("0xF6D430")
+    .setColor("0x53DD73")
     .setFooter("Dev in Time")
 
     member.sendEmbed(msgbvnembed);
