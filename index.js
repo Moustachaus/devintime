@@ -223,7 +223,6 @@ bot.on('guildMemberAdd', member => {
     .addField("**Membre: **", member.guild.memberCount, false)
     .setColor("0x53DD73")
     .setFooter("• Bienvenue sur Dev in Time •", member.user.displayAvatarURL)
-    .setTimestamp
 
     member.sendEmbed(msgbvnembed);
     member.guild.channels.get('535822252717899806').sendEmbed(bvnembed);
@@ -242,7 +241,6 @@ bot.on('guildMemberRemove', member => {
     .addField("**Membre: **", member.guild.memberCount, false)
     .setColor("0xE61919")
     .setFooter("• À la prochaine ! •", member.user.displayAvatarURL)
-    .setTimestamp
 
     member.guild.channels.get('535822252717899806').sendEmbed(byembed);
 
