@@ -193,8 +193,8 @@ bot.on('message', message => {
                         .setTitle("Aide")
                         .setDescription("aide")
                         .addField("Commandes", "!devintime", true)
-                        .setColor("0xFAAC58")
-                        .setFooter("Dev in Time")
+                        .setColor("0x4087D4")
+                        .setFooter("Notre site : https://dev-in-time.com")
                     message.channel.sendEmbed(aide);
         }
     }
