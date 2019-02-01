@@ -243,7 +243,11 @@ bot.on('guildMemberRemove', member => {
     .setFooter("• À la prochaine ! •", member.user.displayAvatarURL)
 
     member.guild.channels.get('535822252717899806').sendEmbed(byembed);
-    //
+
+    const memberCountChannel = member.guild.channels.find(channel => channel.name.startsWith("Membres :"))
+    memberCountChannel.setName(`Membres : ${ member.guild.memberCount }`)
+
+
 });
 
 
