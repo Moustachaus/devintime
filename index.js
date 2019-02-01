@@ -199,31 +199,7 @@ bot.on('message', message => {
         }
     }
 
-    else if(splitMessage[0] === '!devintime') {
-        if(splitMessage[1] === 'neww') {
-            var bvnembed1 = new Discord.RichEmbed()
-                .setTitle("Un nouveau !")
-                .setDescription("***Nom: ***" + member.user.name)
-                .addField("**" + member.user.username, "**a rejoint le serveur, Bienvenue !", true)
-                .setColor("0x53DD73")
-                .setFooter("Dev in Time")
 
-            member.guild.channels.get('539939029412741173').sendEmbed(bvnembed1);
-        }
-    }
-
-    else if(splitMessage[0] === '!devintime') {
-        if(splitMessage[1] === 'byee') {
-            var bvnembed2 = new Discord.RichEmbed()
-                .setTitle("Aurevoir !")
-                .setDescription("***Nom: ***" + member.user.name)
-                .addField("**" + member.user.username, "** a quitté le serveur !", true)
-                .setColor("0xE61919")
-                .setFooter("Dev in Time")
-
-            member.guild.channels.get('539939029412741173').sendEmbed(bvnembed2);
-        }
-    }
 }
 });
 
