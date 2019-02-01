@@ -210,7 +210,7 @@ bot.on('message', message => {
             .setFooter("• Dev in Time •")
         message.channel.sendEmbed(commande);
         message.delete();
-        commande1 = message.content.slice (18);
+        commande1 = message.content.slice (19);
         var commandepv = new Discord.RichEmbed()
             .setTitle("Commande personnalisée envoyé !")
             .setDescription("**Voici votre commande:**")
@@ -226,7 +226,7 @@ bot.on('message', message => {
             .setFooter("• Dev in Time •")
 
 
-
+        user.sendEmbed(commandepv);
 
         
 
