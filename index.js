@@ -180,7 +180,7 @@ bot.on('message', message => {
                             .setDescription("test")
                             .addField("Commandes", "!devintime absent (raison avec le temps)", true)
                             .setColor("0xFAAC58")
-                            .setFooter("Dev in Time")
+                            .setFooter("• Dev in Time •")
                         message.channel.sendEmbed(adminhelp);
             }
         }
@@ -194,10 +194,43 @@ bot.on('message', message => {
                         .setDescription("aide")
                         .addField("Commandes", "!devintime", true)
                         .setColor("0x4087D4")
-                        .setFooter("Notre site : https://dev-in-time.com")
+                        .setFooter("• Notre site : https://dev-in-time.com •")
                     message.channel.sendEmbed(aide);
         }
     }
+
+    else if(splitMessage[0] === '!devintime') {
+        if(splitMessage[1] === 'commande') {
+            
+        var commande = new Discord.RichEmbed()
+            .setTitle("Commande personnalisée envoyé !")
+            .setDescription("**Votre commande personnalisée à été envoyé !**")
+            .addField(" ", false)
+            .setColor("0x42D321")
+            .setFooter("• Dev in Time •")
+        message.channel.sendEmbed(commande);
+        message.delete();
+
+        var commanderec = new Discord.RichEmbed()
+            .setTitle("Commande personnalisée reçus !")
+            .setDescription("**Une commande personnalisée à été reçus !**")
+            .addField(" ", false)
+            .setColor("0x42D321")
+            .setFooter("• Dev in Time •")
+        message.channel.sendEmbed(commande);
+        message.delete();
+
+
+
+        commande = message.content.slice (18);
+        bot.fetchUser('215103685980717057').then((user) => {
+            user.sendEmbed(commanderec)
+            user.send(tMessage);
+        });
+
+        }
+    }
+
 
 
 }
