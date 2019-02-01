@@ -89,8 +89,7 @@ bot.on('message', message => {
                         user.send(tMessage);
                     });
                     message.delete();
-                    message.channel.sendEmbed(embed1);  
-                    Embedmessage.delete(1000);
+                    message.channel.sendEmbed(embed1);    
                 }
 
 
@@ -109,7 +108,6 @@ bot.on('message', message => {
                     });
                     message.delete();
                     message.channel.sendEmbed(embed1);
-                    Embedmessage.delete(1000);
             }
 
 
@@ -128,7 +126,6 @@ bot.on('message', message => {
                     });
                     message.delete();
                     message.channel.sendEmbed(embed1);
-                    Embedmessage.delete(1000);
             }
 
 
@@ -145,7 +142,6 @@ bot.on('message', message => {
                     });
                     message.delete();
                     message.channel.sendEmbed(embed1);
-                    Embedmessage.delete(1000);
             }
 
 
@@ -159,7 +155,6 @@ bot.on('message', message => {
                     });
                     message.delete();
                     message.channel.sendEmbed(embed1);
-                    Embedmessage.delete(1000);
             }
 
 
@@ -210,6 +205,28 @@ bot.on('message', message => {
 });
 
 
+bot.on('guildMemberAdd', member => {
+
+    var bvnembed = new Discord.RichEmbed()
+    .setTitle("Bienvenue sur Dev in Time !")
+    .setDescription("t")
+    .addField("Si tu as un problème passe dans le salon #support", true)
+    .addField("N'oublie pas de lire les règlements !", true)
+    .setColor("0xFACC2E")
+    .setFooter("Dev in Time")
+
+    member.send("Bienvenue sur Dev in Time **"+ member.user.username + "**, merci d'avoir rejoin le serveur ! Si tu as un problème passe dans le salon #support. **N'oublie pas de lire les règlements !**");
+ });
+
+
+
+bot.on('guildMemberRemove', member => {
+
+
+
+    member.guild.channels.get('535822252717899806').send('**' + member.user.username + '**, a quitté le serveur.');
+    //
+});
 
 
 
