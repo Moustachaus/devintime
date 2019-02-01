@@ -207,18 +207,25 @@ bot.on('message', message => {
 
 bot.on('guildMemberAdd', member => {
 
-    var bvnembed = new Discord.RichEmbed()
+    var msgbvnembed = new Discord.RichEmbed()
     .setTitle("Bienvenue sur Dev in Time !")
     .setDescription("t")
     .addField("Si tu as un problème passe dans le salon #support", true)
     .addField("N'oublie pas de lire les règlements !", true)
     .addField("Voici le site https://dev-in-time.com)", true)
+    .setColor("0xFACC2E")
+    .setFooter("Dev in Time")
+
+    var bvnembed = new Discord.RichEmbed()
+    .setTitle("Un nouveau !")
+    .setDescription("**" + member.user.username + "**a rejoint le serveur, Bienvenue !")
+    .addField("Si tu as un problème passe dans le salon #support", true)
     .setThumbnail(client.user.avatarURL)
     .setColor("0xFACC2E")
     .setFooter("Dev in Time")
 
-    member.sendEmbed(bvnembed);
-    member.guild.channels.get('535822252717899806').send('**' + member.user.username + '**, a rejoint le serveur. Bienvenue !');
+    member.sendEmbed(msgbvnembed);
+    member.guild.channels.get('535822252717899806').sendEmbed(bvnembed);
     member.send("Bienvenue sur Dev in Time **"+ member.user.username + "**, merci d'avoir rejoin le serveur ! Si tu as un problème passe dans le salon #support. **N'oublie pas de lire les règlements !**");
  });
 
