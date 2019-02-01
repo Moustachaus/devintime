@@ -219,7 +219,7 @@ bot.on('guildMemberAdd', member => {
     var bvnembed = new Discord.RichEmbed()
     .setTitle("Un nouveau !")
     .setDescription(" ")
-    .addField("**" + member.user.username + "** a rejoint le serveur, Bienvenue !",)
+    .addField("**" + member.user.username + "** a rejoint le serveur, Bienvenue !", " ", true)
     .setColor("0xFACC2E")
     .setFooter("Dev in Time")
 
