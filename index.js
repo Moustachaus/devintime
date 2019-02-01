@@ -89,7 +89,8 @@ bot.on('message', message => {
                         user.send(tMessage);
                     });
                     message.delete();
-                    message.channel.sendEmbed(embed1);             
+                    message.channel.sendEmbed(embed1);  
+                    Embedmessage.delete(1000);
                 }
 
 
@@ -108,6 +109,7 @@ bot.on('message', message => {
                     });
                     message.delete();
                     message.channel.sendEmbed(embed1);
+                    Embedmessage.delete(1000);
             }
 
 
@@ -126,6 +128,7 @@ bot.on('message', message => {
                     });
                     message.delete();
                     message.channel.sendEmbed(embed1);
+                    Embedmessage.delete(1000);
             }
 
 
@@ -142,6 +145,7 @@ bot.on('message', message => {
                     });
                     message.delete();
                     message.channel.sendEmbed(embed1);
+                    Embedmessage.delete(1000);
             }
 
 
@@ -155,6 +159,7 @@ bot.on('message', message => {
                     });
                     message.delete();
                     message.channel.sendEmbed(embed1);
+                    Embedmessage.delete(1000);
             }
 
 
