@@ -225,7 +225,7 @@ bot.on('guildMemberAdd', member => {
 
     member.sendEmbed(msgbvnembed);
     member.guild.channels.get('535822252717899806').sendEmbed(bvnembed);
-    member.send("Bienvenue sur Dev in Time **"+ member.user.username + "**, merci d'avoir rejoin le serveur ! Si tu as un problème passe dans le salon #support. **N'oublie pas de lire les règlements !**");
+    member.send("Bienvenue sur Dev in Time **"+ member.user.username + "**, merci d'avoir rejoint le serveur ! Si tu as un problème passe dans le salon #support. **N'oublie pas de lire les règlements !**");
  });
 
 
