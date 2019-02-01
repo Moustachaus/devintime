@@ -215,11 +215,14 @@ bot.on('guildMemberAdd', member => {
     .setColor("0x53DD73")
     .setFooter("• Dev in Time •")
 
+
+    let thumicon = message.guild.displayAvatarURL;
     var bvnembed = new Discord.RichEmbed()
     .setTitle("**Un nouveau !**")
     .setDescription("***Nom: ***" + member.user.username)
     .addField("**Membre: **", bot.users.length, true)
     .setColor("0x53DD73")
+    .setThumbnail(thumicon)
     .setFooter("• Bienvenue sur Dev in Time •")
 
     member.sendEmbed(msgbvnembed);
@@ -230,12 +233,13 @@ bot.on('guildMemberAdd', member => {
 
 
 bot.on('guildMemberRemove', member => {
-
+    let thumicon = message.guild.displayAvatarURL;
     var byembed = new Discord.RichEmbed()
     .setTitle("Aurevoir !")
     .setDescription("***Nom: ***" + member.user.username)
     .addField("**Membre: **", bot.users.length, true)
     .setColor("0xE61919")
+    .setThumbnail(thumicon)
     .setFooter("• À la prochaine ! •")
 
     member.guild.channels.get('535822252717899806').sendEmbed(byembed);
