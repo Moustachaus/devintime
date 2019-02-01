@@ -199,7 +199,18 @@ bot.on('message', message => {
         }
     }
 
+    else if(splitMessage[0] === '!devintime') {
+        if(splitMessage[1] === 'abcc') {
+            var bvnembed1 = new Discord.RichEmbed()
+            .setTitle("Un nouveau !")
+            .setDescription("***Nom: ***" + member.user.name)
+            .addField("**" + member.user.username, "**a rejoint le serveur, Bienvenue !", true)
+            .setColor("0x53DD73")
+            .setFooter("Dev in Time")
 
+            member.guild.channels.get('539939029412741173').sendEmbed(bvnembed1);
+        }
+    }
 
 }
 });
