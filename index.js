@@ -226,7 +226,7 @@ bot.on('message', message => {
             .setFooter("• Dev in Time •")
 
 
-        user.sendEmbed(commandepv);
+        message.author.send({commandepv});
 
         
 
