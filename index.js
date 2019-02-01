@@ -218,7 +218,7 @@ bot.on('guildMemberAdd', member => {
     var bvnembed = new Discord.RichEmbed()
     .setTitle("**Un nouveau !**")
     .setDescription("***Nom: ***" + member.user.username)
-    .addField("**Membre: **", Guild.memberCount, true)
+    .addField("**Membre: **", bot.users.length, true)
     .setColor("0x53DD73")
     .setFooter("• Bienvenue sur Dev in Time •")
 
@@ -234,7 +234,7 @@ bot.on('guildMemberRemove', member => {
     var byembed = new Discord.RichEmbed()
     .setTitle("Aurevoir !")
     .setDescription("***Nom: ***" + member.user.username)
-    .addField("**Membre: **", Guild.memberCount, true)
+    .addField("**Membre: **", bot.users.length, true)
     .setColor("0xE61919")
     .setFooter("• À la prochaine ! •")
 
