@@ -213,14 +213,14 @@ bot.on('guildMemberAdd', member => {
     .addField("N'oublie pas de lire les règlements !", ".", true)
     .addField("Voici le site https://dev-in-time.com)", ".", true)
     .setColor("0x53DD73")
-    .setFooter("Dev in Time")
+    .setFooter("• Dev in Time •")
 
     var bvnembed = new Discord.RichEmbed()
-    .setTitle("Un nouveau !")
+    .setTitle("**Un nouveau !**")
     .setDescription("***Nom: ***" + member.user.username)
-    .addField(member.user.username, "a rejoint le serveur, Bienvenue !", true)
+    .addField("**Membre: **", bot.users.length, true)
     .setColor("0x53DD73")
-    .setFooter("Dev in Time")
+    .setFooter("• Bienvenue sur Dev in Time •")
 
     member.sendEmbed(msgbvnembed);
     member.guild.channels.get('535822252717899806').sendEmbed(bvnembed);
@@ -234,9 +234,9 @@ bot.on('guildMemberRemove', member => {
     var byembed = new Discord.RichEmbed()
     .setTitle("Aurevoir !")
     .setDescription("***Nom: ***" + member.user.username)
-    .addField(member.user.username, "a quitté le serveur !", true)
+    .addField("**Membre: **", bot.users.length, true)
     .setColor("0xE61919")
-    .setFooter("Dev in Time")
+    .setFooter("• À la prochaine ! •")
 
     member.guild.channels.get('535822252717899806').sendEmbed(byembed);
     //
