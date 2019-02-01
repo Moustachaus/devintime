@@ -216,14 +216,13 @@ bot.on('guildMemberAdd', member => {
     .setFooter("• Dev in Time •")
 
 
-    let thumicon = message.guild.displayAvatarURL;
+
     var bvnembed = new Discord.RichEmbed()
     .setTitle("**Un nouveau !**")
     .setDescription("***Nom: ***" + member.user.username)
-    .addField("**Membre: **", bot.users.length, true)
+    .addField("**Membre: **", message.guild.memberCount, true)
     .setColor("0x53DD73")
-    .setThumbnail(thumicon)
-    .setFooter("• Bienvenue sur Dev in Time •")
+    .setFooter("• Bienvenue sur Dev in Time •", message.member.joinedAt)
 
     member.sendEmbed(msgbvnembed);
     member.guild.channels.get('535822252717899806').sendEmbed(bvnembed);
@@ -233,14 +232,12 @@ bot.on('guildMemberAdd', member => {
 
 
 bot.on('guildMemberRemove', member => {
-    let thumicon = message.guild.displayAvatarURL;
     var byembed = new Discord.RichEmbed()
     .setTitle("Aurevoir !")
     .setDescription("***Nom: ***" + member.user.username)
-    .addField("**Membre: **", bot.users.length, true)
+    .addField("**Membre: **", message.guild.memberCount, true)
     .setColor("0xE61919")
-    .setThumbnail(thumicon)
-    .setFooter("• À la prochaine ! •")
+    .setFooter("• À la prochaine ! •", message.member.joinedAt)
 
     member.guild.channels.get('535822252717899806').sendEmbed(byembed);
     //
