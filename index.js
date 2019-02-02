@@ -311,7 +311,7 @@ bot.on('guildMemberAdd', member => {
     member.send("Bienvenue sur Dev in Time **"+ member.user.username + "**, merci d'avoir rejoint le serveur ! Si tu as un problème passe dans le salon #support. **N'oublie pas de lire les règlements !**");
 
     const memberCountChannel = member.guild.channels.find(channel => channel.name.startsWith("Membres :"))
-    memberCountChannel.setName(`Membres : ${ member.guild.memberCount }`)
+    memberCountChannel.setName(`Membres : ${ member.guild.memberCount } :busts_in_silhouette:`)
  });
 
 
@@ -327,7 +327,7 @@ bot.on('guildMemberRemove', member => {
     member.guild.channels.get('535822252717899806').sendEmbed(byembed);
 
     const memberCountChannel = member.guild.channels.find(channel => channel.name.startsWith("Membres :"))
-    memberCountChannel.setName(`Membres : ${ member.guild.memberCount }`)
+    memberCountChannel.setName(`Membres : ${ member.guild.memberCount } :busts_in_silhouette: `)
 
 
 });
