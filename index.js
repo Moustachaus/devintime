@@ -238,8 +238,8 @@ bot.on('message', message => {
                     commande1 = message.content.slice (19);
                     var commandepv = new Discord.RichEmbed()
                         .setTitle("Commande personnalisée envoyé !")
-                        .setDescription("**Voici votre commande:**")
-                        .addField(commande1, "•", true)
+                        .setDescription("•")
+                        .addField("**Voici votre commande:**", commande1, true)
                         .addField("Votre commande est en attente", "Vous receverez un message sous peu!", true)
                         .setColor("0x42D321")
                         .setFooter("• Dev in Time •")
