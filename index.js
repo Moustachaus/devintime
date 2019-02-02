@@ -199,8 +199,8 @@ bot.on('message', message => {
         }
     }
 
-    else if(splitMessage[0] === '!devintime') {
-        if(splitMessage[1] === 'commande') {
+        else if(splitMessage[0] === '!devintime') {
+            if(splitMessage[1] === 'commande') {
             
         //var commande = new Discord.RichEmbed()
         //    .setTitle("Commande personnalisée envoyé !")
@@ -209,30 +209,30 @@ bot.on('message', message => {
         //    .setColor("0x42D321")
         //    .setFooter("• Dev in Time •")
         //message.channel.sendEmbed(commande);
-        message.delete();
-        commande1 = message.content.slice (19);
-        var commandepv = new Discord.RichEmbed()
-            .setTitle("Commande personnalisée envoyé !")
-            .setDescription("**Voici votre commande:**")
-            .addField(commande1, "•", true)
-            .setColor("0x42D321")
-            .setFooter("• Dev in Time •")
+            message.delete();
+            commande1 = message.content.slice (19);
+            var commandepv = new Discord.RichEmbed()
+                .setTitle("Commande personnalisée envoyé !")
+                .setDescription("**Voici votre commande:**")
+                .addField(commande1, "•", true)
+                .setColor("0x42D321")
+                .setFooter("• Dev in Time •")
 
-        var commanderec = new Discord.RichEmbed()
-            .setTitle("Commande personnalisée reçus !")
-            .setDescription("**Une commande personnalisée a été reçus !**")
-            .addField(commande1, "•", true)
-            .setColor("0x42D321")
-            .setFooter("• Dev in Time •")
+            var commanderec = new Discord.RichEmbed()
+                .setTitle("Commande personnalisée reçus !")
+                .setDescription("**Une commande personnalisée a été reçus !**")
+                .addField(commande1, "•", true)
+                .setColor("0x42D321")
+                .setFooter("• Dev in Time •")
 
 
-        message.author.send(commandepv);
+            message.author.send(commandepv);
 
         
 
-        bot.fetchUser('215103685980717057').then((user) => {
-            user.sendEmbed(commanderec)
-        });
+            bot.fetchUser('215103685980717057').then((user) => {
+                user.sendEmbed(commanderec)
+            });
 
         }
     }
