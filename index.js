@@ -87,6 +87,7 @@ bot.on('message', message => {
                         .setTitle("Envoyé!")
                         .setDescription("Absence reçus")
                         .addField("Raison de l'absence:", tMessage, true)
+                        .addField("De:", member.user.username, true)
                         .setColor("0xFACC2E")
                         .setFooter("• Dev in Time •")
 
