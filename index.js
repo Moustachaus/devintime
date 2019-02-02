@@ -54,9 +54,12 @@ bot.on('message', message => {
                 } else {
                     message.channel.send ("Tu n'as pas la permission de faire ça !");
                 }
-                  } else {
-                    sendError(message, 'Erreur, mauvais format, veuillez inscrire la commande comme ça: "!devintime msg (message)"');
-                }
+                  }// else {
+                    //sendError(message, 'Erreur, mauvais format, veuillez inscrire la commande comme ça: "!devintime msg (message)"');
+                //}
+                //else {
+                //    sendError(message, 'Erreur, mauvais format, veuillez inscrire la commande comme ça: "!devintime absent (raison + temps)"');
+                //}
 
 
 
@@ -166,8 +169,6 @@ bot.on('message', message => {
 
 
         //message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
-    } else {
-        sendError(message, 'Erreur, mauvais format, veuillez inscrire la commande comme ça: "!devintime absent (raison + temps)"');
     }
 
 
