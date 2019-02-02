@@ -241,11 +241,12 @@ bot.on('message', message => {
             if(splitMessage[1] === 'sendcommande') {
                 if(message.member.roles.has("535827594432610336")) {
                     var commandesend1 = new Discord.RichEmbed()
-                        .setTitle("Envoyer une Commande personnalisée")
-                        .setDescription("**Vous pouvez faire votre propre commande avec cette commande !**")
-                        .addField("•Vous n'avez qu'a écrire !devintime commande (votre commande)•", "•", true)
+                        .setTitle("Commande personnalisée reçus !")
+                        .setDescription("**Une commande personnalisée a été reçus !**")
+                        .addField(commande1, "•", true)
                         .setColor("0x42D321")
                         .setFooter("• Dev in Time •")
+    
                     message.delete();
             }
         }
