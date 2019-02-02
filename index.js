@@ -54,7 +54,9 @@ bot.on('message', message => {
                 } else {
                     message.channel.send ("Tu n'as pas la permission de faire ça !");
                 }
-                  }
+                  } else {
+                    sendError(message, 'Erreur, mauvais format, veuillez inscrire la commande comme ça: "!devintime msg (message)"');
+                }
 
 
 
@@ -164,12 +166,12 @@ bot.on('message', message => {
 
 
         //message.channel.send('Raison de votre absence: ' + splitMessage[2] + ' Temps de votre absence: ' + splitMessage[3]);
+    } else {
+        sendError(message, 'Erreur, mauvais format, veuillez inscrire la commande comme ça: "!devintime absent (raison + temps)"');
     }
 
 
 
-        } else {
-            sendError(message, 'Erreur, mauvais format, veuillez inscrire la commande comma ça: "!devintime absent raison temps"');
         }
 
             if(splitMessage[1] === 'admin') {
@@ -239,17 +241,17 @@ bot.on('message', message => {
 
         else if(splitMessage[0] === '!devintime') {
             if(splitMessage[1] === 'sendcommande') {
-                    var commandesende = new Discord.RichEmbed()
-                    .setTitle("Commande personnalisée reçus !")
-                    .setDescription("**Une commande personnalisée a été reçus !**")
-                    .addField("a", "a", true)
-                    .setColor("0x42D321")
+                var commandesende = new Discord.RichEmbed()
+                    .setTitle("Envoyer une Commande personnalisée")
+                    .setDescription("**Vous pouvez faire votre propre commande avec cette commande !**")
+                    .addField("•Vous n'avez qu'a écrire !devintime command (votre commande)•", "•", true)
+                    .setColor("0x2169D3")
                     .setFooter("• Dev in Time •")
 
 
-                    message.delete();
+                message.delete();
 
-                    message.channel.sendEmbed(commandesende);
+                message.channel.sendEmbed(commandesende);
         }
     }
 
