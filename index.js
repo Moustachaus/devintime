@@ -246,8 +246,8 @@ bot.on('message', message => {
                         .addField("•Vous n'avez qu'a écrire !devintime command (votre commande)•", "•", true)
                         .setColor("0x2169D3")
                         .setFooter("• Dev in Time •")
-                    message.channel.sendEmbed(commandesend);
                     message.delete();
+                    message.channel.sendEmbed(commandesend);
             }
         }
     }
