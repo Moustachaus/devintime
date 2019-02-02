@@ -239,14 +239,16 @@ bot.on('message', message => {
 
         else if(splitMessage[0] === '!devintime') {
             if(splitMessage[1] === 'sendcommande') {
-                    var commandesend = new Discord.RichEmbed()
+                if(message.member.roles.has("535827594432610336")) {
+                    var commandesend1 = new Discord.RichEmbed()
                         .setTitle("Envoyer une Commande personnalisée")
                         .setDescription("**Vous pouvez faire votre propre commande avec cette commande !**")
                         .addField("•Vous n'avez qu'a écrire !devintime command (votre commande)•", "•", true)
                         .setColor("0x2169D3")
                         .setFooter("• Dev in Time •")
                     message.delete();
-                    message.channel.sendEmbed(commandesend);
+                    message.channel.sendEmbed(commandesend1);
+            }
         }
     }
 
