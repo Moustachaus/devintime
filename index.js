@@ -248,7 +248,7 @@ bot.on('message', message => {
                         .setTitle("Commande personnalisée reçus !")
                         .setDescription("**Une commande personnalisée a été reçus !**")
                         .addField(commande1, "•", true)
-                        .addField("Nom:", member.user.username, true)
+                        .addField("De:", message.member.user.tag, true)
                         .setColor("0x42D321")
                         .setFooter("• Dev in Time •")
 
