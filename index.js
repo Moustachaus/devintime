@@ -243,8 +243,8 @@ bot.on('message', message => {
                     var commandesend1 = new Discord.RichEmbed()
                         .setTitle("Envoyer une Commande personnalisée")
                         .setDescription("**Vous pouvez faire votre propre commande avec cette commande !**")
-                        .addField("•Vous n'avez qu'a écrire !devintime command (votre commande)•", "•", true)
-                        .setColor("0x2169D3")
+                        .addField("•Vous n'avez qu'a écrire !devintime commande (votre commande)•", "•", true)
+                        .setColor("0x42D321")
                         .setFooter("• Dev in Time •")
                     message.delete();
                     message.channel.sendEmbed(commandesend1);
