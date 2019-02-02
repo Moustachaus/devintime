@@ -220,7 +220,7 @@ bot.on('message', message => {
             }
 
             if(splitMessage[1] === 'commande') {
-                
+                if (msg.channel.id === '539120346624819210') {
             //var commande = new Discord.RichEmbed()
             //    .setTitle("Commande personnalisée envoyé !")
             //    .setDescription("**Votre commande personnalisée à été envoyé !**")
@@ -228,31 +228,45 @@ bot.on('message', message => {
             //    .setColor("0x42D321")
             //    .setFooter("• Dev in Time •")
             //message.channel.sendEmbed(commande);
-                message.delete();
-                commande1 = message.content.slice (19);
-                var commandepv = new Discord.RichEmbed()
-                    .setTitle("Commande personnalisée envoyé !")
-                    .setDescription("**Voici votre commande:**")
-                    .addField(commande1, "•", true)
-                    .setColor("0x42D321")
-                    .setFooter("• Dev in Time •")
+                    message.delete();
+                    commande1 = message.content.slice (19);
+                    var commandepv = new Discord.RichEmbed()
+                        .setTitle("Commande personnalisée envoyé !")
+                        .setDescription("**Voici votre commande:**")
+                        .addField(commande1, "•", true)
+                        .setColor("0x42D321")
+                        .setFooter("• Dev in Time •")
 
-                var commanderec = new Discord.RichEmbed()
-                    .setTitle("Commande personnalisée reçus !")
-                    .setDescription("**Une commande personnalisée a été reçus !**")
-                    .addField(commande1, "•", true)
-                    .setColor("0x42D321")
-                    .setFooter("• Dev in Time •")
+                    var commanderec = new Discord.RichEmbed()
+                        .setTitle("Commande personnalisée reçus !")
+                        .setDescription("**Une commande personnalisée a été reçus !**")
+                        .addField(commande1, "•", true)
+                        .setColor("0x42D321")
+                        .setFooter("• Dev in Time •")
 
 
-                message.author.send(commandepv);
+                    message.author.send(commandepv);
 
-            
+                
 
-                bot.fetchUser('215103685980717057').then((user) => {
-                    user.sendEmbed(commanderec)
-                });
+                    bot.fetchUser('215103685980717057').then((user) => {
+                        user.sendEmbed(commanderec)
+                    });
 
+                } else {
+
+                    commande2 = message.content.slice (19);
+
+                    var aideslon = new Discord.RichEmbed()
+                        .setTitle("Il y a eu un problème..")
+                        .setDescription("Vous devez envoyer votre commande dans le salon #commande-personnalisée !")
+                        .addField("Votre commande", commande2, true)
+                        .setColor("0x754A7E")
+                        .setFooter("• Dev in Time •")
+
+                    message.delete
+                    message.author.send(aideslon);
+                }
             }
 
         //else if(splitMessage[0] === '!devintime') {
