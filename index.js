@@ -201,7 +201,24 @@ bot.on('message', message => {
                     message.channel.sendEmbed(aide);
         }
     }
+    
+        else if(splitMessage[0] === '!devintime') {
+            if(splitMessage[1] === 'sendcommande') {
 
+                message.delete();
+
+                var commandesende = new Discord.RichEmbed()
+                    .setTitle("Envoyer une Commande personnalisée")
+                    .setDescription("**Vous pouvez faire votre propre commande avec cette commande !**")
+                    .addField("•Vous n'avez qu'a écrire !devintime command (votre commande)•", "•", true)
+                    .setColor("0x2169D3")
+                    .setFooter("• Dev in Time •")
+
+
+
+                message.channel.sendEmbed(commandesende);
+        }
+    }
         else if(splitMessage[0] === '!devintime') {
             if(splitMessage[1] === 'commande') {
             
@@ -238,11 +255,6 @@ bot.on('message', message => {
             });
 
         }
-    }
-
-        else if(splitMessage[0] === '!devintime') {
-            message.delete();
-
     }
 
 
