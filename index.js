@@ -240,15 +240,14 @@ bot.on('message', message => {
         else if(splitMessage[0] === '!devintime') {
             if(splitMessage[1] === 'sendcommande') {
                 if(message.member.roles.has("535827594432610336")) {
-                    
                     var commandesende = new Discord.RichEmbed()
-                        .setTitle("Commande personnalisée reçus !")
-                        .setDescription("**Une commande personnalisée a été reçus !**")
-                        .addField(commande1, "•", true)
+                        .setTitle("Envoyer une Commande personnalisée")
+                        .setDescription("**Vous pouvez faire votre propre commande avec cette commande !**")
+                        .addField("•Vous n'avez qu'a écrire !devintime commande (votre commande)•", "•", true)
                         .setColor("0x42D321")
                         .setFooter("• Dev in Time •")
-                    message.author.send(commandesende);
                     message.delete();
+                    message.channel.sendEmbed(commandesende);
             }
         }
     }
