@@ -239,7 +239,6 @@ bot.on('message', message => {
 
         else if(splitMessage[0] === '!devintime') {
             if(splitMessage[1] === 'sendcommande') {
-                if(message.member.roles.has("535827594432610336")) {
                     var commandesende = new Discord.RichEmbed()
                     .setTitle("Commande personnalisée reçus !")
                     .setDescription("**Une commande personnalisée a été reçus !**")
@@ -251,7 +250,6 @@ bot.on('message', message => {
                     message.delete();
 
                     message.channel.sendEmbed(commandesende);
-            }
         }
     }
 
