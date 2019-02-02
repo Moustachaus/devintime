@@ -221,7 +221,7 @@ bot.on('message', message => {
     }
         else if(splitMessage[0] === '!devintime') {
             if(splitMessage[1] === 'commande') {
-                if (msg.channel.id === '539120346624819210') {
+                if (message.channel.id === '539120346624819210') {
             //var commande = new Discord.RichEmbed()
             //    .setTitle("Commande personnalisée envoyé !")
             //    .setDescription("**Votre commande personnalisée à été envoyé !**")
