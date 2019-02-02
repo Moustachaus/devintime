@@ -247,7 +247,6 @@ bot.on('message', message => {
                         .setColor("0x42D321")
                         .setFooter("• Dev in Time •")
                     message.delete();
-                    message.channel.sendEmbed(commandesend1);
             }
         }
     }
