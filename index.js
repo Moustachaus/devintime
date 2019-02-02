@@ -202,7 +202,6 @@ bot.on('message', message => {
         }
     }
     
-        else if(splitMessage[0] === '!devintime') {
             if(splitMessage[1] === 'sendcommande') {
 
                 message.delete();
@@ -217,6 +216,8 @@ bot.on('message', message => {
 
 
                 message.channel.sendEmbed(commandesende);
+
+            }
 
             if(splitMessage[1] === 'commande') {
                 
@@ -253,8 +254,6 @@ bot.on('message', message => {
                 });
 
             }
-        }
-    }
 
         //else if(splitMessage[0] === '!devintime') {
         //    if(splitMessage[1] === 'commande') {
