@@ -241,11 +241,8 @@ bot.on('message', message => {
     }
 
         else if(splitMessage[0] === '!devintime') {
-            if(splitMessage[1] === 'sendcommande') {
+            message.delete();
 
-                message.delete();
-
-        }
     }
 
 
