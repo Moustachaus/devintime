@@ -79,19 +79,24 @@ bot.on('message', message => {
                     var embed1 = new Discord.RichEmbed()
                         .setTitle("Envoyé!")
                         .setDescription("Absence envoyé")
-                        .addField("Raison de votre absence", tMessage, true)
+                        .addField("Raison de votre absence:", tMessage, true)
                         .setColor("0xFACC2E")
-                        .setFooter("Dev in Time")
+                        .setFooter("• Dev in Time •")
 
-
+                    var embed2 = new Discord.RichEmbed()
+                        .setTitle("Envoyé!")
+                        .setDescription("Absence reçus")
+                        .addField("Raison de l'absence:", tMessage, true)
+                        .setColor("0xFACC2E")
+                        .setFooter("• Dev in Time •")
 
 
 
                     bot.fetchUser('215103685980717057').then((user) => {
-                        user.send(tMessage);
+                        user.send(embed2);
                     });
                     bot.fetchUser('244832256902823947').then((user) => {
-                        user.send(tMessage);
+                        user.send(embed2);
                     });
                     message.delete();
                     message.channel.sendEmbed(embed1);    
@@ -106,10 +111,10 @@ bot.on('message', message => {
 
                     tMessage = message.content.slice (17);
                     bot.fetchUser('215103685980717057').then((user) => {
-                        user.send(tMessage);
+                        user.send(embed2);
                     });
                     bot.fetchUser('244832256902823947').then((user) => {
-                        user.send(tMessage);
+                        user.send(embed2);
                     });
                     message.delete();
                     message.channel.sendEmbed(embed1);
@@ -124,10 +129,10 @@ bot.on('message', message => {
                 if(message.member.roles.has("539133325730775081")) {
                     tMessage = message.content.slice (17);
                     bot.fetchUser('215103685980717057').then((user) => {
-                        user.send(tMessage);
+                        user.send(embed2);
                     });
                     bot.fetchUser('244832256902823947').then((user) => {
-                        user.send(tMessage);
+                        user.send(embed2);
                     });
                     message.delete();
                     message.channel.sendEmbed(embed1);
@@ -140,10 +145,10 @@ bot.on('message', message => {
                 if(message.member.roles.has("539183295959793667")) {
                     tMessage = message.content.slice (17);
                     bot.fetchUser('215103685980717057').then((user) => {
-                        user.send(tMessage);
+                        user.send(embed2);
                     });
                     bot.fetchUser('244832256902823947').then((user) => {
-                        user.send(tMessage);
+                        user.send(embed2);
                     });
                     message.delete();
                     message.channel.sendEmbed(embed1);
@@ -234,6 +239,7 @@ bot.on('message', message => {
                         .setTitle("Commande personnalisée envoyé !")
                         .setDescription("**Voici votre commande:**")
                         .addField(commande1, "•", true)
+                        .addField("Votre commande est en attente", "Vous receverez un message sous peu!", true)
                         .setColor("0x42D321")
                         .setFooter("• Dev in Time •")
 
@@ -241,6 +247,7 @@ bot.on('message', message => {
                         .setTitle("Commande personnalisée reçus !")
                         .setDescription("**Une commande personnalisée a été reçus !**")
                         .addField(commande1, "•", true)
+                        .addField("Nom:", member.user.username, true)
                         .setColor("0x42D321")
                         .setFooter("• Dev in Time •")
 
