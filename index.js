@@ -177,7 +177,7 @@ bot.on('message', message => {
 
 
 
-        }
+
 
             else if(splitMessage[1] === 'admin') {
                 if(splitMessage[2] === 'aide') {
@@ -275,6 +275,7 @@ bot.on('message', message => {
                 }
             }
 
+        }
         //else if(splitMessage[0] === '!devintime') {
         //    if(splitMessage[1] === 'commande') {
             
