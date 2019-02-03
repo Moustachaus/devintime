@@ -21,12 +21,6 @@ function sendError1(message, description) {
 bot.on('message', message => {
 
     mention = message.mentions.users.first();
-    if (message.channel.id === '539120346624819210') {
-        if(splitMessage[0] === '!devintime') {
-        } else {
-            message.delete
-        }
-    }
 
     if (message.author.bot) return;
     if (message.content[0] === prefix) {
