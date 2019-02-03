@@ -278,7 +278,7 @@ bot.on('message', message => {
 
 
         if (message.channel.id === '539120346624819210') {
-            if(splitMessage[1] === 'commande') {
+            if(splitMessage[0] === '!devintime') {
         } else {
             var non = new Discord.RichEmbed()
                 .setTitle("Il y a eu un problème..")
