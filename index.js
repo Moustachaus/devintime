@@ -19,13 +19,7 @@ function sendError1(message, description) {
 
 
 bot.on('message', message => {
-    if (message.channel.id === '539120346624819210') {
-        if(splitMessage[0] === '!devintime') {
-            if(splitMessage[1] === 'commande') {
-        } else {
-            message.delete
-        }
-    }
+
 
     if (message.author.bot) return;
 
