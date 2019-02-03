@@ -69,7 +69,7 @@ bot.on('message', message => {
 
 
 
-            else if(splitMessage[1] === 'absent') {
+            if(splitMessage[1] === 'absent') {
                 if(message.member.roles.has("535827594432610336")) {
 
                     tMessage = message.content.slice (17);
@@ -106,7 +106,7 @@ bot.on('message', message => {
 
 
 
-                else if(message.member.roles.has("535828313705283594")) {
+                if(message.member.roles.has("535828313705283594")) {
 
                     tMessage = message.content.slice (17);
                     bot.fetchUser('215103685980717057').then((user) => {
@@ -125,7 +125,7 @@ bot.on('message', message => {
 
 
 
-                else if(message.member.roles.has("539133325730775081")) {
+                if(message.member.roles.has("539133325730775081")) {
                     tMessage = message.content.slice (17);
                     bot.fetchUser('215103685980717057').then((user) => {
                         user.send(embed2);
@@ -141,7 +141,7 @@ bot.on('message', message => {
 
 
 
-                else if(message.member.roles.has("539183295959793667")) {
+                if(message.member.roles.has("539183295959793667")) {
                     tMessage = message.content.slice (17);
                     bot.fetchUser('215103685980717057').then((user) => {
                         user.send(embed2);
@@ -154,7 +154,7 @@ bot.on('message', message => {
             }
 
 
-                else if(message.member.roles.has("535827954870124554")) {
+                if(message.member.roles.has("535827954870124554")) {
                     tMessage = message.content.slice (17);
                     bot.fetchUser('215103685980717057').then((user) => {
                         user.send(tMessage);
@@ -179,7 +179,7 @@ bot.on('message', message => {
 
         }
 
-            else if(splitMessage[1] === 'admin') {
+            if(splitMessage[1] === 'admin') {
                 if(splitMessage[2] === 'aide') {
                     if(splitMessage.length === 3) {
                         var adminhelp = new Discord.RichEmbed()
@@ -194,7 +194,7 @@ bot.on('message', message => {
     }
 
 
-            else if(splitMessage[1] === 'aide') {
+            if(splitMessage[1] === 'aide') {
                 if(splitMessage.length === 2) {
                     var aide = new Discord.RichEmbed()
                         .setTitle("Aide")
@@ -206,7 +206,7 @@ bot.on('message', message => {
         }
     }
     
-            else if(splitMessage[1] === 'sendcommande') {
+            if(splitMessage[1] === 'sendcommande') {
 
                 message.delete();
 
@@ -223,7 +223,7 @@ bot.on('message', message => {
 
             }
 
-            else if(splitMessage[1] === 'commande') {
+            if(splitMessage[1] === 'commande') {
                 if (message.channel.id === '539120346624819210') {
             //var commande = new Discord.RichEmbed()
             //    .setTitle("Commande personnalisée envoyé !")
