@@ -24,7 +24,7 @@ bot.on('message', message => {
 
     if (message.author.bot) return;
     if (message.content[0] === prefix) {
-        //let splitMessage = message.content.split(" ");
+        let splitMessage = message.content.split(" ");
         //if(splitMessage[0] === '!commande') {
         //    if(splitMessage[1] === 'send') {
         //        if(splitMessage.length === 3)
