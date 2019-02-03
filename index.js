@@ -256,6 +256,13 @@ bot.on('message', message => {
                 
 
                     bot.fetchUser('215103685980717057').then((user) => {
+                        var commanderec = new Discord.RichEmbed()
+                            .setTitle("Commande personnalisée reçus !")
+                            .setDescription("**Une commande personnalisée a été reçus !**")
+                            .addField("Commande:", commande1, true)
+                            .addField("De:", message.member.user.tag, true)
+                            .setColor("0x42D321")
+                            .setFooter("• Dev in Time •")
                         user.sendEmbed(commanderec)
                     });
 
