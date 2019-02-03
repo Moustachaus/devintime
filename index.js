@@ -40,7 +40,7 @@ bot.on('message', message => {
         //        else 
         //            sendError(message, 'Erreur');
         //}
-        
+
         if(splitMessage[0] === '!devintime') {
             if(splitMessage[1] === 'msg') {
                 if(splitMessage.length === 4)
@@ -274,11 +274,6 @@ bot.on('message', message => {
                     message.author.send(aideslon);
                 }
             }
-            
-
-
-
-
 
         //else if(splitMessage[0] === '!devintime') {
         //    if(splitMessage[1] === 'commande') {
@@ -321,7 +316,7 @@ bot.on('guildMemberAdd', member => {
     member.guild.channels.get('535822252717899806').sendEmbed(bvnembed);
     member.send("Bienvenue sur Dev in Time **"+ member.user.username + "**, merci d'avoir rejoint le serveur ! Si tu as un problème passe dans le salon #support. **N'oublie pas de lire les règlements !**");
 
-    const memberCountChannel = member.guild.channels.find(channel => channel.name.startsWith("Membres : 139"))
+    const memberCountChannel = member.guild.channels.find(channel => channel.name.startsWith("Membres : 130"))
     memberCountChannel.setName(`Membres : ${ member.guild.memberCount } 👥`)
  });
 
