@@ -82,7 +82,7 @@ bot.on('message', message => {
                         .setFooter("• Dev in Time •")
 
                     var embed2 = new Discord.RichEmbed()
-                        .setTitle("Envoyé!")
+                        .setTitle("Absence reçus!")
                         .setDescription("Absence reçus")
                         .addField("Raison de l'absence:", tMessage, true)
                         .addField("De:", message.member.user.tag, true)
@@ -278,19 +278,19 @@ bot.on('message', message => {
         }
 
         if (message.channel.id === '539120346624819210') {
-                if(splitMessage[1] === 'commande') {
+            if(splitMessage[1] === 'commande') {
                 
-                } else {
-                    var chatt = new Discord.RichEmbed()
-                        .setTitle("Il y a eu un problème..")
-                        .setDescription("Vous devez envoyer une commande-personnalisée avec !devintime commande (votre commande) !")
-                        .addField("•", "•", true)
-                        .setColor("0xF01013")
-                        .setFooter("• Dev in Time •")
+            } else {
+                var chatt = new Discord.RichEmbed()
+                    .setTitle("Il y a eu un problème..")
+                    .setDescription("Vous devez envoyer une commande-personnalisée avec !devintime commande (votre commande) !")
+                    .addField("•", "•", true)
+                    .setColor("0xF01013")
+                    .setFooter("• Dev in Time •")
 
 
-                    message.author.send(chatt);
-                    message.delete
+                message.author.send(chatt);
+                message.delete
             }
         }
 
