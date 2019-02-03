@@ -24,24 +24,24 @@ bot.on('message', message => {
 
     if (message.author.bot) return;
     if (message.content[0] === prefix) {
-        let splitMessage = message.content.split(" ");
-        if(splitMessage[0] === '!commande') {
-            if(splitMessage[1] === 'send') {
-                if(splitMessage.length === 3)
-                message.channel.send('Paramètre: ' + splitMessage[2]);
-            else 
-                sendError(message, 'Erreur');
-            }
-        }
+        //let splitMessage = message.content.split(" ");
+        //if(splitMessage[0] === '!commande') {
+        //    if(splitMessage[1] === 'send') {
+        //        if(splitMessage.length === 3)
+        //        message.channel.send('Paramètre: ' + splitMessage[2]);
+        //    else 
+        //        sendError(message, 'Erreur');
+        //    }
+        //}
 
-        else if(splitMessage[0] === '!ban') {
-            if(splitMessage.length === 2)
-                message.guild.ban(message.mentions.users.first());
-                else 
-                    sendError(message, 'Erreur');
-        }
+        //if(splitMessage[0] === '!ban') {
+        //    if(splitMessage.length === 2)
+        //        message.guild.ban(message.mentions.users.first());
+        //        else 
+        //            sendError(message, 'Erreur');
+        //}
 
-        else if(splitMessage[0] === '!devintime') {
+        if(splitMessage[0] === '!devintime') {
             if(splitMessage[1] === 'msg') {
                 if(splitMessage.length === 4)
                 if (mention == null) { return sendError(message, 'Erreur avec la mention') }
