@@ -295,22 +295,22 @@ bot.on('message', message => {
 bot.on('guildMemberAdd', member => {
 
     var msgbvnembed = new Discord.RichEmbed()
-    .setTitle("Bienvenue sur Dev in Time !")
-    .setDescription("t")
-    .addField("Si tu as un problème passe dans le salon #support", ".", true)
-    .addField("N'oublie pas de lire les règlements !", ".", true)
-    .addField("Voici le site https://dev-in-time.com)", ".", true)
-    .setColor("0x53DD73")
-    .setFooter("• Dev in Time •")
+        .setTitle("Bienvenue sur Dev in Time !")
+        .setDescription("t")
+        .addField("Si tu as un problème passe dans le salon #support", ".", true)
+        .addField("N'oublie pas de lire les règlements !", ".", true)
+        .addField("Voici le site https://dev-in-time.com)", ".", true)
+        .setColor("0x53DD73")
+        .setFooter("• Dev in Time •")
 
 
 
     var bvnembed = new Discord.RichEmbed()
-    .setTitle("**Un nouveau !**")
-    .setDescription("***Nom: ***" + member.user.username)
-    .addField("**Membre: **", member.guild.memberCount, false)
-    .setColor("0x53DD73")
-    .setFooter("• Bienvenue sur Dev in Time •", member.user.displayAvatarURL)
+        .setTitle("**Un nouveau !**")
+        .setDescription("***Nom: ***" + member.user.username)
+        .addField("**Membre: **", member.guild.memberCount, false)
+        .setColor("0x53DD73")
+        .setFooter("• Bienvenue sur Dev in Time •", member.user.displayAvatarURL)
 
     member.sendEmbed(msgbvnembed);
     member.guild.channels.get('535822252717899806').sendEmbed(bvnembed);
@@ -324,11 +324,11 @@ bot.on('guildMemberAdd', member => {
 
 bot.on('guildMemberRemove', member => {
     var byembed = new Discord.RichEmbed()
-    .setTitle("Aurevoir !")
-    .setDescription("***Nom: ***" + member.user.username)
-    .addField("**Membre: **", member.guild.memberCount, false)
-    .setColor("0xE61919")
-    .setFooter("• À la prochaine ! •", member.user.displayAvatarURL)
+        .setTitle("Aurevoir !")
+        .setDescription("***Nom: ***" + member.user.username)
+        .addField("**Membre: **", member.guild.memberCount, false)
+        .setColor("0xE61919")
+        .setFooter("• À la prochaine ! •", member.user.displayAvatarURL)
 
     member.guild.channels.get('535822252717899806').sendEmbed(byembed);
 
