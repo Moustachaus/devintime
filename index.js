@@ -22,7 +22,7 @@ bot.on('message', message => {
 
     mention = message.mentions.users.first();
     if (message.channel.id === '539120346624819210') {
-        if(splitMessage[0] === '!devintime commande') {
+        if(splitMessage[0] === '!devintime') {
         } else {
             message.delete
         }
