@@ -273,7 +273,7 @@ bot.on('message', message => {
                     message.delete
                     message.author.send(aideslon);
                 }
-            } else {
+            }
                 //var commande = new Discord.RichEmbed()
         //    .setTitle("Commande personnalisée envoyé !")
         //    .setDescription("**Votre commande personnalisée à été envoyé !**")
@@ -281,19 +281,21 @@ bot.on('message', message => {
         //    .setColor("0x42D321")
         //    .setFooter("• Dev in Time •")
         //message.channel.sendEmbed(commande);
-                if (message.channel.id === '539120346624819210') {
-                    var chatt = new Discord.RichEmbed()
-                        .setTitle("Il y a eu un problème..")
-                        .setDescription("Vous devez envoyer une commande-personnalisée avec !devintime commande (votre commande) !")
-                        .addField("Dans le salon #commande-personnalisée", "•", true)
-                        .setColor("0xF01013")
-                        .setFooter("• Dev in Time •")
+
+        //else {
+                //if (message.channel.id === '539120346624819210') {
+                    //var chatt = new Discord.RichEmbed()
+                        //.setTitle("Il y a eu un problème..")
+                        //.setDescription("Vous devez envoyer une commande-personnalisée avec !devintime commande (votre commande) !")
+                        //.addField("Dans le salon #commande-personnalisée", "•", true)
+                        //.setColor("0xF01013")
+                        //.setFooter("• Dev in Time •")
 
 
-                    message.author.send(chatt);
-                    message.delete
-            }
-        }
+                    //message.author.send(chatt);
+                    //message.delete
+            //}
+        //}
             }
 
 
