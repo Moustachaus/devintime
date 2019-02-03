@@ -69,7 +69,7 @@ bot.on('message', message => {
 
 
 
-            if(splitMessage[1] === 'absent') {
+            else if(splitMessage[1] === 'absent') {
                 if(message.member.roles.has("535827594432610336")) {
 
                     tMessage = message.content.slice (17);
@@ -179,7 +179,7 @@ bot.on('message', message => {
 
         }
 
-            if(splitMessage[1] === 'admin') {
+            else if(splitMessage[1] === 'admin') {
                 if(splitMessage[2] === 'aide') {
                     if(splitMessage.length === 3) {
                         var adminhelp = new Discord.RichEmbed()
@@ -194,7 +194,7 @@ bot.on('message', message => {
     }
 
 
-            if(splitMessage[1] === 'aide') {
+            else if(splitMessage[1] === 'aide') {
                 if(splitMessage.length === 2) {
                     var aide = new Discord.RichEmbed()
                         .setTitle("Aide")
@@ -206,7 +206,7 @@ bot.on('message', message => {
         }
     }
     
-            if(splitMessage[1] === 'sendcommande') {
+            else if(splitMessage[1] === 'sendcommande') {
 
                 message.delete();
 
@@ -223,7 +223,7 @@ bot.on('message', message => {
 
             }
 
-            if(splitMessage[1] === 'commande') {
+            else if(splitMessage[1] === 'commande') {
                 if (message.channel.id === '539120346624819210') {
             //var commande = new Discord.RichEmbed()
             //    .setTitle("Commande personnalisée envoyé !")
@@ -316,7 +316,7 @@ bot.on('guildMemberAdd', member => {
     member.guild.channels.get('535822252717899806').sendEmbed(bvnembed);
     member.send("Bienvenue sur Dev in Time **"+ member.user.username + "**, merci d'avoir rejoint le serveur ! Si tu as un problème passe dans le salon #support. **N'oublie pas de lire les règlements !**");
 
-    const memberCountChannel = member.guild.channels.find(channel => channel.name.startsWith("Membres : 130"))
+    const memberCountChannel = member.guild.channels.find(channel => channel.name.startsWith("Membres : 140"))
     memberCountChannel.setName(`Membres : ${ member.guild.memberCount } 👥`)
  });
 
