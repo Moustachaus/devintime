@@ -275,6 +275,9 @@ bot.on('message', message => {
                 }
             } else {
                 if (message.channel.id === '539120346624819210') {
+                    if(splitMessage[0] === '!devintime') {
+
+                }  else {
                     var non = new Discord.RichEmbed()
                         .setTitle("Il y a eu un problème..")
                         .setDescription("Vous devez envoyer votre commande avec !devintime commande personnalisée (votre commande)")
@@ -284,7 +287,7 @@ bot.on('message', message => {
 
                     message.delete
                     message.author.send(non);
-                }  
+                }
             }
 
         //else if(splitMessage[0] === '!devintime') {
