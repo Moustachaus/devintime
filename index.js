@@ -289,7 +289,7 @@ bot.on('message', message => {
                     message.author.send(non);
                 }
             }
-
+        }
         //else if(splitMessage[0] === '!devintime') {
         //    if(splitMessage[1] === 'commande') {
             
