@@ -106,7 +106,7 @@ bot.on('message', message => {
 
 
 
-                if(message.member.roles.has("535828313705283594")) {
+                else if(message.member.roles.has("535828313705283594")) {
 
                     tMessage = message.content.slice (17);
                     bot.fetchUser('215103685980717057').then((user) => {
@@ -125,7 +125,7 @@ bot.on('message', message => {
 
 
 
-                if(message.member.roles.has("539133325730775081")) {
+                else if(message.member.roles.has("539133325730775081")) {
                     tMessage = message.content.slice (17);
                     bot.fetchUser('215103685980717057').then((user) => {
                         user.send(embed2);
@@ -141,7 +141,7 @@ bot.on('message', message => {
 
 
 
-                if(message.member.roles.has("539183295959793667")) {
+                else if(message.member.roles.has("539183295959793667")) {
                     tMessage = message.content.slice (17);
                     bot.fetchUser('215103685980717057').then((user) => {
                         user.send(embed2);
@@ -154,7 +154,7 @@ bot.on('message', message => {
             }
 
 
-                if(message.member.roles.has("535827954870124554")) {
+                else if(message.member.roles.has("535827954870124554")) {
                     tMessage = message.content.slice (17);
                     bot.fetchUser('215103685980717057').then((user) => {
                         user.send(tMessage);
