@@ -278,7 +278,6 @@ bot.on('message', message => {
         }
 
         if (message.channel.id === '539120346624819210') {
-            if(splitMessage[0] === '!devintime') {
                 if(splitMessage[1] === 'commande') {
                 
                 } else {
@@ -292,7 +291,6 @@ bot.on('message', message => {
 
                     message.author.send(chatt);
                     message.delete
-                }
             }
         }
 
