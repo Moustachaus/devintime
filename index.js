@@ -274,19 +274,19 @@ bot.on('message', message => {
                     message.author.send(aideslon);
                 }
             } else {
-                if (message.channel.id === '539120346624819210') {
-                    if(splitMessage[0] === '!devintime') {
+                if(splitMessage[0] === '!devintime') {
 
                 }  else {
-                    var non = new Discord.RichEmbed()
-                        .setTitle("Il y a eu un problème..")
-                        .setDescription("Vous devez envoyer votre commande avec !devintime commande personnalisée (votre commande)")
-                        .addField("•", "•", true)
-                        .setColor("0xA78D61")
-                        .setFooter("• Dev in Time •")
+                    if (message.channel.id === '539120346624819210') {
+                        var non = new Discord.RichEmbed()
+                            .setTitle("Il y a eu un problème..")
+                            .setDescription("Vous devez envoyer votre commande avec !devintime commande personnalisée (votre commande)")
+                            .addField("•", "•", true)
+                            .setColor("0xA78D61")
+                            .setFooter("• Dev in Time •")
 
-                    message.delete
-                    message.author.send(non);
+                        message.delete
+                        message.author.send(non);
                 }
             }
         }
