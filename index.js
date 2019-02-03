@@ -40,7 +40,7 @@ bot.on('message', message => {
         //        else 
         //            sendError(message, 'Erreur');
         //}
-
+        
         if(splitMessage[0] === '!devintime') {
             if(splitMessage[1] === 'msg') {
                 if(splitMessage.length === 4)
@@ -273,23 +273,25 @@ bot.on('message', message => {
                     message.delete
                     message.author.send(aideslon);
                 }
-            } else {
-                if(splitMessage[0] === '!devintime') {
-
-                }  else {
-                    if (message.channel.id === '539120346624819210') {
-                        var non = new Discord.RichEmbed()
-                            .setTitle("Il y a eu un problème..")
-                            .setDescription("Vous devez envoyer votre commande avec !devintime commande personnalisée (votre commande)")
-                            .addField("•", "•", true)
-                            .setColor("0xA78D61")
-                            .setFooter("• Dev in Time •")
-
-                        message.delete
-                        message.author.send(non);
-                }
             }
+            
+        if(splitMessage[1] === 'commande') {
+
+        } else {
+            if (message.channel.id === '539120346624819210') {
+                var non = new Discord.RichEmbed()
+                    .setTitle("Il y a eu un problème..")
+                    .setDescription("Vous devez envoyer votre commande avec !devintime commande personnalisée (votre commande)")
+                    .addField("•", "•", true)
+                    .setColor("0xA78D61")
+                    .setFooter("• Dev in Time •")
+
+                message.delete
+                message.author.send(non);
         }
+    }
+
+
         //else if(splitMessage[0] === '!devintime') {
         //    if(splitMessage[1] === 'commande') {
             
