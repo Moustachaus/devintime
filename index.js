@@ -321,7 +321,7 @@ bot.on('guildMemberAdd', member => {
     member.guild.channels.get('535822252717899806').sendEmbed(bvnembed);
     member.send("Bienvenue sur Dev in Time **"+ member.user.username + "**, merci d'avoir rejoint le serveur ! Si tu as un problème passe dans le salon #support. **N'oublie pas de lire les règlements !**");
 
-    const memberCountChannel = member.guild.channels.find(channel => channel.name.startsWith("Membres : 130"))
+    const memberCountChannel = member.guild.channels.find(channel => channel.name.startsWith("Membres : 139"))
     memberCountChannel.setName(`Membres : ${ member.guild.memberCount } 👥`)
  });
 
