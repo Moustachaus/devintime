@@ -290,22 +290,22 @@ bot.on('message', message => {
         //    .setFooter("• Dev in Time •")
         //message.channel.sendEmbed(commande);
 
-        if (message.channel.id === '539120346624819210') {
-            if(splitMessage[1] === 'commande') {
-                
-            } else {
-                var chatt = new Discord.RichEmbed()
-                    .setTitle("Il y a eu un problème..")
-                    .setDescription("Vous devez envoyer une commande-personnalisée avec !devintime commande (votre commande) !")
-                    .addField("•", "•", true)
-                    .setColor("0xF01013")
-                    .setFooter("• Dev in Time •")
-
-
-                message.author.send(chatt);
-                message.delete
-            }
-        }
+        //if (message.channel.id === '539120346624819210') {
+        //    if(splitMessage[1] === 'commande') {
+        //        
+        //    } else {
+        //        var chatt = new Discord.RichEmbed()
+        //            .setTitle("Il y a eu un problème..")
+        //           .setDescription("Vous devez envoyer une commande-personnalisée avec !devintime commande (votre commande) !")
+        //            .addField("•", "•", true)
+        //            .setColor("0xF01013")
+        //            .setFooter("• Dev in Time •")
+//
+//
+        //        message.author.send(chatt);
+        //        message.delete
+        //    }
+        //}
 
 
 
@@ -317,10 +317,10 @@ bot.on('guildMemberAdd', member => {
 
     var msgbvnembed = new Discord.RichEmbed()
         .setTitle("Bienvenue sur Dev in Time !")
-        .setDescription("t")
-        .addField("Si tu as un problème passe dans le salon #support", ".", true)
-        .addField("N'oublie pas de lire les règlements !", ".", true)
-        .addField("Voici le site https://dev-in-time.com)", ".", true)
+        .setDescription("•")
+        .addField("Si tu as un problème passe dans le salon #support", "•", true)
+        .addField("N'oublie pas de lire les règlements !", "•", true)
+        .addField("Voici le site https://dev-in-time.com)", "•", true)
         .setColor("0x53DD73")
         .setFooter("• Dev in Time •")
 
