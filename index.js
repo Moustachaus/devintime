@@ -274,8 +274,6 @@ bot.on('message', message => {
                     message.author.send(aideslon);
                 }
             }
-            else if(splitMessage[1] === 'commande') {
-            }
 
 
 
@@ -335,115 +333,116 @@ bot.on('message', message => {
         //    }
         //}
 
-            else if (message.content.toLowerCase().startsWith("!devintime" + 'new')) {
-                const reason = message.content.split(" ").slice(1).join(" ");
-                if (!message.guild.roles.exists("name", "Support")) {
-                const embed0 = new Discord.RichEmbed()
-                .setColor(embedColor)
-                .addField(`Dev in Time`, `Vous devez créer un rôle nommé Support.`)
-                message.channel.send({ embed: embed0 });
-                return
-                }
-                if (message.guild.channels.exists("name", "ticket-" + message.author.username)) {
-                const embed1 = new Discord.RichEmbed()
-                .setColor(embedColor)
-                .addField(`Dev in Time`, `Vous avez déjà  un ticket ouvert.`)
-                message.channel.send({ embed: embed1 });
-                return
-                }
-                message.guild.createChannel(`ticket-${message.author.username}`, "text").then(c => {
-                    let role = message.guild.roles.find("name", "Support");
-                    let role2 = message.guild.roles.find("name", "Communauté");
-                    c.overwritePermissions(role, {
-                        SEND_MESSAGES: true,
-                        READ_MESSAGES: true
-                    });
-                    c.overwritePermissions(role2, {
-                        SEND_MESSAGES: false,
-                        READ_MESSAGES: false
-                    });
-                    c.overwritePermissions(message.author, {
-                        SEND_MESSAGES: true,
-                        READ_MESSAGES: true
-                    });
-                    const embed2 = new Discord.RichEmbed()
+            else if(splitMessage[0] === '!devintime') {
+                if(splitMessage[1] === 'ticket') {
+                    const reason = message.content.split(" ").slice(1).join(" ");
+                    if (!message.guild.roles.exists("name", "Support")) {
+                    const embed0 = new Discord.RichEmbed()
                     .setColor(embedColor)
-                    .addField(`Dev in Time`, `Ton ticket a été créé : ` + c.toString())
-                    .setTimestamp();
-                    message.channel.send({ embed: embed2 });
-            
-                    const embed3 = new Discord.RichEmbed()
+                    .addField(`Dev in Time`, `Vous devez créer un rôle nommé Support.`)
+                    message.channel.send({ embed: embed0 });
+                    return
+                    }
+                    if (message.guild.channels.exists("name", "ticket-" + message.author.username)) {
+                    const embed1 = new Discord.RichEmbed()
                     .setColor(embedColor)
-                    .addField(`Bonjour ${message.author.username}!`, `Votre ticket a bien été ouvert un de nos staff va vous répondre le plus rapidement possible.`)
-                    .setTimestamp();
-                    c.send({ embed: embed3 });
-                }).catch(console.error);
-            }
-            if (message.content.toLowerCase().startsWith("!devintime" + `close`)) {
-                if (!message.channel.name.startsWith(`ticket-`)) {
-                const embed8 = new Discord.RichEmbed()
-                .setColor(embedColor)
-                .addField(`Skaoli`, `Vous devez être dans un salon de ticket.`)
-                message.channel.send({ embed: embed8 });
-                return
-                }   
-            
-                const embed9 = new Discord.RichEmbed()
-                .setColor(embedColor)
-                .addField(`Dev in Time`, 'Tapez \`+confirmer\` pour confirmer.')
-                message.channel.send({ embed: embed9 })
-                .then((m) => {
-                message.channel.awaitMessages(response => response.content === '+confirmer', {
-                    max: 1,
-                    time: 15000,
-                    errors: ['time'],
-                })
-                .then((collected) => {
-                    message.channel.delete();
+                    .addField(`Dev in Time`, `Vous avez déjà  un ticket ouvert.`)
+                    message.channel.send({ embed: embed1 });
+                    return
+                    }
+                    message.guild.createChannel(`ticket-${message.author.username}`, "text").then(c => {
+                        let role = message.guild.roles.find("name", "Support");
+                        let role2 = message.guild.roles.find("name", "Communauté");
+                        c.overwritePermissions(role, {
+                            SEND_MESSAGES: true,
+                            READ_MESSAGES: true
+                        });
+                        c.overwritePermissions(role2, {
+                            SEND_MESSAGES: false,
+                            READ_MESSAGES: false
+                        });
+                        c.overwritePermissions(message.author, {
+                            SEND_MESSAGES: true,
+                            READ_MESSAGES: true
+                        });
+                        const embed2 = new Discord.RichEmbed()
+                        .setColor(embedColor)
+                        .addField(`Dev in Time`, `Ton ticket a été créé : ` + c.toString())
+                        .setTimestamp();
+                        message.channel.send({ embed: embed2 });
+                
+                        const embed3 = new Discord.RichEmbed()
+                        .setColor(embedColor)
+                        .addField(`Bonjour ${message.author.username}!`, `Votre ticket a bien été ouvert un de nos staff va vous répondre le plus rapidement possible.`)
+                        .setTimestamp();
+                        c.send({ embed: embed3 });
+                    }).catch(console.error);
+                }
+                if (message.content.toLowerCase().startsWith("!devintime" + `close`)) {
+                    if (!message.channel.name.startsWith(`ticket-`)) {
+                    const embed8 = new Discord.RichEmbed()
+                    .setColor(embedColor)
+                    .addField(`Skaoli`, `Vous devez être dans un salon de ticket.`)
+                    message.channel.send({ embed: embed8 });
+                    return
+                    }   
+                
+                    const embed9 = new Discord.RichEmbed()
+                    .setColor(embedColor)
+                    .addField(`Dev in Time`, 'Tapez \`+confirmer\` pour confirmer.')
+                    message.channel.send({ embed: embed9 })
+                    .then((m) => {
+                    message.channel.awaitMessages(response => response.content === '+confirmer', {
+                        max: 1,
+                        time: 15000,
+                        errors: ['time'],
                     })
-                    .catch(() => {
-                    m.edit('').then(m2 => {
-                        m2.delete();
-                    }, 3000);
+                    .then((collected) => {
+                        message.channel.delete();
+                        })
+                        .catch(() => {
+                        m.edit('').then(m2 => {
+                            m2.delete();
+                        }, 3000);
+                        });
                     });
-                });
-            }
-            
-            if (message.content.toLowerCase().startsWith("!devintime" + `add`)) {
-                if (!message.channel.name.startsWith(`ticket-`)) {
-                const embed4 = new Discord.RichEmbed()
-                .setColor(embedColor)
-                .addField(`Dev in Time`, `Vous devez être dans un salon de ticket.`)
-                message.channel.send({ embed: embed4 });
-                return
                 }
-                addedmember = message.mentions.members.first();
-                message.channel.overwritePermissions(addedmember, { SEND_MESSAGES : true, VIEW_CHANNEL : true});
-                const embed5 = new Discord.RichEmbed()
-                .setColor(embedColor)
-                .addField(`Dev in Time`, '**' + addedmember + `** a Ã©tÃ© ajouter au ticket, utilisez la commande [${"!devintime"}remove]() pour l\'enlever`)
-                message.channel.send({ embed: embed5 });
-            
-            }
-            
-            if (message.content.toLowerCase().startsWith("!devintime" + `remove`)) {
-                if (!message.channel.name.startsWith(`ticket-`)) {
-                const embed6 = new Discord.RichEmbed()
-                .setColor(embedColor)
-                .addField(`Dev in Time`, `Vous devez être dans un salon de ticket.`)
-                message.channel.send({ embed: embed6 });
-                return
+                
+                if (message.content.toLowerCase().startsWith("!devintime" + `add`)) {
+                    if (!message.channel.name.startsWith(`ticket-`)) {
+                    const embed4 = new Discord.RichEmbed()
+                    .setColor(embedColor)
+                    .addField(`Dev in Time`, `Vous devez être dans un salon de ticket.`)
+                    message.channel.send({ embed: embed4 });
+                    return
+                    }
+                    addedmember = message.mentions.members.first();
+                    message.channel.overwritePermissions(addedmember, { SEND_MESSAGES : true, VIEW_CHANNEL : true});
+                    const embed5 = new Discord.RichEmbed()
+                    .setColor(embedColor)
+                    .addField(`Dev in Time`, '**' + addedmember + `** a Ã©tÃ© ajouter au ticket, utilisez la commande [${"!devintime"}remove]() pour l\'enlever`)
+                    message.channel.send({ embed: embed5 });
+                
                 }
-                removedmember = message.mentions.members.first();
-                message.channel.overwritePermissions(removedmember, { SEND_MESSAGES : false, VIEW_CHANNEL : false});
-                const embed7 = new Discord.RichEmbed()
-                .setColor(embedColor)
-                .addField(`Dev in Time`, '**' + removedmember + '** a été retirer du ticket.')
-                message.channel.send({ embed: embed7 });
-            }
+                
+                if (message.content.toLowerCase().startsWith("!devintime" + `remove`)) {
+                    if (!message.channel.name.startsWith(`ticket-`)) {
+                    const embed6 = new Discord.RichEmbed()
+                    .setColor(embedColor)
+                    .addField(`Dev in Time`, `Vous devez être dans un salon de ticket.`)
+                    message.channel.send({ embed: embed6 });
+                    return
+                    }
+                    removedmember = message.mentions.members.first();
+                    message.channel.overwritePermissions(removedmember, { SEND_MESSAGES : false, VIEW_CHANNEL : false});
+                    const embed7 = new Discord.RichEmbed()
+                    .setColor(embedColor)
+                    .addField(`Dev in Time`, '**' + removedmember + '** a été retirer du ticket.')
+                    message.channel.send({ embed: embed7 });
+                }
 
 
-
+        }
 }
 });
 
