@@ -310,6 +310,19 @@ bot.on('message', message => {
                         user.sendEmbed(candidaturerecus)
                     });
 
+                }  else {
+
+                    candid1 = message.content.slice (19);
+
+                    var aideslon = new Discord.RichEmbed()
+                        .setTitle("Il y a eu un problème..")
+                        .setDescription("Vous devez envoyer votre candidature dans le salon #commande-personnalisée !")
+                        .addField("Votre commande", candid1, true)
+                        .setColor("0x754A7E")
+                        .setFooter("• Dev in Time •")
+
+                    message.delete
+                    message.author.send(aideslon);
                 }
             }
 
