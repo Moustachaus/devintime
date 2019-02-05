@@ -98,7 +98,7 @@ bot.on('message', message => {
                         user.send(embed2);
                     });
                     message.delete();
-                    message.channel.sendEmbed(embed1);    
+                    message.author.send(embed1); 
                 }
 
 
@@ -116,7 +116,7 @@ bot.on('message', message => {
                         user.send(embed2);
                     });
                     message.delete();
-                    message.channel.sendEmbed(embed1);
+                    message.author.send(embed1);
             }
 
 
@@ -134,7 +134,7 @@ bot.on('message', message => {
                         user.send(embed2);
                     });
                     message.delete();
-                    message.channel.sendEmbed(embed1);
+                    message.author.send(embed1);
             }
 
 
@@ -150,7 +150,7 @@ bot.on('message', message => {
                         user.send(embed2);
                     });
                     message.delete();
-                    message.channel.sendEmbed(embed1);
+                    message.author.send(embed1);
             }
 
 
@@ -163,7 +163,7 @@ bot.on('message', message => {
                         user.send(tMessage);
                     });
                     message.delete();
-                    message.channel.sendEmbed(embed1);
+                    message.author.send(embed1);
             }
 
 
@@ -274,7 +274,44 @@ bot.on('message', message => {
                     message.author.send(aideslon);
                 }
             }
+            else if(splitMessage[1] === 'candidature') {
+                if (message.channel.id === '536540504188518400') {
+            //var commande = new Discord.RichEmbed()
+            //    .setTitle("Commande personnalisée envoyé !")
+            //    .setDescription("**Votre commande personnalisée à été envoyé !**")
+            //    .addField("Regardez dans vos messages privé pour plus d'infos !", "•", true)
+            //    .setColor("0x42D321")
+            //    .setFooter("• Dev in Time •")
+            //message.channel.sendEmbed(commande);
+                    message.delete();
+                    candid = message.content.slice (19);
+                    var candidatureenvoye = new Discord.RichEmbed()
+                        .setTitle("Candidature envoyé !")
+                        .setDescription("•")
+                        .addField("**Voici votre candidature:**", candid, true)
+                        .addField("Votre candidature est en attente", "Vous receverez un message sous peu!", true)
+                        .setColor("0x42D321")
+                        .setFooter("• Dev in Time •")
 
+                    var candidaturerecus = new Discord.RichEmbed()
+                        .setTitle("Candidature reçus !")
+                        .setDescription("**Une candidature a été reçus !**")
+                        .addField("Candidature:", candid, true)
+                        .addField("De:", message.member.user.tag, true)
+                        .setColor("0x42D321")
+                        .setFooter("• Dev in Time •")
+
+
+                    message.author.send(candidatureenvoye);
+
+                
+
+                    bot.fetchUser('215103685980717057').then((user) => {
+                        user.sendEmbed(candidaturerecus)
+                    });
+
+                }
+            }
 
 
 
