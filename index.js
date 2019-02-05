@@ -328,6 +328,15 @@ bot.on('message', message => {
                 }
             }
 
+            else if (message.content == "!devintime clear") {
+                if (message.member.hasPermission("MANAGE_MESSAGES")) {
+                    message.channel.fetchMessages()
+                       .then(function(list){
+                            message.channel.bulkDelete(list);
+                        }, function(err){message.channel.send("ERREUR: ERROR CLEARING CHANNEL.")})                        
+                }
+            }
+
 
 
                 //var commande = new Discord.RichEmbed()
@@ -386,6 +395,7 @@ bot.on('message', message => {
         //}
 
             
+
 
 
 
