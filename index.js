@@ -343,8 +343,9 @@ bot.on('message', message => {
                     if (message.channel.id === '536540504188518400') {
                         var sendcandid = new Discord.RichEmbed()
                         .setTitle("Envoyer une candidature")
-                        .setDescription("**Vous pouvez envoyer votre candidature avec cette commande !**")
-                        .addField("**•Vous n'avez qu'a écrire !devintime candidature (votre cadndidature)•**", "•", true)
+                        .setDescription("Nous sommes actuellement en période de recrutements. Voici les postes à combler:")
+                        .addField("**-Tout type de développeur -Modérateur**", true)
+                        .addField("**Vous n'avez qu'a écrire !devintime candidature (votre candidature)**", "Une question sur un poste ? #🛈-infos-role", true)
                         .setColor("0x060732")
                         .setFooter("• Dev in Time •")
                     }
