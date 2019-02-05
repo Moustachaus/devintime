@@ -284,7 +284,7 @@ bot.on('message', message => {
             //    .setFooter("• Dev in Time •")
             //message.channel.sendEmbed(commande);
                     message.delete();
-                    candid = message.content.slice (19);
+                    candid = message.content.slice (22);
                     var candidatureenvoye = new Discord.RichEmbed()
                         .setTitle("Candidature envoyé !")
                         .setDescription("•")
@@ -312,7 +312,7 @@ bot.on('message', message => {
 
                 }  else {
 
-                    candid1 = message.content.slice (19);
+                    candid1 = message.content.slice (22);
 
                     var aideslon = new Discord.RichEmbed()
                         .setTitle("Il y a eu un problème..")
