@@ -338,6 +338,18 @@ bot.on('message', message => {
             }
 
 
+            else if(splitMessage[1] === '!sendcandid') {
+                if(message.member.roles.has("535829349174345728")) {
+                    if (message.channel.id === '536540504188518400') {
+                        var sendcandid = new Discord.RichEmbed()
+                        .setTitle("Envoyer une candidature")
+                        .setDescription("**Vous pouvez envoyer votre candidature avec cette commande !**")
+                        .addField("**•Vous n'avez qu'a écrire !devintime candidature (votre cadndidature)•**", "•", true)
+                        .setColor("0x060732")
+                        .setFooter("• Dev in Time •")
+                    }
+            }
+        }
 
                 //var commande = new Discord.RichEmbed()
         //    .setTitle("Commande personnalisée envoyé !")
@@ -390,7 +402,7 @@ bot.on('message', message => {
 //
 //
         //        message.author.send(chatt);
-        //        message.delete
+        //        message.delete();ç
         //    }
         //}
 
