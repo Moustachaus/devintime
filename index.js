@@ -344,7 +344,7 @@ bot.on('message', message => {
                         var sendcandid = new Discord.RichEmbed()
                         .setTitle("Envoyer une candidature")
                         .setDescription("Nous sommes actuellement en période de recrutements. Voici les postes à combler:")
-                        .addField("**-Tout type de développeur -Modérateur**", true)
+                        .addField("**-Tout type de développeur -Modérateur**", "•", true)
                         .addField("**Vous n'avez qu'a écrire !devintime candidature (votre candidature)**", "Une question sur un poste ? #🛈-infos-role", true)
                         .setColor("0x060732")
                         .setFooter("• Dev in Time •")
