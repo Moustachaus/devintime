@@ -265,13 +265,13 @@ bot.on('message', message => {
 
                     var aideslon = new Discord.RichEmbed()
                         .setTitle("Il y a eu un problème..")
-                        .setDescription("Vous devez envoyer votre commande dans le salon #commande-personnalisée !")
+                        .setDescription("Vous devez envoyer votre commande dans le salon 📦-commande-personnalisée !")
                         .addField("Votre commande", commande2, true)
                         .setColor("0x754A7E")
                         .setFooter("• Dev in Time •")
 
-                    message.delete
                     message.author.send(aideslon);
+                    message.delete();
                 }
             }
             else if(splitMessage[1] === 'candidature') {
@@ -283,7 +283,6 @@ bot.on('message', message => {
             //    .setColor("0x42D321")
             //    .setFooter("• Dev in Time •")
             //message.channel.sendEmbed(commande);
-                    message.delete();
                     candid = message.content.slice (22);
                     var candidatureenvoye = new Discord.RichEmbed()
                         .setTitle("Candidature envoyé !")
@@ -304,11 +303,13 @@ bot.on('message', message => {
 
                     message.author.send(candidatureenvoye);
 
-                
+
+                    message.delete();
 
                     bot.fetchUser('215103685980717057').then((user) => {
                         user.sendEmbed(candidaturerecus)
                     });
+
 
                 }  else {
 
@@ -316,13 +317,14 @@ bot.on('message', message => {
 
                     var aideslon = new Discord.RichEmbed()
                         .setTitle("Il y a eu un problème..")
-                        .setDescription("Vous devez envoyer votre candidature dans le salon #commande-personnalisée !")
+                        .setDescription("Vous devez envoyer votre candidature dans le salon #📩-recrutement !")
                         .addField("Votre commande", candid1, true)
                         .setColor("0x754A7E")
                         .setFooter("• Dev in Time •")
 
-                    message.delete
+                    
                     message.author.send(aideslon);
+                    message.delete();
                 }
             }
 
