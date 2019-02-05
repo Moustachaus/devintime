@@ -348,6 +348,9 @@ bot.on('message', message => {
                         .addField("**Vous n'avez qu'a écrire !devintime candidature (votre candidature)**", "Une question sur un poste ? #🛈-infos-role", true)
                         .setColor("0x060732")
                         .setFooter("• Dev in Time •")
+
+                        message.delete();
+                        message.channel.sendEmbed(sendcandid);
                     }
             }
         }
