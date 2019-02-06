@@ -198,8 +198,9 @@ bot.on('message', message => {
                 if(splitMessage.length === 2) {
                     var aide = new Discord.RichEmbed()
                         .setTitle("Aide")
-                        .setDescription("aide")
-                        .addField("Commandes", "!devintime", true)
+                        .setDescription("Voici les commandes disponibles avec le bot")
+                        .addField("Commande", "!devintime candidature (votre candidature) dans le salon #📩-recrutement", true)
+                        .addField("Commande", "!devintime commande (votre commande) dans le salon #📦-commande-personnalisée", true)
                         .setColor("0x4087D4")
                         .setFooter("• Notre site : https://dev-in-time.com •")
                     message.channel.sendEmbed(aide);
