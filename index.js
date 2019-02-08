@@ -367,18 +367,18 @@ bot.on('message', message => {
             else if (message.content[1] === "new") {
                 const reason = message.content.split(" ").slice(1).join(" ");
                 if (!message.guild.roles.exists("name", "Support")) {
-                const embed0 = new Discord.RichEmbed()
-                .setColor(embedColor)
-                .addField(`Skoali`, `Vous devez crée un rôle nommé Support.`)
-                message.channel.send({ embed: embed0 });
-                return
+                    const embed0 = new Discord.RichEmbed()
+                    .setColor(embedColor)
+                    .addField(`Skoali`, `Vous devez crée un rôle nommé Support.`)
+                    message.channel.send({ embed: embed0 });
+                    return
                 }
                 if (message.guild.channels.exists("name", "ticket-" + message.author.username)) {
-                const embed1 = new Discord.RichEmbed()
-                .setColor(embedColor)
-                .addField(`Skoali`, `Vous avez déjà un ticket ouvert.`)
-                message.channel.send({ embed: embed1 });
-                return
+                    const embed1 = new Discord.RichEmbed()
+                    .setColor(embedColor)
+                    .addField(`Skoali`, `Vous avez déjà un ticket ouvert.`)
+                    message.channel.send({ embed: embed1 });
+                    return
                 }
                 message.guild.createChannel(`ticket-${message.author.username}`, "text").then(c => {
                     let role = message.guild.roles.find("name", "Support");
@@ -410,33 +410,33 @@ bot.on('message', message => {
             }
             else if (message.content[1] === "close") {
                 if (!message.channel.name.startsWith(`ticket-`)) {
-                    const embed9 = new Discord.RichEmbed()
-                    .setColor(embedColor)
-                    .addField(`Skoali`, 'Tapez \`+confirmer\` pour confirmer.')
-                    message.channel.send({ embed: embed9 })
-                    .then((m) => {
-                    message.channel.awaitMessages(response => response.content === '+confirmer', {
-                        max: 1,
-                        time: 15000,
-                        errors: ['time'],
+                const embed8 = new Discord.RichEmbed()
+                .setColor(embedColor)
+                .addField(`Skaoli`, `Vous devez être dans un salon de ticket.`)
+                message.channel.send({ embed: embed8 });
+                return
+                }   
+            
+                const embed9 = new Discord.RichEmbed()
+                .setColor(embedColor)
+                .addField(`Skoali`, 'Tapez \`+confirmer\` pour confirmer.')
+                message.channel.send({ embed: embed9 })
+                .then((m) => {
+                  message.channel.awaitMessages(response => response.content === '+confirmer', {
+                    max: 1,
+                    time: 15000,
+                    errors: ['time'],
+                  })
+                  .then((collected) => {
+                      message.channel.delete();
                     })
-                    .then((collected) => {
-                        message.channel.delete();
-                        })
-                        .catch(() => {
-                        m.edit('').then(m2 => {
-                            m2.delete();
-                        }, 3000);
-                        });
+                    .catch(() => {
+                      m.edit('').then(m2 => {
+                          m2.delete();
+                      }, 3000);
                     });
-        } else {
-            const embed8 = new Discord.RichEmbed()
-            .setColor(embedColor)
-            .addField(`Skaoli`, `Vous devez être dans un salon de ticket.`)
-            message.channel.send({ embed: embed8 });
-            return
-        }
-    }
+                });
+              }
 }
 
             else if (message.content[1] === "add") {
