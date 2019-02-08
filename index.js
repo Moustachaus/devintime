@@ -578,21 +578,6 @@ if (message.channel.id === '536540504188518400') {
     }
 }
 
-if (message.channel.id === '539120346624819210') {
-    if(!message.content.toLowerCase().startsWith("!devintime commande ")) {
-        var chatt1 = new Discord.RichEmbed()
-            .setTitle("Il y a eu un problème..")
-            .setDescription("Vous devez envoyer une commande-personnalisée avec **!devintime commande (votre commande)** !")
-            .setColor("0xF01013")
-            .setFooter("• Dev in Time •")
-
-
-        message.author.send(chatt1);
-        message.delete();
-    }
-}
-
-
 
 });
 
