@@ -369,14 +369,14 @@ bot.on('message', message => {
                 if (!message.guild.roles.exists("name", "Support")) {
                     const embed0 = new Discord.RichEmbed()
                     .setColor(embedColor)
-                    .addField(`Skoali`, `Vous devez crée un rôle nommé Support.`)
+                    .addField(`Dev in Time`, `Vous devez crée un rôle nommé Support.`)
                     message.channel.send({ embed: embed0 });
                     return
                 }
                 if (message.guild.channels.exists("name", "ticket-" + message.author.username)) {
                     const embed1 = new Discord.RichEmbed()
                     .setColor(embedColor)
-                    .addField(`Skoali`, `Vous avez déjà un ticket ouvert.`)
+                    .addField(`Dev in Time`, `Vous avez déjà un ticket ouvert.`)
                     message.channel.send({ embed: embed1 });
                     return
                 }
@@ -399,7 +399,8 @@ bot.on('message', message => {
                     .setColor(embedColor)
                     .addField(`Dev in Time`, `Ton ticket a été créé : ` + c.toString())
                     .setTimestamp();
-                    message.channel.send({ embed: embed2 });
+                    message.author.send(embed2);
+                    message.delete();
 
                     const embed3 = new Discord.RichEmbed()
                     .setColor(embedColor)
