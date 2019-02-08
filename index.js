@@ -471,6 +471,7 @@ bot.on('message', message => {
                     .addField(`Skoali`, '**' + removedmember + '** a été retirer du ticket.')
                     message.channel.send({ embed: embed7 });
                   }
+                }
 
                 //var commande = new Discord.RichEmbed()
         //    .setTitle("Commande personnalisée envoyé !")
