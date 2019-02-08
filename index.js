@@ -365,50 +365,50 @@ bot.on('message', message => {
         }
 
     if (message.content.toLowerCase().startsWith(prefix + `new`)) {
-        const reason = message.content.split(" ").slice(1).join(" ");
-        if (!message.guild.roles.exists("name", "Support")) {
-        const embed0 = new Discord.RichEmbed()
+    const reason = message.content.split(" ").slice(1).join(" ");
+    if (!message.guild.roles.exists("name", "Support")) {
+    const embed0 = new Discord.RichEmbed()
+    .setColor(embedColor)
+    .addField(`Skoali`, `Vous devez crée un rôle nommé Support.`)
+    message.channel.send({ embed: embed0 });
+    return
+    }
+    if (message.guild.channels.exists("name", "ticket-" + message.author.username)) {
+    const embed1 = new Discord.RichEmbed()
+    .setColor(embedColor)
+    .addField(`Skoali`, `Vous avez déjà un ticket ouvert.`)
+    message.channel.send({ embed: embed1 });
+    return
+    }
+    message.guild.createChannel(`ticket-${message.author.username}`, "text").then(c => {
+        let role = message.guild.roles.find("name", "Support");
+        let role2 = message.guild.roles.find("name", "@everyone");
+        c.overwritePermissions(role, {
+            SEND_MESSAGES: true,
+            READ_MESSAGES: true
+        });
+        c.overwritePermissions(role2, {
+            SEND_MESSAGES: false,
+            READ_MESSAGES: false
+        });
+        c.overwritePermissions(message.author, {
+            SEND_MESSAGES: true,
+            READ_MESSAGES: true
+        });
+        const embed2 = new Discord.RichEmbed()
         .setColor(embedColor)
-        .addField(`Skoali`, `Vous devez crée un rôle nommé Support.`)
-        message.channel.send({ embed: embed0 });
-        return
-        }
-        if (message.guild.channels.exists("name", "ticket-" + message.author.username)) {
-        const embed1 = new Discord.RichEmbed()
+        .addField(`Skoali`, `Ton ticket a été crée : ` + c.toString())
+        .setTimestamp();
+        message.channel.send({ embed: embed2 });
+
+        const embed3 = new Discord.RichEmbed()
         .setColor(embedColor)
-        .addField(`Skoali`, `Vous avez déjà un ticket ouvert.`)
-        message.channel.send({ embed: embed1 });
-        return
-        }
-        message.guild.createChannel(`ticket-${message.author.username}`, "text").then(c => {
-            let role = message.guild.roles.find("name", "Support");
-            let role2 = message.guild.roles.find("name", "@everyone");
-            c.overwritePermissions(role, {
-                SEND_MESSAGES: true,
-                READ_MESSAGES: true
-            });
-            c.overwritePermissions(role2, {
-                SEND_MESSAGES: false,
-                READ_MESSAGES: false
-            });
-            c.overwritePermissions(message.author, {
-                SEND_MESSAGES: true,
-                READ_MESSAGES: true
-            });
-            const embed2 = new Discord.RichEmbed()
-            .setColor(embedColor)
-            .addField(`Skoali`, `Ton ticket a été crée : ` + c.toString())
-            .setTimestamp();
-            message.channel.send({ embed: embed2 });
-            
-            const embed3 = new Discord.RichEmbed()
-            .setColor(embedColor)
-            .addField(`Bonjour ${message.author.username}!`, `Votre ticket a bien été ouvert un de nos staff va vous répondre le plus rapidement possible.`)
-            .setTimestamp();
-            c.send({ embed: embed3 });
-        }).catch(console.error);
-        }
-        if (message.content.toLowerCase().startsWith(prefix + `close`)) {
+        .addField(`Bonjour ${message.author.username}!`, `Votre ticket a bien été ouvert un de nos staff va vous répondre le plus rapidement possible.`)
+        .setTimestamp();
+        c.send({ embed: embed3 });
+    }).catch(console.error);
+  }
+    if (message.content.toLowerCase().startsWith(prefix + `close`)) {
         if (!message.channel.name.startsWith(`ticket-`)) {
         const embed8 = new Discord.RichEmbed()
         .setColor(embedColor)
@@ -416,29 +416,29 @@ bot.on('message', message => {
         message.channel.send({ embed: embed8 });
         return
         }   
-            
+
         const embed9 = new Discord.RichEmbed()
         .setColor(embedColor)
         .addField(`Skoali`, 'Tapez \`+confirmer\` pour confirmer.')
         message.channel.send({ embed: embed9 })
         .then((m) => {
-            message.channel.awaitMessages(response => response.content === '+confirmer', {
+        message.channel.awaitMessages(response => response.content === '+confirmer', {
             max: 1,
             time: 15000,
             errors: ['time'],
-            })
-            .then((collected) => {
-                message.channel.delete();
+        })
+        .then((collected) => {
+            message.channel.delete();
             })
             .catch(() => {
-                m.edit('').then(m2 => {
-                    m2.delete();
-                }, 3000);
+            m.edit('').then(m2 => {
+                m2.delete();
+            }, 3000);
             });
         });
-        }
-            
-        if (message.content.toLowerCase().startsWith(prefix + `add`)) {
+    }
+
+    if (message.content.toLowerCase().startsWith(prefix + `add`)) {
         if (!message.channel.name.startsWith(`ticket-`)) {
         const embed4 = new Discord.RichEmbed()
         .setColor(embedColor)
@@ -452,10 +452,10 @@ bot.on('message', message => {
         .setColor(embedColor)
         .addField(`Skoali`, '**' + addedmember + `** a été ajouter au ticket, utilisez la commande [${prefix}remove]() pour l\'enlever`)
         message.channel.send({ embed: embed5 });
-            
-        }
-            
-        if (message.content.toLowerCase().startsWith(prefix + `remove`)) {
+
+    }
+
+    if (message.content.toLowerCase().startsWith(prefix + `remove`)) {
         if (!message.channel.name.startsWith(`ticket-`)) {
         const embed6 = new Discord.RichEmbed()
         .setColor(embedColor)
@@ -469,7 +469,7 @@ bot.on('message', message => {
         .setColor(embedColor)
         .addField(`Skoali`, '**' + removedmember + '** a été retirer du ticket.')
         message.channel.send({ embed: embed7 });
-        }
+    }
 
                 //var commande = new Discord.RichEmbed()
         //    .setTitle("Commande personnalisée envoyé !")
