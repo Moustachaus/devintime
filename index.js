@@ -409,9 +409,7 @@ bot.on('message', message => {
                 c.send({ embed: embed3 });
             }).catch(console.error);
         }
-    }
-    if (message.content[0] === "!devintime") {
-        if (message.content[1] === "close") {
+        else if (message.content[1] === "close") {
             if (!message.channel.name.startsWith(`ticket-`)) {
             const embed8 = new Discord.RichEmbed()
             .setColor(embedColor)
@@ -440,10 +438,8 @@ bot.on('message', message => {
             });
         });
     }
-}
 
-    if (message.content[0] === "!devintime") {
-        if (message.content[1] === "add") {
+        else if (message.content[1] === "add") {
             if (!message.channel.name.startsWith(`ticket-`)) {
             const embed4 = new Discord.RichEmbed()
             .setColor(embedColor)
@@ -458,10 +454,8 @@ bot.on('message', message => {
             .addField(`Skoali`, '**' + addedmember + `** a été ajouter au ticket, utilisez la commande [${prefix}remove]() pour l\'enlever`)
             message.channel.send({ embed: embed5 });
 
-    }
 }
-    if (message.content[0] === "!devintime") {
-        if (message.content[1] === "remove") {
+        else if (message.content[1] === "remove") {
             if (!message.channel.name.startsWith(`ticket-`)) {
             const embed6 = new Discord.RichEmbed()
             .setColor(embedColor)
@@ -475,7 +469,6 @@ bot.on('message', message => {
             .setColor(embedColor)
             .addField(`Skoali`, '**' + removedmember + '** a été retirer du ticket.')
             message.channel.send({ embed: embed7 });
-        }
 
                 //var commande = new Discord.RichEmbed()
         //    .setTitle("Commande personnalisée envoyé !")
