@@ -367,18 +367,18 @@ bot.on('message', message => {
             else if(message.content[1] === "new") {
                 const reason = message.content.split(" ").slice(1).join(" ");
                 if (!message.guild.roles.exists("name", "Support")) {
-                const embed0 = new Discord.RichEmbed()
-                .setColor(embedColor)
-                .addField(`Skoali`, `Vous devez crée un rôle nommé Support.`)
-                message.channel.send({ embed: embed0 });
-                return
+                    const embed0 = new Discord.RichEmbed()
+                    .setColor(embedColor)
+                    .addField(`Skoali`, `Vous devez crée un rôle nommé Support.`)
+                    message.channel.send({ embed: embed0 });
+                    return
                 }
                 if (message.guild.channels.exists("name", "ticket-" + message.author.username)) {
-                const embed1 = new Discord.RichEmbed()
-                .setColor(embedColor)
-                .addField(`Skoali`, `Vous avez déjà un ticket ouvert.`)
-                message.channel.send({ embed: embed1 });
-                return
+                    const embed1 = new Discord.RichEmbed()
+                    .setColor(embedColor)
+                    .addField(`Skoali`, `Vous avez déjà un ticket ouvert.`)
+                    message.channel.send({ embed: embed1 });
+                    return
                 }
                 message.guild.createChannel(`ticket-${message.author.username}`, "text").then(c => {
                     let role = message.guild.roles.find("name", "Support");
@@ -410,11 +410,11 @@ bot.on('message', message => {
             }
             else if(message.content[1] === "close") {
                 if (!message.channel.name.startsWith(`ticket-`)) {
-                const embed8 = new Discord.RichEmbed()
-                .setColor(embedColor)
-                .addField(`Skaoli`, `Vous devez être dans un salon de ticket.`)
-                message.channel.send({ embed: embed8 });
-                return
+                    const embed8 = new Discord.RichEmbed()
+                    .setColor(embedColor)
+                    .addField(`Skaoli`, `Vous devez être dans un salon de ticket.`)
+                    message.channel.send({ embed: embed8 });
+                    return
                 }   
 
                 const embed9 = new Discord.RichEmbed()
@@ -441,11 +441,11 @@ bot.on('message', message => {
 
             else if(message.content[1] === "add") {
                 if (!message.channel.name.startsWith(`ticket-`)) {
-                const embed4 = new Discord.RichEmbed()
-                .setColor(embedColor)
-                .addField(`Skoali`, `Vous devez être dans un salon de ticket.`)
-                message.channel.send({ embed: embed4 });
-                return
+                    const embed4 = new Discord.RichEmbed()
+                    .setColor(embedColor)
+                    .addField(`Skoali`, `Vous devez être dans un salon de ticket.`)
+                    message.channel.send({ embed: embed4 });
+                    return
                 }
                 addedmember = message.mentions.members.first();
                 message.channel.overwritePermissions(addedmember, { SEND_MESSAGES : true, VIEW_CHANNEL : true});
@@ -459,11 +459,11 @@ bot.on('message', message => {
 
             else if(message.content[1] === "remove") {
                 if (!message.channel.name.startsWith(`ticket-`)) {
-                const embed6 = new Discord.RichEmbed()
-                .setColor(embedColor)
-                .addField(`Skoali`, `Vous devez être dans un salon de ticket.`)
-                message.channel.send({ embed: embed6 });
-                return
+                    const embed6 = new Discord.RichEmbed()
+                    .setColor(embedColor)
+                    .addField(`Skoali`, `Vous devez être dans un salon de ticket.`)
+                    message.channel.send({ embed: embed6 });
+                    return
                 }
                 removedmember = message.mentions.members.first();
                 message.channel.overwritePermissions(removedmember, { SEND_MESSAGES : false, VIEW_CHANNEL : false});
