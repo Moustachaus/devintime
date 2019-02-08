@@ -437,7 +437,7 @@ bot.on('message', message => {
                     });
                 });
               }
-}
+
 
             else if (message.content[1] === "add") {
                 if (!message.channel.name.startsWith(`ticket-`)) {
@@ -530,7 +530,7 @@ bot.on('message', message => {
 
 
 
-
+    }
 }
 });
 
