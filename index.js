@@ -592,19 +592,8 @@ if (message.channel.id === '539120346624819210') {
     }
 }
 
-if (message.channel.id === '535826554320715797') {
-    if(!message.content.toLowerCase().startsWith("!devintime support new")) {
-        var chatt11 = new Discord.RichEmbed()
-            .setTitle("Il y a eu un problème..")
-            .setDescription("Vous devez créer votre ticket d'aide avec **!devintime support new** !")
-            .setColor("0xF01013")
-            .setFooter("• Dev in Time •")
 
 
-        message.author.send(chatt11);
-        message.delete();
-    }
-}
 });
 
 //bot.on('messageReactionAdd', (reaction, user) => {
