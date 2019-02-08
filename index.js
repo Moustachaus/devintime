@@ -364,7 +364,7 @@ bot.on('message', message => {
             }
         }
 
-            else if(message.content[1] === "new") {
+            else if (message.content.toLowerCase().startsWith(prefix + `new`)) {
                 const reason = message.content.split(" ").slice(1).join(" ");
                 if (!message.guild.roles.exists("name", "Support")) {
                     const embed0 = new Discord.RichEmbed()
@@ -408,14 +408,14 @@ bot.on('message', message => {
                     c.send({ embed: embed3 });
                 }).catch(console.error);
             }
-            else if(message.content[1] === "close") {
+            else if (message.content.toLowerCase().startsWith(prefix + `close`)) {
                 if (!message.channel.name.startsWith(`ticket-`)) {
                     const embed8 = new Discord.RichEmbed()
                     .setColor(embedColor)
                     .addField(`Skaoli`, `Vous devez être dans un salon de ticket.`)
                     message.channel.send({ embed: embed8 });
                     return
-                }   
+                }  
 
                 const embed9 = new Discord.RichEmbed()
                 .setColor(embedColor)
@@ -439,7 +439,7 @@ bot.on('message', message => {
             }
 
 
-            else if(message.content[1] === "add") {
+            else if (message.content.toLowerCase().startsWith(prefix + `add`)) {
                 if (!message.channel.name.startsWith(`ticket-`)) {
                     const embed4 = new Discord.RichEmbed()
                     .setColor(embedColor)
@@ -457,7 +457,7 @@ bot.on('message', message => {
             }
 
 
-            else if(message.content[1] === "remove") {
+            else if (message.content.toLowerCase().startsWith(prefix + `remove`)) {
                 if (!message.channel.name.startsWith(`ticket-`)) {
                     const embed6 = new Discord.RichEmbed()
                     .setColor(embedColor)
