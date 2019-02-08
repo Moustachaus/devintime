@@ -493,6 +493,7 @@ bot.on('message', message => {
             else if (message.content.toLowerCase().startsWith("!devintime support aide")) {
                 const embed14 = new Discord.RichEmbed()
                 .setColor(embedColor)
+                .setDescription("Vous pouvez créer votre ticket dans le salon #support-ticket")
                 .addField(`!devintime support new`, 'Sert à créer un nouveau ticket')
                 .addField(`!devintime support add`, 'Sert à ajouter quelqu\'un à votre ticket')
                 .addField(`!devintime support remove`, 'Sert à retirer quelqu\'un de votre ticket')
