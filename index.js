@@ -1,7 +1,8 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const prefix = '!';
-
+var PREFIX = "!";
+const embedColor = 0xE52B50;
 
 function sendError(message, description) {
     message.channel.send({embed: {
