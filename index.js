@@ -363,7 +363,7 @@ bot.on('message', message => {
             }
         }
 
-            else if (message.content.toLowerCase().startsWith("!devintime new")) {
+            else if (message.content.toLowerCase().startsWith("!devintime support new")) {
                 const reason = message.content.split(" ").slice(1).join(" ");
                 if (!message.guild.roles.exists("name", "Support")) {
                     const embed0 = new Discord.RichEmbed()
@@ -407,7 +407,7 @@ bot.on('message', message => {
                     c.send({ embed: embed3 });
                 }).catch(console.error);
             }
-            else if (message.content.toLowerCase().startsWith("!devintime close")) {
+            else if (message.content.toLowerCase().startsWith("!devintime support close")) {
                 if (!message.channel.name.startsWith(`ticket-`)) {
                     const embed8 = new Discord.RichEmbed()
                     .setColor(embedColor)
@@ -418,10 +418,10 @@ bot.on('message', message => {
 
                 const embed9 = new Discord.RichEmbed()
                 .setColor(embedColor)
-                .addField(`Dev in Time`, 'Tapez \`!devintime confirmer\` pour confirmer.')
+                .addField(`Dev in Time`, 'Tapez \`!devintime support confirmer\` pour confirmer.')
                 message.channel.send({ embed: embed9 })
                 .then((m) => {
-                message.channel.awaitMessages(response => response.content === '!devintime confirmer', {
+                message.channel.awaitMessages(response => response.content === '!devintime support confirmer', {
                     max: 1,
                     time: 15000,
                     errors: ['time'],
@@ -438,7 +438,7 @@ bot.on('message', message => {
             }
 
 
-            else if (message.content.toLowerCase().startsWith("!devintime add")) {
+            else if (message.content.toLowerCase().startsWith("!devintime support add")) {
                 if (!message.channel.name.startsWith(`ticket-`)) {
                     const embed4 = new Discord.RichEmbed()
                     .setColor(embedColor)
@@ -456,7 +456,7 @@ bot.on('message', message => {
             }
 
 
-            else if (message.content.toLowerCase().startsWith("!devintime remove")) {
+            else if (message.content.toLowerCase().startsWith("!devintime support remove")) {
                 if (!message.channel.name.startsWith(`ticket-`)) {
                     const embed6 = new Discord.RichEmbed()
                     .setColor(embedColor)
