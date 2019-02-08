@@ -416,7 +416,7 @@ bot.on('message', message => {
                 message.channel.send({ embed: embed8 });
                 return
             }   
-
+        }
             const embed9 = new Discord.RichEmbed()
             .setColor(embedColor)
             .addField(`Skoali`, 'Tapez \`+confirmer\` pour confirmer.')
@@ -468,6 +468,7 @@ bot.on('message', message => {
                 .setColor(embedColor)
                 .addField(`Skoali`, '**' + removedmember + '** a été retirer du ticket.')
                 message.channel.send({ embed: embed7 });
+            }
 
                 //var commande = new Discord.RichEmbed()
         //    .setTitle("Commande personnalisée envoyé !")
