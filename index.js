@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const prefix = '!';
+const prefix = '!'
 const embedColor = 0xE52B50;
 var PREFIX = "!";
 
@@ -410,33 +410,33 @@ bot.on('message', message => {
             }
             else if (message.content[1] === "close") {
                 if (!message.channel.name.startsWith(`ticket-`)) {
-                    const embed8 = new Discord.RichEmbed()
-                    .setColor(embedColor)
-                    .addField(`Skaoli`, `Vous devez être dans un salon de ticket.`)
-                    message.channel.send({ embed: embed8 });
-                    return
+                const embed8 = new Discord.RichEmbed()
+                .setColor(embedColor)
+                .addField(`Skaoli`, `Vous devez être dans un salon de ticket.`)
+                message.channel.send({ embed: embed8 });
+                return
                 }   
-            
+
                 const embed9 = new Discord.RichEmbed()
                 .setColor(embedColor)
-                .addField(`Skoali`, 'Tapez \`!confirmer\` pour confirmer.')
+                .addField(`Skoali`, 'Tapez \`+confirmer\` pour confirmer.')
                 message.channel.send({ embed: embed9 })
                 .then((m) => {
-                  message.channel.awaitMessages(response => response.content === '!confirmer', {
+                message.channel.awaitMessages(response => response.content === '+confirmer', {
                     max: 1,
                     time: 15000,
                     errors: ['time'],
-                  })
-                  .then((collected) => {
-                      message.channel.delete();
+                })
+                .then((collected) => {
+                    message.channel.delete();
                     })
                     .catch(() => {
-                      m.edit('').then(m2 => {
-                          m2.delete();
-                      }, 3000);
+                    m.edit('').then(m2 => {
+                        m2.delete();
+                    }, 3000);
                     });
                 });
-              }
+            }
 
 
             else if (message.content[1] === "add") {
@@ -454,7 +454,9 @@ bot.on('message', message => {
                 .addField(`Skoali`, '**' + addedmember + `** a été ajouter au ticket, utilisez la commande [${prefix}remove]() pour l\'enlever`)
                 message.channel.send({ embed: embed5 });
 
-    }
+            }
+
+
             else if (message.content[1] === "remove") {
                 if (!message.channel.name.startsWith(`ticket-`)) {
                 const embed6 = new Discord.RichEmbed()
