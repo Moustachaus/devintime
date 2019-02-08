@@ -396,7 +396,7 @@ bot.on('message', message => {
                     });
                     const embed2 = new Discord.RichEmbed()
                     .setColor(embedColor)
-                    .addField(`Skoali`, `Ton ticket a été crée : ` + c.toString())
+                    .addField(`Dev in Time`, `Ton ticket a été créé : ` + c.toString())
                     .setTimestamp();
                     message.channel.send({ embed: embed2 });
 
@@ -418,10 +418,10 @@ bot.on('message', message => {
 
                 const embed9 = new Discord.RichEmbed()
                 .setColor(embedColor)
-                .addField(`Skoali`, 'Tapez \`+confirmer\` pour confirmer.')
+                .addField(`Dev in Time`, 'Tapez \`!devintime confirmer\` pour confirmer.')
                 message.channel.send({ embed: embed9 })
                 .then((m) => {
-                message.channel.awaitMessages(response => response.content === '+confirmer', {
+                message.channel.awaitMessages(response => response.content === '!devintime confirmer', {
                     max: 1,
                     time: 15000,
                     errors: ['time'],
@@ -442,7 +442,7 @@ bot.on('message', message => {
                 if (!message.channel.name.startsWith(`ticket-`)) {
                     const embed4 = new Discord.RichEmbed()
                     .setColor(embedColor)
-                    .addField(`Skoali`, `Vous devez être dans un salon de ticket.`)
+                    .addField(`Dev in Time`, `Vous devez être dans un salon de ticket.`)
                     message.channel.send({ embed: embed4 });
                     return
                 }
@@ -450,7 +450,7 @@ bot.on('message', message => {
                 message.channel.overwritePermissions(addedmember, { SEND_MESSAGES : true, VIEW_CHANNEL : true});
                 const embed5 = new Discord.RichEmbed()
                 .setColor(embedColor)
-                .addField(`Skoali`, '**' + addedmember + `** a été ajouter au ticket, utilisez la commande [!devintime remove]() pour l\'enlever`)
+                .addField(`Dev in Time`, '**' + addedmember + `** a été ajouté au ticket, utilisez la commande [!devintime remove]() pour l\'enlever`)
                 message.channel.send({ embed: embed5 });
 
             }
@@ -460,7 +460,7 @@ bot.on('message', message => {
                 if (!message.channel.name.startsWith(`ticket-`)) {
                     const embed6 = new Discord.RichEmbed()
                     .setColor(embedColor)
-                    .addField(`Skoali`, `Vous devez être dans un salon de ticket.`)
+                    .addField(`Dev in Time`, `Vous devez être dans un salon de ticket.`)
                     message.channel.send({ embed: embed6 });
                     return
                 }
@@ -468,7 +468,7 @@ bot.on('message', message => {
                 message.channel.overwritePermissions(removedmember, { SEND_MESSAGES : false, VIEW_CHANNEL : false});
                 const embed7 = new Discord.RichEmbed()
                 .setColor(embedColor)
-                .addField(`Skoali`, '**' + removedmember + '** a été retirer du ticket.')
+                .addField(`Dev in Time`, '**' + removedmember + '** a été retiré du ticket.')
                 message.channel.send({ embed: embed7 });
             }
 
@@ -532,6 +532,21 @@ bot.on('message', message => {
 
 
     }
+
+    if (message.channel.id === '536540504188518400') {
+        if(!message.content.toLowerCase().startsWith("!devintime candidature")) {
+            var chatt = new Discord.RichEmbed()
+                .setTitle("Il y a eu un problème..")
+                .setDescription("Vous devez envoyer une commande-personnalisée avec !devintime commande (votre commande) !")
+                .addField("Dans le salon #commande-personnalisée", "•", true)
+                .setColor("0xF01013")
+                .setFooter("• Dev in Time •")
+
+
+            message.author.send(chatt);
+            message.delete();
+        }
+}
 }
 });
 
