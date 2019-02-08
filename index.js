@@ -370,8 +370,8 @@ bot.on('message', message => {
                     if (message.channel.id === '535826554320715797') {
                         var sendcandid = new Discord.RichEmbed()
                         .setTitle("Créer un ticket d'aide")
-                        .addField("**Vous n'avez qu'a écrire !devintime support new**")
-                        .setColor("0x060732")
+                        .addField("**Vous n'avez qu'a écrire !devintime support new**", "•")
+                        .setColor("0x4A5F7B")
                         .setFooter("• Dev in Time •")
 
                         message.delete();
