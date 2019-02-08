@@ -365,49 +365,49 @@ bot.on('message', message => {
         }
 
     if (message.content.toLowerCase().startsWith(prefix + `new`)) {
-    const reason = message.content.split(" ").slice(1).join(" ");
-    if (!message.guild.roles.exists("name", "Support")) {
-    const embed0 = new Discord.RichEmbed()
-    .setColor(embedColor)
-    .addField(`Skoali`, `Vous devez crée un rôle nommé Support.`)
-    message.channel.send({ embed: embed0 });
-    return
-    }
-    if (message.guild.channels.exists("name", "ticket-" + message.author.username)) {
-    const embed1 = new Discord.RichEmbed()
-    .setColor(embedColor)
-    .addField(`Skoali`, `Vous avez déjà un ticket ouvert.`)
-    message.channel.send({ embed: embed1 });
-    return
-    }
-    message.guild.createChannel(`ticket-${message.author.username}`, "text").then(c => {
-        let role = message.guild.roles.find("name", "Support");
-        let role2 = message.guild.roles.find("name", "@everyone");
-        c.overwritePermissions(role, {
-            SEND_MESSAGES: true,
-            READ_MESSAGES: true
-        });
-        c.overwritePermissions(role2, {
-            SEND_MESSAGES: false,
-            READ_MESSAGES: false
-        });
-        c.overwritePermissions(message.author, {
-            SEND_MESSAGES: true,
-            READ_MESSAGES: true
-        });
-        const embed2 = new Discord.RichEmbed()
+        const reason = message.content.split(" ").slice(1).join(" ");
+        if (!message.guild.roles.exists("name", "Support")) {
+        const embed0 = new Discord.RichEmbed()
         .setColor(embedColor)
-        .addField(`Skoali`, `Ton ticket a été crée : ` + c.toString())
-        .setTimestamp();
-        message.channel.send({ embed: embed2 });
+        .addField(`Skoali`, `Vous devez crée un rôle nommé Support.`)
+        message.channel.send({ embed: embed0 });
+        return
+        }
+        if (message.guild.channels.exists("name", "ticket-" + message.author.username)) {
+        const embed1 = new Discord.RichEmbed()
+        .setColor(embedColor)
+        .addField(`Skoali`, `Vous avez déjà un ticket ouvert.`)
+        message.channel.send({ embed: embed1 });
+        return
+        }
+        message.guild.createChannel(`ticket-${message.author.username}`, "text").then(c => {
+            let role = message.guild.roles.find("name", "Support");
+            let role2 = message.guild.roles.find("name", "@everyone");
+            c.overwritePermissions(role, {
+                SEND_MESSAGES: true,
+                READ_MESSAGES: true
+            });
+            c.overwritePermissions(role2, {
+                SEND_MESSAGES: false,
+                READ_MESSAGES: false
+            });
+            c.overwritePermissions(message.author, {
+                SEND_MESSAGES: true,
+                READ_MESSAGES: true
+            });
+            const embed2 = new Discord.RichEmbed()
+            .setColor(embedColor)
+            .addField(`Skoali`, `Ton ticket a été crée : ` + c.toString())
+            .setTimestamp();
+            message.channel.send({ embed: embed2 });
 
-        const embed3 = new Discord.RichEmbed()
-        .setColor(embedColor)
-        .addField(`Bonjour ${message.author.username}!`, `Votre ticket a bien été ouvert un de nos staff va vous répondre le plus rapidement possible.`)
-        .setTimestamp();
-        c.send({ embed: embed3 });
-    }).catch(console.error);
-  }
+            const embed3 = new Discord.RichEmbed()
+            .setColor(embedColor)
+            .addField(`Bonjour ${message.author.username}!`, `Votre ticket a bien été ouvert un de nos staff va vous répondre le plus rapidement possible.`)
+            .setTimestamp();
+            c.send({ embed: embed3 });
+        }).catch(console.error);
+    }
     if (message.content.toLowerCase().startsWith(prefix + `close`)) {
         if (!message.channel.name.startsWith(`ticket-`)) {
         const embed8 = new Discord.RichEmbed()
