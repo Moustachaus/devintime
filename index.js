@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const prefix = '!'
+const prefix = '!';
 const embedColor = 0xE52B50;
 var PREFIX = "!";
 
