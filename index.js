@@ -374,10 +374,10 @@ bot.on('message', message => {
                 return
                 }
                 if (message.guild.channels.exists("name", "ticket-" + message.author.username)) {
-                const embed1 = new Discord.RichEmbed()
+                const embed13 = new Discord.RichEmbed()
                 .setColor(embedColor)
                 .addField(`Dev in Time`, `Vous avez déjà un ticket ouvert.`)
-                message.channel.send({ embed: embed1 });
+                message.channel.send({ embed: embed13 });
                 return
                 }
                 message.guild.createChannel(`ticket-${message.author.username}`, "text").then(c => {
@@ -395,11 +395,11 @@ bot.on('message', message => {
                         SEND_MESSAGES: true,
                         READ_MESSAGES: true
                     });
-                    const embed2 = new Discord.RichEmbed()
+                    const embed21 = new Discord.RichEmbed()
                     .setColor(embedColor)
                     .addField(`Dev in Time`, `Ton ticket a été crée : ` + c.toString())
                     .setTimestamp();
-                    message.channel.send({ embed: embed2 });
+                    message.channel.send({ embed: embed21 });
             
                     const embed3 = new Discord.RichEmbed()
                     .setColor(embedColor)
