@@ -1,8 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const prefix = '!'
+const prefix = '!',
 const embedColor = 0xE52B50;
-var PREFIX = "!";
 
 function sendError(message, description) {
     message.channel.send({embed: {
@@ -364,7 +363,7 @@ bot.on('message', message => {
             }
         }
 
-            else if (message.content.toLowerCase().startsWith(prefix + `new`)) {
+            else if (message.content.toLowerCase().startsWith("!devintime" + `new`)) {
                 const reason = message.content.split(" ").slice(1).join(" ");
                 if (!message.guild.roles.exists("name", "Support")) {
                     const embed0 = new Discord.RichEmbed()
@@ -408,7 +407,7 @@ bot.on('message', message => {
                     c.send({ embed: embed3 });
                 }).catch(console.error);
             }
-            else if (message.content.toLowerCase().startsWith(prefix + `close`)) {
+            else if (message.content.toLowerCase().startsWith("!devintime" + `close`)) {
                 if (!message.channel.name.startsWith(`ticket-`)) {
                     const embed8 = new Discord.RichEmbed()
                     .setColor(embedColor)
@@ -439,7 +438,7 @@ bot.on('message', message => {
             }
 
 
-            else if (message.content.toLowerCase().startsWith(prefix + `add`)) {
+            else if (message.content.toLowerCase().startsWith("!devintime" + `add`)) {
                 if (!message.channel.name.startsWith(`ticket-`)) {
                     const embed4 = new Discord.RichEmbed()
                     .setColor(embedColor)
@@ -451,13 +450,13 @@ bot.on('message', message => {
                 message.channel.overwritePermissions(addedmember, { SEND_MESSAGES : true, VIEW_CHANNEL : true});
                 const embed5 = new Discord.RichEmbed()
                 .setColor(embedColor)
-                .addField(`Skoali`, '**' + addedmember + `** a été ajouter au ticket, utilisez la commande [${prefix}remove]() pour l\'enlever`)
+                .addField(`Skoali`, '**' + addedmember + `** a été ajouter au ticket, utilisez la commande [!devintime remove]() pour l\'enlever`)
                 message.channel.send({ embed: embed5 });
 
             }
 
 
-            else if (message.content.toLowerCase().startsWith(prefix + `remove`)) {
+            else if (message.content.toLowerCase().startsWith("!devintime" + `remove`)) {
                 if (!message.channel.name.startsWith(`ticket-`)) {
                     const embed6 = new Discord.RichEmbed()
                     .setColor(embedColor)
