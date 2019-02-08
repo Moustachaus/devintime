@@ -364,7 +364,7 @@ bot.on('message', message => {
             }
         }
 
-        if (message.content.toLowerCase().startsWith(prefix + `new`)) {
+        else if (message.content.toLowerCase().startsWith(prefix + `new`)) {
             const reason = message.content.split(" ").slice(1).join(" ");
             if (!message.guild.roles.exists("name", "Support")) {
             const embed0 = new Discord.RichEmbed()
