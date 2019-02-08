@@ -533,21 +533,24 @@ bot.on('message', message => {
 
     }
 
-    if (message.channel.id === '536540504188518400') {
-        if(!message.content.toLowerCase().startsWith("!devintime candidature")) {
-            var chatt = new Discord.RichEmbed()
-                .setTitle("Il y a eu un problème..")
-                .setDescription("Vous devez envoyer une commande-personnalisée avec !devintime commande (votre commande) !")
-                .addField("Dans le salon #commande-personnalisée", "•", true)
-                .setColor("0xF01013")
-                .setFooter("• Dev in Time •")
+
+}
+
+if (message.channel.id === '536540504188518400') {
+    if(!message.content.toLowerCase().startsWith("!devintime candidature")) {
+        var chatt1 = new Discord.RichEmbed()
+            .setTitle("Il y a eu un problème..")
+            .setDescription("Vous devez envoyer une commande-personnalisée avec !devintime commande (votre commande) !")
+            .addField("Dans le salon #commande-personnalisée", "•", true)
+            .setColor("0xF01013")
+            .setFooter("• Dev in Time •")
 
 
-            message.author.send(chatt);
-            message.delete();
-        }
+        message.author.send(chatt1);
+        message.delete();
+    }
 }
-}
+
 });
 
 //bot.on('messageReactionAdd', (reaction, user) => {
