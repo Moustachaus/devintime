@@ -355,7 +355,7 @@ bot.on('message', message => {
                         .addField("**-Tout type de développeur**", "•", true)
                         .addField("**-Modérateur**", "•", true)
                         .addField("**Vous n'avez qu'a écrire !devintime candidature (votre candidature)**", "Une question sur un poste ? #🛈-infos-role", true)
-                        .setColor("0x060732")
+                        .setColor("0x5026C5")
                         .setFooter("• Dev in Time •")
 
                         message.delete();
