@@ -410,19 +410,19 @@ bot.on('message', message => {
             }
             else if (message.content[1] === "close") {
                 if (!message.channel.name.startsWith(`ticket-`)) {
-                const embed8 = new Discord.RichEmbed()
-                .setColor(embedColor)
-                .addField(`Skaoli`, `Vous devez être dans un salon de ticket.`)
-                message.channel.send({ embed: embed8 });
-                return
+                    const embed8 = new Discord.RichEmbed()
+                    .setColor(embedColor)
+                    .addField(`Skaoli`, `Vous devez être dans un salon de ticket.`)
+                    message.channel.send({ embed: embed8 });
+                    return
                 }   
             
                 const embed9 = new Discord.RichEmbed()
                 .setColor(embedColor)
-                .addField(`Skoali`, 'Tapez \`+confirmer\` pour confirmer.')
+                .addField(`Skoali`, 'Tapez \`!confirmer\` pour confirmer.')
                 message.channel.send({ embed: embed9 })
                 .then((m) => {
-                  message.channel.awaitMessages(response => response.content === '+confirmer', {
+                  message.channel.awaitMessages(response => response.content === '!confirmer', {
                     max: 1,
                     time: 15000,
                     errors: ['time'],
