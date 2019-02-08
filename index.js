@@ -364,6 +364,22 @@ bot.on('message', message => {
             }
         }
 
+
+        else if(splitMessage[1] === '!sendok') {
+            if(message.member.roles.has("535829349174345728")) {
+                if (message.channel.id === '536540504188518400') {
+                    var sendcandid = new Discord.RichEmbed()
+                    .setTitle("Créer un ticket d'aide")
+                    .addField("**Vous n'avez qu'a écrire !devintime support new**")
+                    .setColor("0x060732")
+                    .setFooter("• Dev in Time •")
+
+                    message.delete();
+                    message.channel.sendEmbed(sendcandid);
+                }
+        }
+    }
+
             else if (message.content.toLowerCase().startsWith("!devintime support new")) {
                 const reason = message.content.split(" ").slice(1).join(" ");
                 if (!message.guild.roles.exists("name", "Support")) {
@@ -550,14 +566,14 @@ bot.on('message', message => {
 
 if (message.channel.id === '536540504188518400') {
     if(!message.content.toLowerCase().startsWith("!devintime candidature ")) {
-        var chatt1 = new Discord.RichEmbed()
+        var chatt21 = new Discord.RichEmbed()
             .setTitle("Il y a eu un problème..")
             .setDescription("Vous devez envoyer une candidature avec **!devintime candidature (votre candidature)** !")
             .setColor("0xF01013")
             .setFooter("• Dev in Time •")
 
 
-        message.author.send(chatt1);
+        message.author.send(chatt21);
         message.delete();
     }
 }
@@ -576,6 +592,19 @@ if (message.channel.id === '539120346624819210') {
     }
 }
 
+if (message.channel.id === '535826554320715797') {
+    if(!message.content.toLowerCase().startsWith("!devintime support new")) {
+        var chatt11 = new Discord.RichEmbed()
+            .setTitle("Il y a eu un problème..")
+            .setDescription("Vous devez créer votre ticket d'aide avec **!devintime support new** !")
+            .setColor("0xF01013")
+            .setFooter("• Dev in Time •")
+
+
+        message.author.send(chatt11);
+        message.delete();
+    }
+}
 });
 
 //bot.on('messageReactionAdd', (reaction, user) => {
